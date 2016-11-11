@@ -1,0 +1,16 @@
+PODS:
+  - Chrysan (0.1.0)
+
+DEPENDENCIES:
+  - Chrysan (from `../`)
+
+EXTERNAL SOURCES:
+  Chrysan:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Chrysan: 5193c019afe4be5510d02a325f950af279a54d85
+
+PODFILE CHECKSUM: baed710e9c4496a36a874dd7929a034f11085755
+
+COCOAPODS: 1.2.0.beta.1

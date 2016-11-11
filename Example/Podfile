@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'Chrysan_Example' do
+  pod 'Chrysan', :path => '../'
+end

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Chrysan_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-Tg-YQJ">
+                                <rect key="frame" x="136" y="318" width="102" height="30"/>
+                                <state key="normal" title="show message"/>
+                                <connections>
+                                    <action selector="showMessageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Byb-hv-EDr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-BJ-i6Y">
+                                <rect key="frame" x="169" y="280" width="37" height="30"/>
+                                <state key="normal" title="show"/>
+                                <connections>
+                                    <action selector="showAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OPv-Ca-lxw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4go-QG-TEp">
+                                <rect key="frame" x="137" y="356" width="101" height="30"/>
+                                <state key="normal" title="show progress"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="On5-Et-88i"/>
+                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Y6T-Mw-yzr"/>
+                            <constraint firstItem="4go-QG-TEp" firstAttribute="top" secondItem="b6z-Tg-YQJ" secondAttribute="bottom" constant="8" id="cac-KD-cE7"/>
+                            <constraint firstItem="4go-QG-TEp" firstAttribute="centerX" secondItem="b6z-Tg-YQJ" secondAttribute="centerX" id="qhZ-d1-Z3o"/>
+                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="top" secondItem="2LF-BJ-i6Y" secondAttribute="bottom" constant="8" id="w1I-Ad-4lm"/>
+                            <constraint firstItem="2LF-BJ-i6Y" firstAttribute="centerX" secondItem="b6z-Tg-YQJ" secondAttribute="centerX" id="w4N-21-CSZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showProgressAction" destination="4go-QG-TEp" id="uU9-jV-OrE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
