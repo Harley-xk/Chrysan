@@ -106,13 +106,9 @@ public class ChrysanView: UIView {
         isShown = false
         
         layer.removeAllAnimations()
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            self.alpha = 0
-        }, completion: { finished in
-            self.isHidden = true
-            self.reset()
-        })
+        self.alpha = 0
+        self.isHidden = true
+        self.reset()
     }
     
     // MARK: - Private
@@ -259,9 +255,7 @@ public class ChrysanView: UIView {
         parent.layoutIfNeeded()
         layer.removeAllAnimations()
         
-        UIView.animate(withDuration: 0.25) {
-            self.alpha = 1
-        }
+        self.alpha = 1
     }
     
     private func reset() {

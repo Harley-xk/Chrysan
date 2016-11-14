@@ -46,11 +46,12 @@ class ViewController: UIViewController {
             chrysan.hudStyle = .light
             chrysan.color = .black
             chrysan.chrysanStyle = .gray
+            chrysan.show(.plain, message:"Changed to Light", hideAfterSeconds:1)
         }else {
             chrysan.hudStyle = .dark
             chrysan.color = .white
             chrysan.chrysanStyle = .whiteLarge
-
+            chrysan.show(.plain, message:"Changed to Dark", hideAfterSeconds:1)
         }
     }
 

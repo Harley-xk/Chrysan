@@ -18,7 +18,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exs-X2-Jec">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.20113255033557048" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-b5-ETG">
                     <rect key="frame" x="120" y="200" width="80" height="80"/>
