@@ -189,6 +189,7 @@ public class ChrysanView: UIView {
     private func updateAndShow() {
         
         messageLabel.text = message;
+        updateMessageTextAlignment()
         
         positionX.constant = offsetX
         positionY.constant = offsetY
@@ -207,6 +208,7 @@ public class ChrysanView: UIView {
             labelSpace.constant = 4;
             messageMinWidth.constant = 50;
         }
+        
 
         messageToTop.constant = 64
         activityView.isHidden = true
@@ -235,6 +237,18 @@ public class ChrysanView: UIView {
         
         layoutIfNeeded()
         showHUD()
+    }
+    
+    private func updateMessageTextAlignment() {
+        messageLabel.textAlignment = .center
+        if let string = message as? NSString {
+            let size = CGSize(width: frame.size.width - 70, height: 1000)
+            let font = UIFont.systemFont(ofSize: 16)
+            let rect = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
+            if size.height >= 35 {
+                messageLabel.textAlignment = .left
+            }
+        }
     }
     
     private func image(name: String) -> UIImage? {

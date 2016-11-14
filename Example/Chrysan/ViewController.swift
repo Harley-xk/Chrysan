@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     @IBAction func showAction(_ sender: Any) {
 
-        chrysan.show(.plain, message:"阿道夫啊的身份阿道夫安德森安德森啊的身份啊的身份安德森啊的身份啊的身份安德森阿瑟费阿萨德发水淀粉啊的身份啊水淀粉啊的身份啊水淀粉啊水淀粉安德森分啊的身份啊的身份啊水淀粉啊的身份啊的身份啊水淀粉啊的身份啊水淀粉安德森", hideAfterSeconds: 1)
+        chrysan.show(.plain, message:"GitHub is how people build software\nWe’re supporting a community where more than 18 million people learn, share, and work together to build software.\nCome help us make collaboration even better. We’ve built a company we truly love working for, and we think you will too.\nDevelopers from all around the world are building amazing things together. Their story is our story.\nLearn about the latest company info, new features, and general goings-on at GitHub.\nWe continuously monitor the status of github.com and all its related services. If there are any interruptions in service, a note will be posted here.", hideAfterSeconds: 5)
     }
     
     @IBAction func showMessageAction(_ sender: Any) {
