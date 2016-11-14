@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1C5F1800443AD80A6D82BDBE93E59A69'
+               BlueprintIdentifier = '90A03B9D49C96ED79F7E748A7049ECBF'
                BlueprintName = 'Chrysan-Chrysan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Chrysan.bundle'>

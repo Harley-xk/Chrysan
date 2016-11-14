@@ -1,29 +1,16 @@
 PODS:
   - Chrysan (0.1.0)
-  - HKProgressHUD (2.0.0)
-  - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - Chrysan (from `../`)
-  - HKProgressHUD (from `https://github.com/Harley-xk/HKProgressHUD.git`)
-  - PureLayout (~> 3.0.1)
 
 EXTERNAL SOURCES:
   Chrysan:
     :path: ../
-  HKProgressHUD:
-    :git: https://github.com/Harley-xk/HKProgressHUD.git
-
-CHECKOUT OPTIONS:
-  HKProgressHUD:
-    :commit: a4e09260ec9f86cc0cc92fcc7c859062a8f4d117
-    :git: https://github.com/Harley-xk/HKProgressHUD.git
 
 SPEC CHECKSUMS:
   Chrysan: 5193c019afe4be5510d02a325f950af279a54d85
-  HKProgressHUD: c42c749c9cd5332383afc4f53d723bf4cb475a41
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: e6c06be33f5767c44db370f6f927f82137d85f63
+PODFILE CHECKSUM: baed710e9c4496a36a874dd7929a034f11085755
 
 COCOAPODS: 1.2.0.beta.1

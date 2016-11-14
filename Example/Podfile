@@ -2,8 +2,4 @@ use_frameworks!
 
 target 'Chrysan_Example' do
   pod 'Chrysan', :path => '../'
-  
-  pod 'PureLayout', '~> 3.0.1'
-  pod 'HKProgressHUD', :git => 'https://github.com/Harley-xk/HKProgressHUD.git'
-
 end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C4A9303A6B39259E76424FEA2DBD0208'
+               BlueprintIdentifier = '857049B74FED68C9CFEB5AD2633FEA46'
                BlueprintName = 'Chrysan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Chrysan.framework'>
