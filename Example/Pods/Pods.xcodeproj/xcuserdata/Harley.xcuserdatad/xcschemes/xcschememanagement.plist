@@ -14,7 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HKProgressHUD-HKProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HKProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Chrysan_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,12 +37,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0DF6CA4ED27F38A7F7EF38813D334E83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1C5F1800443AD80A6D82BDBE93E59A69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74CBDF6575BB2E66D6A1C01A4E515B1C</key>
+		<key>6B572DB2EB28E7A086D7F067FAB52B45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B342A7BAA1D01075B0364AF85BDBEDE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C33B3A71DEF5D691917E4DDE537A8C12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

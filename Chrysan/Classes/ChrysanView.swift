@@ -1,6 +1,6 @@
 //
 //  ChrysanView.swift
-//  Pods
+//  Chrysan
 //
 //  Created by Harley on 2016/11/11.
 //
@@ -34,7 +34,11 @@ public class ChrysanView: UIView {
     public var maskColor = UIColor.clear
     
     /// 菊花背景样式，使用系统自带的毛玻璃特效，默认为黑色样式
-    public var hudStyle = UIBlurEffectStyle.dark
+    public var hudStyle = UIBlurEffectStyle.dark {
+        didSet {
+            effectView.effect = UIBlurEffect(style: hudStyle)
+        }
+    }
     
     /// icon 及文字颜色，默认为白色
     public var color = UIColor.white
@@ -71,7 +75,7 @@ public class ChrysanView: UIView {
     /// - Parameters:
     ///   - progress: 进度值，范围 0 - 1
     ///   - message: 状态文字，默认为nil
-    public func show(progress: Float, message: String? = nil) {
+    public func show(progress: CGFloat, message: String? = nil) {
         
         self.progress = progress
         show(.progress, message: message, hideAfterSeconds: 0)
@@ -81,7 +85,7 @@ public class ChrysanView: UIView {
     /// 显示自定义图标
     ///
     /// - Parameters:
-    ///   - customIcon: 自定义图标
+    ///   - customIcon: 自定义图标，会被转换为 Template 模式
     ///   - message: 状态文字，默认为 nil
     ///   - delay: 一段时间后自动隐藏，默认0，此时不会自动隐藏
     public func show(customIcon: UIImage, message: String? = nil, hideAfterSeconds delay: Double = 0) {
@@ -129,9 +133,9 @@ public class ChrysanView: UIView {
     private var parent: UIView!
     private var status: Status = .plain
     private var message: String?
-    private var progress: Float = 0
+    private var progress: CGFloat = 0
 
-    public class func chrysan(withView parent: UIView) -> ChrysanView? {
+    internal class func chrysan(withView parent: UIView) -> ChrysanView? {
         
         if let views = bundle.loadNibNamed("Chrysan", owner: nil, options: nil) as? [ChrysanView], views.count > 0 {
             let chrysan = views[0]
@@ -157,18 +161,26 @@ public class ChrysanView: UIView {
 
         parent = view
         pinEdgesToParent()
-        self.isHidden = true
+        isHidden = true
+        
+        hudView.layer.cornerRadius = 8
+        hudView.clipsToBounds = true
     }
     
     private func pinEdgesToParent() {
         
+        self.translatesAutoresizingMaskIntoConstraints = false;
+
         let top = pinToParent(withEdge: .top)
         let bottom = pinToParent(withEdge: .bottom)
         let left = pinToParent(withEdge: .leading)
         let right = pinToParent(withEdge: .trailing)
         
         parent.addConstraints([top, bottom, left, right])
-        parent.layoutIfNeeded()
+        
+        DispatchQueue.main.async {
+            self.parent.layoutIfNeeded()
+        }
     }
     
     private func pinToParent(withEdge edge: NSLayoutAttribute) -> NSLayoutConstraint {
@@ -182,8 +194,7 @@ public class ChrysanView: UIView {
         positionX.constant = offsetX
         positionY.constant = offsetY
         
-        backgroundView.backgroundColor = backgroundColor
-        hudView.backgroundColor = backgroundColor
+        backgroundView.backgroundColor = maskColor
         
         iconView.tintColor = color
         activityView.tintColor = color
@@ -194,8 +205,8 @@ public class ChrysanView: UIView {
             labelSpace.constant = 8;
             messageMinWidth.constant = 70;
         }else {
-            labelSpace.constant = 0;
-            messageMinWidth.constant = 42;
+            labelSpace.constant = 4;
+            messageMinWidth.constant = 50;
         }
 
         messageToTop.constant = 64
@@ -227,7 +238,7 @@ public class ChrysanView: UIView {
     }
     
     private func image(name: String) -> UIImage? {
-        return UIImage(named: "chrysan_\(name).png", in: ChrysanView.bundle, compatibleWith: nil)
+        return UIImage(named: "chrysan_\(name).png", in: ChrysanView.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
     }
     
     private func showHUD() {

@@ -1,0 +1,6 @@
+framework module HKProgressHUD {
+  umbrella header "HKProgressHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

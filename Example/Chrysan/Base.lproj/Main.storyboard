@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,41 +22,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="5DD-XV-4zW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-Tg-YQJ">
-                                <rect key="frame" x="136" y="318" width="102" height="30"/>
+                                <rect key="frame" x="257" y="58" width="102" height="30"/>
                                 <state key="normal" title="show message"/>
                                 <connections>
                                     <action selector="showMessageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Byb-hv-EDr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4go-QG-TEp">
+                                <rect key="frame" x="258" y="96" width="101" height="30"/>
+                                <state key="normal" title="show progress"/>
+                                <connections>
+                                    <action selector="showProgressAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9UT-gF-1uh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQM-25-g4q">
+                                <rect key="frame" x="271" y="629" width="88" height="30"/>
+                                <state key="normal" title="change style"/>
+                                <connections>
+                                    <action selector="changeStyleAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ODB-sk-OHo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-BJ-i6Y">
-                                <rect key="frame" x="169" y="280" width="37" height="30"/>
+                                <rect key="frame" x="322" y="20" width="37" height="30"/>
                                 <state key="normal" title="show"/>
                                 <connections>
                                     <action selector="showAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OPv-Ca-lxw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4go-QG-TEp">
-                                <rect key="frame" x="137" y="356" width="101" height="30"/>
-                                <state key="normal" title="show progress"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="On5-Et-88i"/>
-                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Y6T-Mw-yzr"/>
-                            <constraint firstItem="4go-QG-TEp" firstAttribute="top" secondItem="b6z-Tg-YQJ" secondAttribute="bottom" constant="8" id="cac-KD-cE7"/>
-                            <constraint firstItem="4go-QG-TEp" firstAttribute="centerX" secondItem="b6z-Tg-YQJ" secondAttribute="centerX" id="qhZ-d1-Z3o"/>
-                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="top" secondItem="2LF-BJ-i6Y" secondAttribute="bottom" constant="8" id="w1I-Ad-4lm"/>
-                            <constraint firstItem="2LF-BJ-i6Y" firstAttribute="centerX" secondItem="b6z-Tg-YQJ" secondAttribute="centerX" id="w4N-21-CSZ"/>
+                            <constraint firstItem="HQM-25-g4q" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="40u-zU-83p"/>
+                            <constraint firstItem="2LF-BJ-i6Y" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9Pa-xQ-Zqz"/>
+                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="top" secondItem="2LF-BJ-i6Y" secondAttribute="bottom" constant="8" id="AYZ-Qw-3Il"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5DD-XV-4zW" secondAttribute="bottom" id="Pdl-DR-o4f"/>
+                            <constraint firstItem="5DD-XV-4zW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bVh-BQ-CrO"/>
+                            <constraint firstItem="4go-QG-TEp" firstAttribute="top" secondItem="b6z-Tg-YQJ" secondAttribute="bottom" constant="8" id="g4k-Us-uUO"/>
+                            <constraint firstItem="4go-QG-TEp" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="iae-ah-ews"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HQM-25-g4q" secondAttribute="bottom" constant="8" id="ksB-Jx-wAk"/>
+                            <constraint firstItem="2LF-BJ-i6Y" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="l0w-Hd-1E7"/>
+                            <constraint firstAttribute="trailing" secondItem="5DD-XV-4zW" secondAttribute="trailing" id="mf4-B0-3dH"/>
+                            <constraint firstItem="b6z-Tg-YQJ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="w2P-4c-UxW"/>
+                            <constraint firstItem="5DD-XV-4zW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="z5a-MK-oob"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="showProgressAction" destination="4go-QG-TEp" id="uU9-jV-OrE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="480" height="640"/>
+    </resources>
 </document>

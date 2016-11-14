@@ -1,0 +1,31 @@
+{
+  "name": "HKProgressHUD",
+  "version": "2.0.0",
+  "summary": "ProgressHUD for iOS Projects in Objective-C.",
+  "description": "An optional longer description of HKProjectBase\n\n* Markdown format.\n* Don't worry about the indent, we strip it!",
+  "homepage": "https://github.com/Harley-xk/HKProgressHUD",
+  "license": "MIT",
+  "authors": {
+    "Harley.xk": "harley.gb@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Harley-xk/HKProgressHUD.git"
+  },
+  "social_media_url": "http://weibo.com/u/1161848005",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "HKProgressHUD": [
+      "Pod/Assets/*.png",
+      "Pod/Assets/*.xib"
+    ]
+  },
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "MobileCoreServices"
+  ]
+}

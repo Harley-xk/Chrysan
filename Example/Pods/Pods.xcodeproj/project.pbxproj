@@ -8,29 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		02BCBBE91396E61B038BD720789E9CCF /* chrysan_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */; };
+		0D815499C8168F3792E640D672C89D78 /* icn_info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F311FE6DB1157258CEBE801CCDDBD26 /* icn_info@3x.png */; };
+		15A261185A64FBAB72AB9000DE09071F /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2252AFA0579E9E311692B6773970DCCD /* ALView+PureLayout.m */; };
+		16246FF777CE8ACD448070EFF6B95F46 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D48D7E631591BA3F0C1AD0ADECFEF /* NSArray+PureLayout.m */; };
+		164E4FC94D9C2AB540116335D99CFD21 /* icn_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE128275159B3D4E332B4CEB3BAE678 /* icn_check@2x.png */; };
 		20C130C14FABC2F5ED2418537139186D /* Chrysan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 736BFB64826470F11B9F1E26EE9017AC /* Chrysan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2748C7756740372E127AA645B4C09665 /* Chrysan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */; };
+		20D1FA39649E35A6391AFC82312196FB /* HKRoundProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249A37B45B7A55358E626A3375C6C540 /* HKRoundProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2748C7756740372E127AA645B4C09665 /* Chrysan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC9D83D8AA2AC65D04272E3E531119BB /* Chrysan.bundle */; };
 		274E983534825330B4D87EFE0F14EC68 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156DC305C32360BFBF23809F4376DE35 /* RingProgressView.swift */; };
+		28C0C3C024D6BC2BFC5421AD26E60B23 /* UIViewController+HKProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C13DADB8FE03CAEA08909FF9C5AFB2 /* UIViewController+HKProgressHUD.m */; };
+		2B791AFF2416A110C3E0CF99202C3371 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 612656A3BEFFE3A0475A05B47203BD7C /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A5FDCAE41F5C2FFD70798BC808A59A /* HKProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3778AA606CA8F08B2760D4FE94077E60 /* HKProgressHUD.bundle */; };
+		38FDB898C8F8F4A2A188E616876B21B5 /* icn_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40D55BBDC1389F3A8D8AB46A002853F7 /* icn_cross@3x.png */; };
+		39A47EF947721A1B3411F492106DC149 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8452301E95FA6B55481AED2FD257F39 /* PureLayout-dummy.m */; };
 		3DE3612E0D6785B64A4B26D6227667D2 /* Chrysan.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4C8491BD60C7006F6E8808EA93B214 /* Chrysan.xib */; };
 		456196DA6DC0D992690A144298C633B3 /* chrysan_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */; };
+		4B532320DFDB27CE9C5FF1AB3EC16829 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E5304F12D10915F6C3B5F9356F6DC3 /* MobileCoreServices.framework */; };
+		4BCE0B152AA1A6B797167345AA215709 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C5E86C30B700F0E2A5074312F9E1CA /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DCD9CAAB17EF7E34A3456A06DFC80EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */; };
+		5CB1F49438D29BCF09B49C6DC8327ECF /* icn_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7D5037D34B5A2C3F80C2FEE4FD757A /* icn_cross@2x.png */; };
+		5D1E1BB6FAAEC57C2CB7369AEF2A7580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */; };
 		61901BE11637A80E27F1E461EE324549 /* chrysan_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */; };
-		7D167D619CF692746AB0D8DDFBDF905C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		74FEFB969273D79AF11E6BC17A724432 /* Pods-Chrysan_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */; };
+		7792B74EF1DC0AF825F90D317D5311AB /* icn_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C74EAE022C95C19AE7A3516099796FD0 /* icn_check@3x.png */; };
+		77A9F95B1B1B6233FD8CB4E2F9974E07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC94C37A294A908DF9FB4B4E481C693 /* UIKit.framework */; };
+		7CA5DAB1DE88E6F8C3C8F2515D0E52A5 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A5672945DA3B608DC3CC75FED0ED5C7F /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F939CB3232232B800EEFC7B08E06285 /* Chrysan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA427201607AD6D3FAF6ED9A09D3166 /* Chrysan-dummy.m */; };
+		8724890B14791A208354788A72A8887A /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE5416D189B19DD61F07175A0A80012 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FB29344E89AE232DFA8020552A781DD /* HKRoundProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B639DB118A73EEE82AA2E5232A66BB9 /* HKRoundProgressView.m */; };
+		90F784EED9EA4C22DD79F45B47205588 /* UIView+HKProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2498EE6DF2633ED47B80E19376123697 /* UIView+HKProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944BF67EA6398192CBCC47F9FFDE0638 /* icn_alert@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D415DF28F9C04D3C22811C71D4D3BC /* icn_alert@3x.png */; };
+		968A2DBDCF384810B8E3A5C514663713 /* icn_alert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69A9D10B668F37BBA7AED936ACFD4D7 /* icn_alert@2x.png */; };
+		96A632F518D3EA48618BC29EE6825675 /* HKProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD9755A5958B3DA14B82C3635D1BD1B /* HKProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9787B94CF4D23E5B0E76E664E28E2E73 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 60902CDD4181FDC63EF793C41FC71098 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A17F68A2BBBEA95AD7AB01E97B0309AA /* chrysan_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */; };
-		A2D3DEEC80E0D61859F8C7A7C273EC21 /* Pods-Chrysan_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5970388C1508A801E4B697E0BA0007F /* Pods-Chrysan_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */; };
-		F0E93705AEDD4E3546FC1EEF8FB93057 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B227C50D3EB06F38CEE44E357189776A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */; };
+		B33890A7C10E5B73B06027C9F175DC83 /* UIViewController+HKProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 631A38E6394A983ED3BBA62D7EFD1FCA /* UIViewController+HKProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B36AC295CC86137E435A0601CCEFCBA2 /* HKProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2968C20704A985B836028C10294C90A1 /* HKProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B639FDE51DD9618A00229126 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639FDE41DD9618A00229126 /* Extensions.swift */; };
+		C487E5D7105F623BBE1D7173E3D612D9 /* HKProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A634EF8BF69A0E5FE2CD2C4E67B41C2 /* HKProgressHUD-dummy.m */; };
+		C5D216C029A81FF63BA5D1401334FA71 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A48680AE4E66AC43E19404460B992032 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCBEF6E229BF3307D18D99B072826C09 /* UIView+HKProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D63E41F00586B86B6CB46424702D23 /* UIView+HKProgressHUD.m */; };
+		D60CC19B7AFA3B8C75969BCB30F4B34C /* icn_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C12F32BA07307584C542ACD8E7C4A17 /* icn_info@2x.png */; };
+		E3D0D32B7FE448DB413C12AC0A6C4565 /* HKProgressHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB62BA8CBBFF7910D748FF4242331A15 /* HKProgressHUD.xib */; };
+		EFF8D97B83889E904FB1295620F629EA /* HKProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3A02A3A4568D841F7020C1BEA2B6F /* HKProgressHUD.m */; };
+		F0E93705AEDD4E3546FC1EEF8FB93057 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */; };
+		F427C3AD1CA98E0C67A3E7BBDE878EEB /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D680CFA39E4879E59BE150B66DA357C /* NSLayoutConstraint+PureLayout.m */; };
+		FB9102241C4C7EBA1CB4C5B21E37F978 /* Pods-Chrysan_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBD2919E78152F4CCB60415F209E3888 /* ChrysanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C8E71EEEDC3B64C88F101A38C6D95 /* ChrysanView.swift */; };
+		FFCDE593F7C0315AE700445FD0E54D8F /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 245710217CA846A9E7AE69A7A4BD5CD3 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45E57B1B4029E52A551CB9A1CADD6503 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4A9303A6B39259E76424FEA2DBD0208;
-			remoteInfo = Chrysan;
-		};
 		57B8A8585076066ECA3B2B7FDC39CB86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -38,46 +67,119 @@
 			remoteGlobalIDString = 1C5F1800443AD80A6D82BDBE93E59A69;
 			remoteInfo = "Chrysan-Chrysan";
 		};
+		77B219B17C96095B7C9466CB1D2C4CC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33B3A71DEF5D691917E4DDE537A8C12;
+			remoteInfo = "HKProgressHUD-HKProgressHUD";
+		};
+		A17FC668DA89CD852E52FDDCC5E4722E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4A9303A6B39259E76424FEA2DBD0208;
+			remoteInfo = Chrysan;
+		};
+		B150F1F1911EE2FE0C27CFC50F52754F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B572DB2EB28E7A086D7F067FAB52B45;
+			remoteInfo = PureLayout;
+		};
+		F467A4255C494FF9DB79025F234F56C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DF6CA4ED27F38A7F7EF38813D334E83;
+			remoteInfo = HKProgressHUD;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AB20E1060657E0D098E1CE8B8AB803 /* Pods_Chrysan_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrysan_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E5304F12D10915F6C3B5F9356F6DC3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		05AEFD5E9B7D86291158AB903C130960 /* Pods-Chrysan_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chrysan_Example.release.xcconfig"; sourceTree = "<group>"; };
+		05C13DADB8FE03CAEA08909FF9C5AFB2 /* UIViewController+HKProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HKProgressHUD.m"; path = "Pod/Classes/UIViewController+HKProgressHUD.m"; sourceTree = "<group>"; };
+		0D680CFA39E4879E59BE150B66DA357C /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		121D180FE7B5B172260C050E8D9E5309 /* Pods-Chrysan_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chrysan_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		156DC305C32360BFBF23809F4376DE35 /* RingProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
+		1B639DB118A73EEE82AA2E5232A66BB9 /* HKRoundProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HKRoundProgressView.m; path = Pod/Classes/HKRoundProgressView.m; sourceTree = "<group>"; };
+		2252AFA0579E9E311692B6773970DCCD /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		245710217CA846A9E7AE69A7A4BD5CD3 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		2498EE6DF2633ED47B80E19376123697 /* UIView+HKProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+HKProgressHUD.h"; path = "Pod/Classes/UIView+HKProgressHUD.h"; sourceTree = "<group>"; };
+		249A37B45B7A55358E626A3375C6C540 /* HKRoundProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HKRoundProgressView.h; path = Pod/Classes/HKRoundProgressView.h; sourceTree = "<group>"; };
+		2968C20704A985B836028C10294C90A1 /* HKProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		2D3F963B3D33A8FC125D39EE8D6AE9B8 /* ResourceBundle-Chrysan-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Chrysan-Info.plist"; sourceTree = "<group>"; };
-		36BEF57BFB9AD6BFB4CF47A9FB59BB20 /* Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Chrysan.framework; path = Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_cross@2x.png"; sourceTree = "<group>"; };
-		38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Chrysan.bundle; path = Chrysan.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D415DF28F9C04D3C22811C71D4D3BC /* icn_alert@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_alert@3x.png"; path = "Pod/Assets/icn_alert@3x.png"; sourceTree = "<group>"; };
+		33148BE517D72C106077032A0FB10196 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3778AA606CA8F08B2760D4FE94077E60 /* HKProgressHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKProgressHUD.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_cross@2x.png"; sourceTree = "<group>"; };
 		3A0645E993B18FFC728E74C810E4FADD /* Pods-Chrysan_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chrysan_Example-resources.sh"; sourceTree = "<group>"; };
+		3E55FE4D832C16AF717A46A85B14BB48 /* HKProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HKProgressHUD.modulemap; sourceTree = "<group>"; };
+		40D55BBDC1389F3A8D8AB46A002853F7 /* icn_cross@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_cross@3x.png"; path = "Pod/Assets/icn_cross@3x.png"; sourceTree = "<group>"; };
 		41D14A9B72240F90EAE1FE1DA4FB7639 /* Pods-Chrysan_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chrysan_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_cross@3x.png"; sourceTree = "<group>"; };
+		452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_cross@3x.png"; sourceTree = "<group>"; };
 		454C8E71EEEDC3B64C88F101A38C6D95 /* ChrysanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChrysanView.swift; sourceTree = "<group>"; };
+		4AC11FFE6CFB39839A9D498414CD1A9B /* HKProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4C12F32BA07307584C542ACD8E7C4A17 /* icn_info@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_info@2x.png"; path = "Pod/Assets/icn_info@2x.png"; sourceTree = "<group>"; };
+		4F311FE6DB1157258CEBE801CCDDBD26 /* icn_info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_info@3x.png"; path = "Pod/Assets/icn_info@3x.png"; sourceTree = "<group>"; };
+		50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		540CDFF3B23B542FCA1BA0D72912B9AA /* Pods-Chrysan_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chrysan_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		573F0B952E98148A97B956AE4CEE372D /* Chrysan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Chrysan-prefix.pch"; sourceTree = "<group>"; };
+		5FDB93B29F1AA4C7BD66FEACE3C2BFD6 /* Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60902CDD4181FDC63EF793C41FC71098 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		612656A3BEFFE3A0475A05B47203BD7C /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		631A38E6394A983ED3BBA62D7EFD1FCA /* UIViewController+HKProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HKProgressHUD.h"; path = "Pod/Classes/UIViewController+HKProgressHUD.h"; sourceTree = "<group>"; };
+		69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HKProgressHUD.xcconfig; sourceTree = "<group>"; };
+		6A634EF8BF69A0E5FE2CD2C4E67B41C2 /* HKProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HKProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6CD9755A5958B3DA14B82C3635D1BD1B /* HKProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HKProgressHUD.h; path = Pod/Classes/HKProgressHUD.h; sourceTree = "<group>"; };
+		71017A59A4377403ECF08E1E7565DF42 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C5E86C30B700F0E2A5074312F9E1CA /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		736BFB64826470F11B9F1E26EE9017AC /* Chrysan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Chrysan-umbrella.h"; sourceTree = "<group>"; };
 		77876D745A8D8A33CCA563CC05FB04EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92AE37EA6106A2C2069532C0B6B674A6 /* Pods-Chrysan_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Chrysan_Example.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F174CFA3F28608E2E354E68D79C0F3B /* Chrysan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Chrysan.modulemap; sourceTree = "<group>"; };
+		90B815F7201F65CD7BF8A75299F8B8B6 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		92AE37EA6106A2C2069532C0B6B674A6 /* Pods-Chrysan_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Chrysan_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B7677FF04465AC18187C2595EDAC5BB /* HKProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HKProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0D48D7E631591BA3F0C1AD0ADECFEF /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		9F174CFA3F28608E2E354E68D79C0F3B /* Chrysan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Chrysan.modulemap; sourceTree = "<group>"; };
+		A1E88D4190FE62F8E31645B471B86A93 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		A48680AE4E66AC43E19404460B992032 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Chrysan.xcconfig; sourceTree = "<group>"; };
+		A5672945DA3B608DC3CC75FED0ED5C7F /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		ADE128275159B3D4E332B4CEB3BAE678 /* icn_check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_check@2x.png"; path = "Pod/Assets/icn_check@2x.png"; sourceTree = "<group>"; };
+		B4C5BB314EFB0490BE08F94C06ED6611 /* ResourceBundle-HKProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HKProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		B639FDE41DD9618A00229126 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chrysan_Example-umbrella.h"; sourceTree = "<group>"; };
+		B69A9D10B668F37BBA7AED936ACFD4D7 /* icn_alert@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_alert@2x.png"; path = "Pod/Assets/icn_alert@2x.png"; sourceTree = "<group>"; };
+		BE64A8E3D02CDC468ED2EDF485430961 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		BFA427201607AD6D3FAF6ED9A09D3166 /* Chrysan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Chrysan-dummy.m"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_check@3x.png"; sourceTree = "<group>"; };
+		C74EAE022C95C19AE7A3516099796FD0 /* icn_check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_check@3x.png"; path = "Pod/Assets/icn_check@3x.png"; sourceTree = "<group>"; };
+		CAC94C37A294A908DF9FB4B4E481C693 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CB62BA8CBBFF7910D748FF4242331A15 /* HKProgressHUD.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = HKProgressHUD.xib; path = Pod/Assets/HKProgressHUD.xib; sourceTree = "<group>"; };
+		D048877C85BE86F65D6D73843213C191 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_check@3x.png"; sourceTree = "<group>"; };
+		DC9D83D8AA2AC65D04272E3E531119BB /* Chrysan.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chrysan.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chrysan_Example-dummy.m"; sourceTree = "<group>"; };
-		E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_check@2x.png"; sourceTree = "<group>"; };
+		E2D63E41F00586B86B6CB46424702D23 /* UIView+HKProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+HKProgressHUD.m"; path = "Pod/Classes/UIView+HKProgressHUD.m"; sourceTree = "<group>"; };
+		E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_check@2x.png"; sourceTree = "<group>"; };
 		E930DC45E2BC43216FB9CE9697869FF7 /* Pods-Chrysan_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chrysan_Example-frameworks.sh"; sourceTree = "<group>"; };
-		ED7982141FE201452459111AE15FC2C2 /* Pods_Chrysan_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chrysan_Example.framework; path = "Pods-Chrysan_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE5416D189B19DD61F07175A0A80012 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		ED7D5037D34B5A2C3F80C2FEE4FD757A /* icn_cross@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icn_cross@2x.png"; path = "Pod/Assets/icn_cross@2x.png"; sourceTree = "<group>"; };
 		EF4C8491BD60C7006F6E8808EA93B214 /* Chrysan.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = Chrysan.xib; sourceTree = "<group>"; };
 		F72544758A6D57AE0BE72140104B5B2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8452301E95FA6B55481AED2FD257F39 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		FAF3A02A3A4568D841F7020C1BEA2B6F /* HKProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HKProgressHUD.m; path = Pod/Classes/HKProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3FB9E5D60762CEC58083DE3ED49E0595 /* Frameworks */ = {
+		1DAD7E6C0BB38FCB7C11166D2FEBFB81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D167D619CF692746AB0D8DDFBDF905C /* Foundation.framework in Frameworks */,
+				4DCD9CAAB17EF7E34A3456A06DFC80EB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +191,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7DCD96728F524D3DA7887C03A66DF11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B227C50D3EB06F38CEE44E357189776A /* Foundation.framework in Frameworks */,
+				4B532320DFDB27CE9C5FF1AB3EC16829 /* MobileCoreServices.framework in Frameworks */,
+				77A9F95B1B1B6233FD8CB4E2F9974E07 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F8098F46FE4DC40867BAA69265C093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED10009BD9D44E606EC71CE61FF0D96D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,9 +215,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD27CEB1AB8124E2FAAAD8E40306C571 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1E1BB6FAAEC57C2CB7369AEF2A7580 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				869D00D7F9EBE80D639FCDBED27ABFDF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		128D7876711B3F5EA4C7D28763BA221F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D83D8AA2AC65D04272E3E531119BB /* Chrysan.bundle */,
+				5FDB93B29F1AA4C7BD66FEACE3C2BFD6 /* Chrysan.framework */,
+				3778AA606CA8F08B2760D4FE94077E60 /* HKProgressHUD.bundle */,
+				9B7677FF04465AC18187C2595EDAC5BB /* HKProgressHUD.framework */,
+				01AB20E1060657E0D098E1CE8B8AB803 /* Pods_Chrysan_Example.framework */,
+				D048877C85BE86F65D6D73843213C191 /* PureLayout.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1F2BD7135690D8B2D877C97C67DD668F /* Pods-Chrysan_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +265,21 @@
 			path = "Target Support Files/Pods-Chrysan_Example";
 			sourceTree = "<group>";
 		};
+		2E555DCF9F8445F38680E07C1A7CBF85 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E55FE4D832C16AF717A46A85B14BB48 /* HKProgressHUD.modulemap */,
+				69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */,
+				6A634EF8BF69A0E5FE2CD2C4E67B41C2 /* HKProgressHUD-dummy.m */,
+				4AC11FFE6CFB39839A9D498414CD1A9B /* HKProgressHUD-prefix.pch */,
+				2968C20704A985B836028C10294C90A1 /* HKProgressHUD-umbrella.h */,
+				33148BE517D72C106077032A0FB10196 /* Info.plist */,
+				B4C5BB314EFB0490BE08F94C06ED6611 /* ResourceBundle-HKProgressHUD-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HKProgressHUD";
+			sourceTree = "<group>";
+		};
 		3F2E3F767CD96A97DE40EB90AE0AA5F0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +289,24 @@
 				38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */,
 				452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */,
 			);
-			name = Assets;
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		4D1562816AE1F15CBE2A8FA5FE26A7DA /* HKProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9755A5958B3DA14B82C3635D1BD1B /* HKProgressHUD.h */,
+				FAF3A02A3A4568D841F7020C1BEA2B6F /* HKProgressHUD.m */,
+				249A37B45B7A55358E626A3375C6C540 /* HKRoundProgressView.h */,
+				1B639DB118A73EEE82AA2E5232A66BB9 /* HKRoundProgressView.m */,
+				2498EE6DF2633ED47B80E19376123697 /* UIView+HKProgressHUD.h */,
+				E2D63E41F00586B86B6CB46424702D23 /* UIView+HKProgressHUD.m */,
+				631A38E6394A983ED3BBA62D7EFD1FCA /* UIViewController+HKProgressHUD.h */,
+				05C13DADB8FE03CAEA08909FF9C5AFB2 /* UIViewController+HKProgressHUD.m */,
+				C18FD7E87A4936F14FFADB26AAB6879E /* Resources */,
+				2E555DCF9F8445F38680E07C1A7CBF85 /* Support Files */,
+			);
+			path = HKProgressHUD;
 			sourceTree = "<group>";
 		};
 		64A78325DBBD7C3CC3C50B64B8EF1F01 /* Chrysan */ = {
@@ -135,16 +314,7 @@
 			children = (
 				3F2E3F767CD96A97DE40EB90AE0AA5F0 /* Assets */,
 			);
-			name = Chrysan;
 			path = Chrysan;
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -152,8 +322,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				DDD0EF712206FE66E52100219AE9581A /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8C4B9FBA5A1466C9EEA625DD19209F2F /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				A4B4E28FE89C563FCE8A03CB6E04B8C6 /* Pods */,
+				128D7876711B3F5EA4C7D28763BA221F /* Products */,
 				F42ADF3291836C3D8AE735DA042BF5B6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -169,14 +340,14 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		8C4B9FBA5A1466C9EEA625DD19209F2F /* Products */ = {
+		869D00D7F9EBE80D639FCDBED27ABFDF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */,
-				36BEF57BFB9AD6BFB4CF47A9FB59BB20 /* Chrysan.framework */,
-				ED7982141FE201452459111AE15FC2C2 /* Pods_Chrysan_Example.framework */,
+				50E4D8D5E8F569B8509D28818B14A0B5 /* Foundation.framework */,
+				03E5304F12D10915F6C3B5F9356F6DC3 /* MobileCoreServices.framework */,
+				CAC94C37A294A908DF9FB4B4E481C693 /* UIKit.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		8E3EACD986D6C7229948EBAE0439EE3E /* Chrysan */ = {
@@ -184,7 +355,6 @@
 			children = (
 				9C2AF8DC64F5A1EA265CDB88B92013EC /* Classes */,
 			);
-			name = Chrysan;
 			path = Chrysan;
 			sourceTree = "<group>";
 		};
@@ -193,9 +363,18 @@
 			children = (
 				454C8E71EEEDC3B64C88F101A38C6D95 /* ChrysanView.swift */,
 				156DC305C32360BFBF23809F4376DE35 /* RingProgressView.swift */,
+				B639FDE41DD9618A00229126 /* Extensions.swift */,
 			);
-			name = Classes;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		A4B4E28FE89C563FCE8A03CB6E04B8C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D1562816AE1F15CBE2A8FA5FE26A7DA /* HKProgressHUD */,
+				C4F6BF5F459BCFBC9132701AC1332047 /* PureLayout */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A579419A5A344A096EB1B1A65B7FC84E /* Support Files */ = {
@@ -213,12 +392,51 @@
 			path = "Example/Pods/Target Support Files/Chrysan";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C18FD7E87A4936F14FFADB26AAB6879E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				CB62BA8CBBFF7910D748FF4242331A15 /* HKProgressHUD.xib */,
+				B69A9D10B668F37BBA7AED936ACFD4D7 /* icn_alert@2x.png */,
+				32D415DF28F9C04D3C22811C71D4D3BC /* icn_alert@3x.png */,
+				ADE128275159B3D4E332B4CEB3BAE678 /* icn_check@2x.png */,
+				C74EAE022C95C19AE7A3516099796FD0 /* icn_check@3x.png */,
+				ED7D5037D34B5A2C3F80C2FEE4FD757A /* icn_cross@2x.png */,
+				40D55BBDC1389F3A8D8AB46A002853F7 /* icn_cross@3x.png */,
+				4C12F32BA07307584C542ACD8E7C4A17 /* icn_info@2x.png */,
+				4F311FE6DB1157258CEBE801CCDDBD26 /* icn_info@3x.png */,
 			);
-			name = Frameworks;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C4F6BF5F459BCFBC9132701AC1332047 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				245710217CA846A9E7AE69A7A4BD5CD3 /* ALView+PureLayout.h */,
+				2252AFA0579E9E311692B6773970DCCD /* ALView+PureLayout.m */,
+				A48680AE4E66AC43E19404460B992032 /* NSArray+PureLayout.h */,
+				9E0D48D7E631591BA3F0C1AD0ADECFEF /* NSArray+PureLayout.m */,
+				EBE5416D189B19DD61F07175A0A80012 /* NSLayoutConstraint+PureLayout.h */,
+				0D680CFA39E4879E59BE150B66DA357C /* NSLayoutConstraint+PureLayout.m */,
+				A5672945DA3B608DC3CC75FED0ED5C7F /* PureLayout.h */,
+				60902CDD4181FDC63EF793C41FC71098 /* PureLayout+Internal.h */,
+				612656A3BEFFE3A0475A05B47203BD7C /* PureLayoutDefines.h */,
+				D05027C26DBDEBD00B14A8291930A22F /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		D05027C26DBDEBD00B14A8291930A22F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71017A59A4377403ECF08E1E7565DF42 /* Info.plist */,
+				BE64A8E3D02CDC468ED2EDF485430961 /* PureLayout.modulemap */,
+				90B815F7201F65CD7BF8A75299F8B8B6 /* PureLayout.xcconfig */,
+				F8452301E95FA6B55481AED2FD257F39 /* PureLayout-dummy.m */,
+				A1E88D4190FE62F8E31645B471B86A93 /* PureLayout-prefix.pch */,
+				71C5E86C30B700F0E2A5074312F9E1CA /* PureLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
 		DDD0EF712206FE66E52100219AE9581A /* Development Pods */ = {
@@ -248,11 +466,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		05B01EA82C428E5B4E1188E65D3DF617 /* Headers */ = {
+		12CA924315B12F3849B76EBB49E95034 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D3DEEC80E0D61859F8C7A7C273EC21 /* Pods-Chrysan_Example-umbrella.h in Headers */,
+				B36AC295CC86137E435A0601CCEFCBA2 /* HKProgressHUD-umbrella.h in Headers */,
+				96A632F518D3EA48618BC29EE6825675 /* HKProgressHUD.h in Headers */,
+				20D1FA39649E35A6391AFC82312196FB /* HKRoundProgressView.h in Headers */,
+				90F784EED9EA4C22DD79F45B47205588 /* UIView+HKProgressHUD.h in Headers */,
+				B33890A7C10E5B73B06027C9F175DC83 /* UIViewController+HKProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +486,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55F09CE58ADFFD60446FA524CDE840B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9102241C4C7EBA1CB4C5B21E37F978 /* Pods-Chrysan_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB60FB5F7CEFE756C6EF1899593A7942 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCDE593F7C0315AE700445FD0E54D8F /* ALView+PureLayout.h in Headers */,
+				C5D216C029A81FF63BA5D1401334FA71 /* NSArray+PureLayout.h in Headers */,
+				8724890B14791A208354788A72A8887A /* NSLayoutConstraint+PureLayout.h in Headers */,
+				9787B94CF4D23E5B0E76E664E28E2E73 /* PureLayout+Internal.h in Headers */,
+				4BCE0B152AA1A6B797167345AA215709 /* PureLayout-umbrella.h in Headers */,
+				7CA5DAB1DE88E6F8C3C8F2515D0E52A5 /* PureLayout.h in Headers */,
+				2B791AFF2416A110C3E0CF99202C3371 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0DF6CA4ED27F38A7F7EF38813D334E83 /* HKProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9E30A4CD42586357FF9B920DE861E4 /* Build configuration list for PBXNativeTarget "HKProgressHUD" */;
+			buildPhases = (
+				CCB6BCAD47C95CDD21D1EB6F67A15AFC /* Sources */,
+				C7DCD96728F524D3DA7887C03A66DF11 /* Frameworks */,
+				7EA157954EF285DE51CCBC8670A36FDB /* Resources */,
+				12CA924315B12F3849B76EBB49E95034 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE0EE540553D1E7725DA440DDA71F547 /* PBXTargetDependency */,
+			);
+			name = HKProgressHUD;
+			productName = HKProgressHUD;
+			productReference = 9B7677FF04465AC18187C2595EDAC5BB /* HKProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1C5F1800443AD80A6D82BDBE93E59A69 /* Chrysan-Chrysan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25855FBFB661BDC15522D6B42F44EF1A /* Build configuration list for PBXNativeTarget "Chrysan-Chrysan" */;
@@ -281,26 +544,62 @@
 			);
 			name = "Chrysan-Chrysan";
 			productName = "Chrysan-Chrysan";
-			productReference = 38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */;
+			productReference = DC9D83D8AA2AC65D04272E3E531119BB /* Chrysan.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		74CBDF6575BB2E66D6A1C01A4E515B1C /* Pods-Chrysan_Example */ = {
+		6B572DB2EB28E7A086D7F067FAB52B45 /* PureLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BF7C16DC4977B016FCB3B0086FEABEA /* Build configuration list for PBXNativeTarget "Pods-Chrysan_Example" */;
+			buildConfigurationList = 52867CEAA07637195B11D9CA1F51ABA4 /* Build configuration list for PBXNativeTarget "PureLayout" */;
 			buildPhases = (
-				B5A6F0A7786157E92C14D04BB35C9E2A /* Sources */,
-				3FB9E5D60762CEC58083DE3ED49E0595 /* Frameworks */,
-				05B01EA82C428E5B4E1188E65D3DF617 /* Headers */,
+				2CE920AFF726D5ABA1C1F6AC8A8B865A /* Sources */,
+				FD27CEB1AB8124E2FAAAD8E40306C571 /* Frameworks */,
+				BB60FB5F7CEFE756C6EF1899593A7942 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A7CC96CCA981E28F91D092CBD9A08D30 /* PBXTargetDependency */,
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = D048877C85BE86F65D6D73843213C191 /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B342A7BAA1D01075B0364AF85BDBEDE8 /* Pods-Chrysan_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641A68178AA66DD86573F8777BA10635 /* Build configuration list for PBXNativeTarget "Pods-Chrysan_Example" */;
+			buildPhases = (
+				8E0B55D66FAFA90D7C2A3159E54AE148 /* Sources */,
+				1DAD7E6C0BB38FCB7C11166D2FEBFB81 /* Frameworks */,
+				55F09CE58ADFFD60446FA524CDE840B8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9DA02EB3D431EA191CEFB0ACB0FEF17 /* PBXTargetDependency */,
+				EDF6E2EE2C6AD590AFF80649FF052E3A /* PBXTargetDependency */,
+				B903E97A041BE585B407086182BD94B9 /* PBXTargetDependency */,
 			);
 			name = "Pods-Chrysan_Example";
 			productName = "Pods-Chrysan_Example";
-			productReference = ED7982141FE201452459111AE15FC2C2 /* Pods_Chrysan_Example.framework */;
+			productReference = 01AB20E1060657E0D098E1CE8B8AB803 /* Pods_Chrysan_Example.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		C33B3A71DEF5D691917E4DDE537A8C12 /* HKProgressHUD-HKProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08DA60F5CD05F14545F184DBBD59CB20 /* Build configuration list for PBXNativeTarget "HKProgressHUD-HKProgressHUD" */;
+			buildPhases = (
+				72A2AD9624EC74B67E4A520353BEDD33 /* Sources */,
+				E1F8098F46FE4DC40867BAA69265C093 /* Frameworks */,
+				E98921B58A818209F44FE483E3C10A12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HKProgressHUD-HKProgressHUD";
+			productName = "HKProgressHUD-HKProgressHUD";
+			productReference = 3778AA606CA8F08B2760D4FE94077E60 /* HKProgressHUD.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		C4A9303A6B39259E76424FEA2DBD0208 /* Chrysan */ = {
 			isa = PBXNativeTarget;
@@ -318,7 +617,7 @@
 			);
 			name = Chrysan;
 			productName = Chrysan;
-			productReference = 36BEF57BFB9AD6BFB4CF47A9FB59BB20 /* Chrysan.framework */;
+			productReference = 5FDB93B29F1AA4C7BD66FEACE3C2BFD6 /* Chrysan.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -338,13 +637,16 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8C4B9FBA5A1466C9EEA625DD19209F2F /* Products */;
+			productRefGroup = 128D7876711B3F5EA4C7D28763BA221F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C4A9303A6B39259E76424FEA2DBD0208 /* Chrysan */,
 				1C5F1800443AD80A6D82BDBE93E59A69 /* Chrysan-Chrysan */,
-				74CBDF6575BB2E66D6A1C01A4E515B1C /* Pods-Chrysan_Example */,
+				0DF6CA4ED27F38A7F7EF38813D334E83 /* HKProgressHUD */,
+				C33B3A71DEF5D691917E4DDE537A8C12 /* HKProgressHUD-HKProgressHUD */,
+				B342A7BAA1D01075B0364AF85BDBEDE8 /* Pods-Chrysan_Example */,
+				6B572DB2EB28E7A086D7F067FAB52B45 /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -362,11 +664,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EA157954EF285DE51CCBC8670A36FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A5FDCAE41F5C2FFD70798BC808A59A /* HKProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94665C276642AC7A7379C3BB072CA9E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2748C7756740372E127AA645B4C09665 /* Chrysan.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98921B58A818209F44FE483E3C10A12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D0D32B7FE448DB413C12AC0A6C4565 /* HKProgressHUD.xib in Resources */,
+				968A2DBDCF384810B8E3A5C514663713 /* icn_alert@2x.png in Resources */,
+				944BF67EA6398192CBCC47F9FFDE0638 /* icn_alert@3x.png in Resources */,
+				164E4FC94D9C2AB540116335D99CFD21 /* icn_check@2x.png in Resources */,
+				7792B74EF1DC0AF825F90D317D5311AB /* icn_check@3x.png in Resources */,
+				5CB1F49438D29BCF09B49C6DC8327ECF /* icn_cross@2x.png in Resources */,
+				38FDB898C8F8F4A2A188E616876B21B5 /* icn_cross@3x.png in Resources */,
+				D60CC19B7AFA3B8C75969BCB30F4B34C /* icn_info@2x.png in Resources */,
+				0D815499C8168F3792E640D672C89D78 /* icn_info@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +706,33 @@
 				7F939CB3232232B800EEFC7B08E06285 /* Chrysan-dummy.m in Sources */,
 				FBD2919E78152F4CCB60415F209E3888 /* ChrysanView.swift in Sources */,
 				274E983534825330B4D87EFE0F14EC68 /* RingProgressView.swift in Sources */,
+				B639FDE51DD9618A00229126 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE920AFF726D5ABA1C1F6AC8A8B865A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A261185A64FBAB72AB9000DE09071F /* ALView+PureLayout.m in Sources */,
+				16246FF777CE8ACD448070EFF6B95F46 /* NSArray+PureLayout.m in Sources */,
+				F427C3AD1CA98E0C67A3E7BBDE878EEB /* NSLayoutConstraint+PureLayout.m in Sources */,
+				39A47EF947721A1B3411F492106DC149 /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A2AD9624EC74B67E4A520353BEDD33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0B55D66FAFA90D7C2A3159E54AE148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FEFB969273D79AF11E6BC17A724432 /* Pods-Chrysan_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,11 +743,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F0A7786157E92C14D04BB35C9E2A /* Sources */ = {
+		CCB6BCAD47C95CDD21D1EB6F67A15AFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5970388C1508A801E4B697E0BA0007F /* Pods-Chrysan_Example-dummy.m in Sources */,
+				C487E5D7105F623BBE1D7173E3D612D9 /* HKProgressHUD-dummy.m in Sources */,
+				EFF8D97B83889E904FB1295620F629EA /* HKProgressHUD.m in Sources */,
+				8FB29344E89AE232DFA8020552A781DD /* HKRoundProgressView.m in Sources */,
+				CCBEF6E229BF3307D18D99B072826C09 /* UIView+HKProgressHUD.m in Sources */,
+				28C0C3C024D6BC2BFC5421AD26E60B23 /* UIViewController+HKProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +764,29 @@
 			target = 1C5F1800443AD80A6D82BDBE93E59A69 /* Chrysan-Chrysan */;
 			targetProxy = 57B8A8585076066ECA3B2B7FDC39CB86 /* PBXContainerItemProxy */;
 		};
-		A7CC96CCA981E28F91D092CBD9A08D30 /* PBXTargetDependency */ = {
+		A9DA02EB3D431EA191CEFB0ACB0FEF17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Chrysan;
 			target = C4A9303A6B39259E76424FEA2DBD0208 /* Chrysan */;
-			targetProxy = 45E57B1B4029E52A551CB9A1CADD6503 /* PBXContainerItemProxy */;
+			targetProxy = A17FC668DA89CD852E52FDDCC5E4722E /* PBXContainerItemProxy */;
+		};
+		B903E97A041BE585B407086182BD94B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 6B572DB2EB28E7A086D7F067FAB52B45 /* PureLayout */;
+			targetProxy = B150F1F1911EE2FE0C27CFC50F52754F /* PBXContainerItemProxy */;
+		};
+		BE0EE540553D1E7725DA440DDA71F547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HKProgressHUD-HKProgressHUD";
+			target = C33B3A71DEF5D691917E4DDE537A8C12 /* HKProgressHUD-HKProgressHUD */;
+			targetProxy = 77B219B17C96095B7C9466CB1D2C4CC4 /* PBXContainerItemProxy */;
+		};
+		EDF6E2EE2C6AD590AFF80649FF052E3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HKProgressHUD;
+			target = 0DF6CA4ED27F38A7F7EF38813D334E83 /* HKProgressHUD */;
+			targetProxy = F467A4255C494FF9DB79025F234F56C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,6 +840,73 @@
 			};
 			name = Release;
 		};
+		5E135C51D2BA2E85509D886C9310A58E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05AEFD5E9B7D86291158AB903C130960 /* Pods-Chrysan_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Chrysan_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chrysan_Example/Pods-Chrysan_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Chrysan_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		83C87E800C1DA8EF279414CA226201A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HKProgressHUD/HKProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HKProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HKProgressHUD/HKProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HKProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,6 +946,38 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		8E78455E0C12FA78CF52804AB31BFFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HKProgressHUD/HKProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HKProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HKProgressHUD/HKProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HKProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		9D9EB11BA567E6B7CD0F0857B991B38F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -582,6 +1056,23 @@
 			};
 			name = Debug;
 		};
+		A33A2EBA8714A344258835849F8F7C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HKProgressHUD";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HKProgressHUD/ResourceBundle-HKProgressHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HKProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		AB5203FF1AF6C0866915BB28BE5BFCDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
@@ -599,7 +1090,39 @@
 			};
 			name = Debug;
 		};
-		B4F059A786A8381B63A0A4F63FD339F5 /* Debug */ = {
+		B991D7B802075BBA4D056D162864B7B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B815F7201F65CD7BF8A75299F8B8B6 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E818F200B065075FC8DDAD12FAF16FA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 121D180FE7B5B172260C050E8D9E5309 /* Pods-Chrysan_Example.debug.xcconfig */;
 			buildSettings = {
@@ -635,9 +1158,26 @@
 			};
 			name = Debug;
 		};
-		BCDD4D8E810B6A805BC41786C643E817 /* Release */ = {
+		EEBD240D7BAEDBAFFC6D667FD67D4221 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05AEFD5E9B7D86291158AB903C130960 /* Pods-Chrysan_Example.release.xcconfig */;
+			baseConfigurationReference = 69AA840BFDBF4CA6DB9DA5252B06521C /* HKProgressHUD.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HKProgressHUD";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HKProgressHUD/ResourceBundle-HKProgressHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HKProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F0340D0848732AC78979D1DF58F0748A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B815F7201F65CD7BF8A75299F8B8B6 /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -650,20 +1190,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Chrysan_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Chrysan_Example/Pods-Chrysan_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Chrysan_Example;
+				PRODUCT_NAME = PureLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -673,6 +1210,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08DA60F5CD05F14545F184DBBD59CB20 /* Build configuration list for PBXNativeTarget "HKProgressHUD-HKProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEBD240D7BAEDBAFFC6D667FD67D4221 /* Debug */,
+				A33A2EBA8714A344258835849F8F7C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9E30A4CD42586357FF9B920DE861E4 /* Build configuration list for PBXNativeTarget "HKProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E78455E0C12FA78CF52804AB31BFFE4 /* Debug */,
+				83C87E800C1DA8EF279414CA226201A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		25855FBFB661BDC15522D6B42F44EF1A /* Build configuration list for PBXNativeTarget "Chrysan-Chrysan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -691,20 +1246,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		52867CEAA07637195B11D9CA1F51ABA4 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B991D7B802075BBA4D056D162864B7B3 /* Debug */,
+				F0340D0848732AC78979D1DF58F0748A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641A68178AA66DD86573F8777BA10635 /* Build configuration list for PBXNativeTarget "Pods-Chrysan_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E818F200B065075FC8DDAD12FAF16FA5 /* Debug */,
+				5E135C51D2BA2E85509D886C9310A58E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		808C12E79EBBB6CF3F96BF06569268CE /* Build configuration list for PBXNativeTarget "Chrysan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D9EB11BA567E6B7CD0F0857B991B38F /* Debug */,
 				329645218DA9E07AF22D3BDA6D2F60F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BF7C16DC4977B016FCB3B0086FEABEA /* Build configuration list for PBXNativeTarget "Pods-Chrysan_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4F059A786A8381B63A0A4F63FD339F5 /* Debug */,
-				BCDD4D8E810B6A805BC41786C643E817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

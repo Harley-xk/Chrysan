@@ -153,6 +153,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H28MQNK878;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -356,6 +357,7 @@
 			baseConfigurationReference = 17C8F14075A1405FDF9E53B0 /* Pods-Chrysan_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = Chrysan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -370,6 +372,7 @@
 			baseConfigurationReference = 36845C377CBB94B56C496AB5 /* Pods-Chrysan_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = Chrysan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

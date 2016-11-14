@@ -1,6 +1,6 @@
 //
 //  RingProgressView.swift
-//  Pods
+//  Chrysan
 //
 //  Created by Harley on 2016/11/11.
 //
@@ -10,14 +10,49 @@ import UIKit
 
 class RingProgressView: UIView {
 
-    var progress: Float = 0
+    @IBOutlet weak var progressLabel: UILabel!
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var progress: CGFloat = 0 {
+        didSet {
+            setNeedsDisplay()
+        }
     }
-    */
-
+    
+    override func draw(_ rect: CGRect) {
+        
+        let lineColor = self.tintColor ?? .white
+        let linebgColor = lineColor.withAlphaComponent(0.1)
+        let lineWidth: CGFloat = 2
+        
+        let size = bounds.size
+        let center = CGPoint(x: size.width / 2, y: size.height / 2)
+        let radius = (size.width - lineWidth) / 2
+        let startAngle = -CGFloat.pi / 2
+        var endAngle = CGFloat.pi * 2 + startAngle
+        
+        /// 绘制背景圆圈
+        let bgPath = UIBezierPath()
+        bgPath.lineWidth = lineWidth
+        bgPath.lineCapStyle = .round
+        bgPath.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        
+        linebgColor.set()
+        bgPath.stroke()
+        
+        
+        /// 绘制进度圆圈
+        let progressPath = UIBezierPath()
+        progressPath.lineCapStyle = .round
+        progressPath.lineWidth = lineWidth
+        
+        endAngle = progress * 2 * CGFloat.pi + startAngle
+        progressPath.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        
+        lineColor.set()
+        progressPath.stroke()
+        
+        /// 显示进度文字
+        progressLabel.text = String(format: "%.0f", progress * 100)
+        progressLabel.textColor = lineColor
+    }
 }
