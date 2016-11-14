@@ -40,6 +40,9 @@ public class ChrysanView: UIView {
         }
     }
     
+    /// 菊花的样式，默认为 white large
+    public var chrysanStyle = UIActivityIndicatorViewStyle.whiteLarge
+    
     /// icon 及文字颜色，默认为白色
     public var color = UIColor.white
     
@@ -219,6 +222,7 @@ public class ChrysanView: UIView {
             messageToTop.constant = 16
         case .running:
             activityView.isHidden = false
+            activityView.activityIndicatorViewStyle = chrysanStyle
         case .progress:
             progressView.isHidden = false
             progressView.progress = progress
