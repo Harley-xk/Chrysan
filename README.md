@@ -5,7 +5,7 @@
 
 Chrysan 使用 iOS 自带的 UIBlurEffect 效果。
 
-![](images/img_0.png)
+![](Images/img_0.png)
 
 
 ### 安装
