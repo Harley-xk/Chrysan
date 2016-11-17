@@ -129,7 +129,7 @@ public class ChrysanView: UIView {
     
     private var isShown = false
     
-    private var parent: UIView!
+    weak private var parent: UIView!
     private var status: Status = .plain
     private var message: String?
     private var progress: CGFloat = 0
