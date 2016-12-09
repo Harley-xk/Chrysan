@@ -59,11 +59,7 @@ public class ChrysanView: UIView {
     ///   - message: 状态说明文字，默认为 nil
     ///   - hideDelay: 一段时间后自动隐藏，单位秒，默认0，此时不会自动隐藏
     public func show(_ status: Status = .running, message: String? = nil, hideDelay delay: Double = 0) {
-        show(status, message: message, hideAfterSeconds: delay)
-    }
-    
-    public func show(_ status: Status = .running, message: String? = nil, hideAfterSeconds delay: Double = 0) {
-
+        
         self.status = status
         self.message = message
 
@@ -85,7 +81,7 @@ public class ChrysanView: UIView {
     public func show(progress: CGFloat, message: String? = nil) {
         
         self.progress = progress
-        show(.progress, message: message, hideAfterSeconds: 0)
+        show(.progress, message: message, hideDelay: 0)
     }
     
     
@@ -95,14 +91,9 @@ public class ChrysanView: UIView {
     ///   - customIcon: 自定义图标，会被转换为 Template 模式
     ///   - message: 状态文字，默认为 nil
     ///   - delay: 一段时间后自动隐藏，单位秒，默认0，此时不会自动隐藏
-    public func show(customIcon: UIImage, message: String? = nil, hideDelay delay: Double = 0) {
-        show(customIcon: customIcon, message: message, hideAfterSeconds: delay)
-    }
-    
-    public func show(customIcon: UIImage, message: String? = nil, hideAfterSeconds delay: Double = 0) {
-        
+    public func show(customIcon: UIImage, message: String? = nil, hideDelay delay: Double = 0) {        
         self.customIcon = customIcon
-        show(.custom, message: message, hideAfterSeconds: delay)
+        show(.custom, message: message, hideDelay: delay)
     }
     
     public func hide() {
