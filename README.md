@@ -23,7 +23,7 @@ pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git'
 #### 显示
 
 ```swift
-public func show(_ status: Status = .running, message: String? = nil, hideAfterSeconds delay: Double = 0)
+public func show(_ status: Status = .running, message: String? = nil, hideDelay delay: Double = 0)
 ```
 这个方法用来显示一个菊花，各参数说明如下：
 
@@ -71,7 +71,7 @@ chrysan.show(message: "正在处理")
 // 显示纯文字
 chrysan.show(.plain, message:"这是一段纯文字")
 // 显示纯文字，1 秒后隐藏
-chrysan.show(.plain, message:"这是一段纯文字", hideAfterSeconds: 1)
+chrysan.show(.plain, message:"这是一段纯文字", hideDelay: 1)
 ```
 
 #### 显示图案
@@ -81,7 +81,7 @@ chrysan.show(.plain, message:"这是一段纯文字", hideAfterSeconds: 1)
 chrysan.show(.succeed, message: "处理完毕", hideAfterSeconds: 1)
 // 显示自定义图案
 let image = UIImage(named: "myImage")
-chrysan.show(customIcon: image, message: "自定义图案", hideAfterSeconds: 1)
+chrysan.show(customIcon: image, message: "自定义图案", hideDelay: 1)
 ```
 
 #### 显示任务进度
