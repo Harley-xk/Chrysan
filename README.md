@@ -78,7 +78,7 @@ chrysan.show(.plain, message:"这是一段纯文字", hideDelay: 1)
 
 ```swift
 // 任务完成后给予用户反馈
-chrysan.show(.succeed, message: "处理完毕", hideAfterSeconds: 1)
+chrysan.show(.succeed, message: "处理完毕", hideDelay: 1)
 // 显示自定义图案
 let image = UIImage(named: "myImage")
 chrysan.show(customIcon: image, message: "自定义图案", hideDelay: 1)
