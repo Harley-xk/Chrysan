@@ -91,7 +91,7 @@ public class ChrysanView: UIView {
     ///   - customIcon: 自定义图标，会被转换为 Template 模式
     ///   - message: 状态文字，默认为 nil
     ///   - delay: 一段时间后自动隐藏，单位秒，默认0，此时不会自动隐藏
-    public func show(customIcon: UIImage, message: String? = nil, hideDelay delay: Double = 0) {        
+    public func show(customIcon: UIImage, message: String? = nil, hideDelay delay: Double = 0) {
         self.customIcon = customIcon
         show(.custom, message: message, hideDelay: delay)
     }
@@ -239,14 +239,10 @@ public class ChrysanView: UIView {
     }
     
     private func updateMessageTextAlignment() {
-        messageLabel.textAlignment = .center
-        if let string = message as? NSString {
-            let size = CGSize(width: frame.size.width - 70, height: 1000)
-            let font = UIFont.systemFont(ofSize: 16)
-            let rect = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
-            if size.height >= 35 {
-                messageLabel.textAlignment = .left
-            }
+        if status == .plain {
+            messageLabel.textAlignment = .left
+        }else {
+            messageLabel.textAlignment = .center
         }
     }
     
