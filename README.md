@@ -49,7 +49,7 @@ public func show(_ status: Status = .running, message: String? = nil, hideDelay 
 
 ***message*** - 显示在图标下方的说明文字，说明文字支持多行文本
 
-***hideAfterSeconds*** - 自动隐藏的时间，传入0则表示不自动隐藏
+***hideDelay*** - 自动隐藏的时间，传入0则表示不自动隐藏
 
 --
 
@@ -87,7 +87,7 @@ chrysan.show(customIcon: image, message: "自定义图案", hideDelay: 1)
 #### 显示任务进度
 
 ```swift
-// 显示环形的任务进度，会在中心显示进度的精确数值
+// 显示环形的任务进度，会在中心显示进度百分比，progress 取值 0-1
 chrysan.show(progress: progress, message: "下载中...")
 ```
 
