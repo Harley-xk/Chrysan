@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8E2E3C3A17B1F8FF80126C04242B33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2823811AACCB10649D4E7AD77DE20237 /* chrysan_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BEF90A733A6DDD215398D39CA9289E2 /* chrysan_check@3x.png */; };
 		377B136074EE24CAA04B016281B491B0 /* Chrysan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */; };
-		3D917C6B723DEC9DDE46332716F485A4 /* chrysan_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */; };
 		407081D33A70D9B6CC2FA74F4B1C6910 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFCBD9BCAF64377980D090E65E7577 /* RingProgressView.swift */; };
 		40BBFDEC1F1B31B65835C1B686865C3C /* ChrysanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C700FBFD7A5D70DDAC1B422B9396E80F /* ChrysanView.swift */; };
-		4AC38F22F2C9717E8DCE21511D77789C /* Chrysan.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4C8491BD60C7006F6E8808EA93B214 /* Chrysan.xib */; };
 		4EA68966E84687945A6ECE71E504BAD5 /* Chrysan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA427201607AD6D3FAF6ED9A09D3166 /* Chrysan-dummy.m */; };
-		7D167D619CF692746AB0D8DDFBDF905C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		7F47D8C94F73432E36A5CEDD1CAF827F /* chrysan_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */; };
-		8D0C9C69D82C843811D840734F199D9A /* chrysan_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */; };
+		766D49F9B2CACA518C81871D155D4839 /* chrysan_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 143BB5F53FD8BB955D09A951B6E901A7 /* chrysan_check@2x.png */; };
+		7B2747A2E033B33B88378EA276303A68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7BE71F1FCD51DB2B19762517F1A357FC /* Chrysan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D117DF47B6EB1C0D1F0F3E97315274 /* Chrysan.xib */; };
 		A1B14C67EB5B4E0FACFF8B94A50016EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AC52AD175B865558494590AA41561 /* Extensions.swift */; };
 		A2D3DEEC80E0D61859F8C7A7C273EC21 /* Pods-Chrysan_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A32A977DD7309E8CD4673FC0EA125D7F /* chrysan_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A17A3A977313CD729BFD655EC971E8 /* chrysan_cross@3x.png */; };
 		C5970388C1508A801E4B697E0BA0007F /* Pods-Chrysan_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */; };
-		CED7D592A18879924DE09C47FE5E16A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		D2443574692B85A6673743F61C001D89 /* chrysan_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */; };
+		D17E81BD49B7D43155E6DED49E9F9898 /* chrysan_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9236749671EC325F72FF4E32CC58F134 /* chrysan_cross@2x.png */; };
 		FB53BF6E880E7E38888952A76A01BC7E /* Chrysan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 736BFB64826470F11B9F1E26EE9017AC /* Chrysan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,21 +42,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D117DF47B6EB1C0D1F0F3E97315274 /* Chrysan.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = Chrysan.xib; sourceTree = "<group>"; };
 		05AEFD5E9B7D86291158AB903C130960 /* Pods-Chrysan_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chrysan_Example.release.xcconfig"; sourceTree = "<group>"; };
 		121D180FE7B5B172260C050E8D9E5309 /* Pods-Chrysan_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chrysan_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		143BB5F53FD8BB955D09A951B6E901A7 /* chrysan_check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_check@2x.png"; sourceTree = "<group>"; };
 		2D3F963B3D33A8FC125D39EE8D6AE9B8 /* ResourceBundle-Chrysan-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Chrysan-Info.plist"; sourceTree = "<group>"; };
 		36BEF57BFB9AD6BFB4CF47A9FB59BB20 /* Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Chrysan.framework; path = Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_cross@2x.png"; sourceTree = "<group>"; };
 		38FF2C7E2AD8DF5E57E5C3BBB7DB08BC /* Chrysan.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Chrysan.bundle; path = Chrysan.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0645E993B18FFC728E74C810E4FADD /* Pods-Chrysan_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chrysan_Example-resources.sh"; sourceTree = "<group>"; };
 		41D14A9B72240F90EAE1FE1DA4FB7639 /* Pods-Chrysan_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chrysan_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_cross@3x.png"; sourceTree = "<group>"; };
 		540CDFF3B23B542FCA1BA0D72912B9AA /* Pods-Chrysan_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chrysan_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		573F0B952E98148A97B956AE4CEE372D /* Chrysan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Chrysan-prefix.pch"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6CBFCBD9BCAF64377980D090E65E7577 /* RingProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		736BFB64826470F11B9F1E26EE9017AC /* Chrysan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Chrysan-umbrella.h"; sourceTree = "<group>"; };
+		73A17A3A977313CD729BFD655EC971E8 /* chrysan_cross@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_cross@3x.png"; sourceTree = "<group>"; };
 		77876D745A8D8A33CCA563CC05FB04EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BEF90A733A6DDD215398D39CA9289E2 /* chrysan_check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_check@3x.png"; sourceTree = "<group>"; };
 		8D9AC52AD175B865558494590AA41561 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9236749671EC325F72FF4E32CC58F134 /* chrysan_cross@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "chrysan_cross@2x.png"; sourceTree = "<group>"; };
 		92AE37EA6106A2C2069532C0B6B674A6 /* Pods-Chrysan_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Chrysan_Example.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F174CFA3F28608E2E354E68D79C0F3B /* Chrysan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Chrysan.modulemap; sourceTree = "<group>"; };
@@ -64,13 +68,9 @@
 		B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chrysan_Example-umbrella.h"; sourceTree = "<group>"; };
 		BFA427201607AD6D3FAF6ED9A09D3166 /* Chrysan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Chrysan-dummy.m"; sourceTree = "<group>"; };
 		C700FBFD7A5D70DDAC1B422B9396E80F /* ChrysanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChrysanView.swift; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_check@3x.png"; sourceTree = "<group>"; };
 		DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chrysan_Example-dummy.m"; sourceTree = "<group>"; };
-		E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "chrysan_check@2x.png"; sourceTree = "<group>"; };
 		E930DC45E2BC43216FB9CE9697869FF7 /* Pods-Chrysan_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chrysan_Example-frameworks.sh"; sourceTree = "<group>"; };
 		ED7982141FE201452459111AE15FC2C2 /* Pods_Chrysan_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chrysan_Example.framework; path = "Pods-Chrysan_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF4C8491BD60C7006F6E8808EA93B214 /* Chrysan.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = Chrysan.xib; sourceTree = "<group>"; };
 		F72544758A6D57AE0BE72140104B5B2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D167D619CF692746AB0D8DDFBDF905C /* Foundation.framework in Frameworks */,
+				1A8E2E3C3A17B1F8FF80126C04242B33 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED7D592A18879924DE09C47FE5E16A7 /* Foundation.framework in Frameworks */,
+				7B2747A2E033B33B88378EA276303A68 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,34 +119,13 @@
 			path = "Target Support Files/Pods-Chrysan_Example";
 			sourceTree = "<group>";
 		};
-		3F2E3F767CD96A97DE40EB90AE0AA5F0 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				EF4C8491BD60C7006F6E8808EA93B214 /* Chrysan.xib */,
-				E7A807A59D9CD825DAB36C042280F90A /* chrysan_check@2x.png */,
-				DA619D8616E197143EEE9A371E7F5CEE /* chrysan_check@3x.png */,
-				38AAF1F9F11A3CB40AF99E2D4E54E64B /* chrysan_cross@2x.png */,
-				452F933AA9970E460769FCD2D3D87957 /* chrysan_cross@3x.png */,
-			);
-			name = Assets;
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		64A78325DBBD7C3CC3C50B64B8EF1F01 /* Chrysan */ = {
 			isa = PBXGroup;
 			children = (
-				3F2E3F767CD96A97DE40EB90AE0AA5F0 /* Assets */,
+				93ECFEF69EC618F21F737D0234E550DC /* Assets */,
 			);
 			name = Chrysan;
 			path = Chrysan;
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -181,6 +160,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		93ECFEF69EC618F21F737D0234E550DC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				02D117DF47B6EB1C0D1F0F3E97315274 /* Chrysan.xib */,
+				143BB5F53FD8BB955D09A951B6E901A7 /* chrysan_check@2x.png */,
+				7BEF90A733A6DDD215398D39CA9289E2 /* chrysan_check@3x.png */,
+				9236749671EC325F72FF4E32CC58F134 /* chrysan_cross@2x.png */,
+				73A17A3A977313CD729BFD655EC971E8 /* chrysan_cross@3x.png */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A579419A5A344A096EB1B1A65B7FC84E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +191,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,6 +203,14 @@
 			);
 			name = Chrysan;
 			path = Chrysan;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		DDD0EF712206FE66E52100219AE9581A /* Development Pods */ = {
@@ -313,7 +313,7 @@
 			buildPhases = (
 				5F6A572E337B041744E47393B9A85EC0 /* Sources */,
 				D21308D4D39D1D2917C5690F99C67AD4 /* Frameworks */,
-				983882C2CC9DC6E8ED3F61E913323197 /* Resources */,
+				1081C797DE61B6075B017C0952991521 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -330,7 +330,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -353,15 +353,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		983882C2CC9DC6E8ED3F61E913323197 /* Resources */ = {
+		1081C797DE61B6075B017C0952991521 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC38F22F2C9717E8DCE21511D77789C /* Chrysan.xib in Resources */,
-				D2443574692B85A6673743F61C001D89 /* chrysan_check@2x.png in Resources */,
-				3D917C6B723DEC9DDE46332716F485A4 /* chrysan_check@3x.png in Resources */,
-				8D0C9C69D82C843811D840734F199D9A /* chrysan_cross@2x.png in Resources */,
-				7F47D8C94F73432E36A5CEDD1CAF827F /* chrysan_cross@3x.png in Resources */,
+				7BE71F1FCD51DB2B19762517F1A357FC /* Chrysan.xib in Resources */,
+				766D49F9B2CACA518C81871D155D4839 /* chrysan_check@2x.png in Resources */,
+				2823811AACCB10649D4E7AD77DE20237 /* chrysan_check@3x.png in Resources */,
+				D17E81BD49B7D43155E6DED49E9F9898 /* chrysan_cross@2x.png in Resources */,
+				A32A977DD7309E8CD4673FC0EA125D7F /* chrysan_cross@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,42 +420,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4DCDA452A0604D94734C83AE0E5FBC88 /* Release */ = {
+		031F9E28DF593188125C2F592047123A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Chrysan/Chrysan-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Chrysan/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Chrysan/Chrysan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Chrysan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		678AFC722570146CFBA40AE8C5F1DF2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -477,6 +446,7 @@
 				PRODUCT_NAME = Chrysan;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,51 +455,46 @@
 			};
 			name = Debug;
 		};
-		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+		06C5964515B9B8D47C34F779867F63E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Chrysan/Chrysan-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Chrysan/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Chrysan/Chrysan.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Chrysan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -537,10 +502,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -569,6 +537,50 @@
 			};
 			name = Debug;
 		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		AAD50CF2A0D5BA67644D971A2B210753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
@@ -586,27 +598,11 @@
 			};
 			name = Release;
 		};
-		B2F8160B0C88676CB1C4AAFB0657C02D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Chrysan";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Chrysan/ResourceBundle-Chrysan-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = Chrysan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		B4F059A786A8381B63A0A4F63FD339F5 /* Debug */ = {
+		B03125062F1DCC1B9EF95D0C2CFF2EE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 121D180FE7B5B172260C050E8D9E5309 /* Pods-Chrysan_Example.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -632,17 +628,37 @@
 				PRODUCT_NAME = Pods_Chrysan_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		BCDD4D8E810B6A805BC41786C643E817 /* Release */ = {
+		B2F8160B0C88676CB1C4AAFB0657C02D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Chrysan";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Chrysan/ResourceBundle-Chrysan-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Chrysan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B3E4412E8743FA9B0E676BCA3F769F66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05AEFD5E9B7D86291158AB903C130960 /* Pods-Chrysan_Example.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -668,6 +684,8 @@
 				PRODUCT_NAME = Pods_Chrysan_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -680,8 +698,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
-				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -689,8 +707,8 @@
 		8BF7C16DC4977B016FCB3B0086FEABEA /* Build configuration list for PBXNativeTarget "Pods-Chrysan_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4F059A786A8381B63A0A4F63FD339F5 /* Debug */,
-				BCDD4D8E810B6A805BC41786C643E817 /* Release */,
+				B03125062F1DCC1B9EF95D0C2CFF2EE2 /* Debug */,
+				B3E4412E8743FA9B0E676BCA3F769F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -707,8 +725,8 @@
 		9DE3ACD378DEE1C1971760B48207D0F2 /* Build configuration list for PBXNativeTarget "Chrysan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				678AFC722570146CFBA40AE8C5F1DF2C /* Debug */,
-				4DCDA452A0604D94734C83AE0E5FBC88 /* Release */,
+				031F9E28DF593188125C2F592047123A /* Debug */,
+				06C5964515B9B8D47C34F779867F63E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -78,12 +78,13 @@ public class ChrysanView: UIView {
     /// - Parameters:
     ///   - progress: 进度值，范围 0 - 1
     ///   - message: 状态文字，默认为nil
-    public func show(progress: CGFloat, message: String? = nil) {
-        
+    ///   - progressText: 进度条圆圈内部显示的文字，默认为百分比
+    public func show(progress: CGFloat, message: String? = nil, progressText: String? = nil) {
         self.progress = progress
+        self.progressText = progressText
         show(.progress, message: message, hideDelay: 0)
     }
-    
+    private var progressText: String?
     
     /// 显示自定义图标
     ///
@@ -222,7 +223,7 @@ public class ChrysanView: UIView {
             activityView.activityIndicatorViewStyle = chrysanStyle
         case .progress:
             progressView.isHidden = false
-            progressView.progress = progress
+            progressView.setProgress(progress, text: progressText)
         case .succeed:
             iconView.isHidden = false
             iconView.image = image(name: "check")
@@ -272,7 +273,7 @@ public class ChrysanView: UIView {
         customIcon = nil
         message = nil
         progress = 0
-        progressView.progress = 0
+        progressView.setProgress(0)
     }
     
     /*

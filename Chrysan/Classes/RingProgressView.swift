@@ -12,11 +12,15 @@ class RingProgressView: UIView {
 
     @IBOutlet weak var progressLabel: UILabel!
     
-    var progress: CGFloat = 0 {
-        didSet {
-            setNeedsDisplay()
-        }
+    func setProgress(_ progress: CGFloat, text: String? = nil) {
+        self.progressText = text
+        self.progress = progress
+        self.setNeedsDisplay()
     }
+    
+    private(set) var progress: CGFloat = 0
+    
+    private var progressText: String?
     
     override func draw(_ rect: CGRect) {
         
@@ -52,7 +56,7 @@ class RingProgressView: UIView {
         progressPath.stroke()
         
         /// 显示进度文字
-        progressLabel.text = String(format: "%.0f", progress * 100)
+        progressLabel.text = progressText ?? String(format: "%.0f", progress * 100)
         progressLabel.textColor = lineColor
     }
 }
