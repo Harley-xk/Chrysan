@@ -63,6 +63,17 @@ public class ChrysanView: UIView {
         show(message: message, hideDelay: delay)
     }
     
+    /// 快速显示纯文本消息提示
+    ///
+    /// - Parameters:
+    ///   - message: 需要显示的文字提示
+    ///   - delay: 自动隐藏时间，默认不隐藏
+    /// - Discussion:
+    ///   标准 API 默认参数过多，无法通过代码提示完成最常用的显示消息的方法，故特地增加了这个简便方法
+    public func showPlainMessage(_ message: String, hideDelay delay: Double = 0) {
+        show(.plain, message: message, hideDelay: delay)
+    }
+    
     /// 显示菊花
     ///
     /// - Parameters:
