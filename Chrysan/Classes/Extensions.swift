@@ -34,9 +34,7 @@ public extension UIViewController {
     
     public var chrysan: ChrysanView {
         get {
-            let hud = view.chrysan
-            hud.offsetY = -64
-            return hud
+            return view.chrysan
         }
         set {
             view.chrysan = newValue

@@ -18,7 +18,7 @@ pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git'
 ### 使用
 每个 View 都有一个 chrysan 属性，可以获取当前 View 的独立的菊花。只有当第一次访问 chrysan 属性时才会真实地创建 ChrysanView 实例，避免不必要的开销和内存占用。
 
-通过访问 ViewController 的 chrysan 属性，可以访问 ViewController 的根 View 的菊花并自动创建。通过 ViewController 创建的菊花会自动设置向上 64 个 pt 的距离位移，以优化视觉效果。
+通过访问 ViewController 的 chrysan 属性，可以访问 ViewController 的根 View 的菊花并自动创建。~~通过 ViewController 创建的菊花会自动设置向上 64 个 pt 的距离位移，以优化视觉效果。~~
 
 #### 显示
 
