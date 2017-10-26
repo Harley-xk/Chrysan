@@ -12,7 +12,7 @@ Chrysan 使用 iOS 自带的 UIBlurEffect 效果。
 通过 CocoaPods 安装：
 
 ```ruby
-pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git'
+pod 'Chrysan'
 ```
 
 ### 使用
