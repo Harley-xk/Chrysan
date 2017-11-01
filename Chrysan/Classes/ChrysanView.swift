@@ -223,15 +223,14 @@ public class ChrysanView: UIView {
         progressView.tintColor = color
         messageLabel.textColor = color
         
-        if message != nil && message!.characters.count > 0 {
-            labelSpace.constant = 8;
-            messageMinWidth.constant = 70;
+        if message != nil && !message!.isEmpty{
+            labelSpace.constant = 8
+            messageMinWidth.constant = 70
         }else {
-            labelSpace.constant = 4;
-            messageMinWidth.constant = 50;
+            labelSpace.constant = 4
+            messageMinWidth.constant = 50
         }
         
-
         messageToTop.constant = 64
         activityView.isHidden = true
         progressView.isHidden = true
