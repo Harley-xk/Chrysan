@@ -5,11 +5,11 @@
 
 > Chrysan 是一个简单易用的 HUD 库，基于我较早之前写的 HKProgressHUD，使用 Swift 进行了重构和优化。使用 iOS 自带的 UIBlurEffect 毛玻璃特效。
 
-<img src="Images/sample_1.png" width=100></img>
-<img src="Images/sample_2.png" width=100></img>
-<img src="Images/sample_3.png" width=100></img>
-<img src="Images/sample_4.png" width=100></img>
-<img src="Images/sample_0.gif" width=108></img>
+<img src="Images/sample_1.png" height=300></img>
+<img src="Images/sample_2.png" height=300></img>
+<img src="Images/sample_3.png" height=300></img>
+<img src="Images/sample_4.png" height=300></img>
+<img src="Images/sample_0.gif" height=300></img>
 
 ### 安装
 通过 CocoaPods 安装：
