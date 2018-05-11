@@ -19,6 +19,7 @@
 		A1B14C67EB5B4E0FACFF8B94A50016EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AC52AD175B865558494590AA41561 /* Extensions.swift */; };
 		A2D3DEEC80E0D61859F8C7A7C273EC21 /* Pods-Chrysan_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A32A977DD7309E8CD4673FC0EA125D7F /* chrysan_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A17A3A977313CD729BFD655EC971E8 /* chrysan_cross@3x.png */; };
+		B6DCED8720A58CD500CC6B26 /* ChrysanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCED8620A58CD500CC6B26 /* ChrysanConfig.swift */; };
 		C5970388C1508A801E4B697E0BA0007F /* Pods-Chrysan_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */; };
 		D17E81BD49B7D43155E6DED49E9F9898 /* chrysan_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9236749671EC325F72FF4E32CC58F134 /* chrysan_cross@2x.png */; };
 		FB53BF6E880E7E38888952A76A01BC7E /* Chrysan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 736BFB64826470F11B9F1E26EE9017AC /* Chrysan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +67,7 @@
 		9F174CFA3F28608E2E354E68D79C0F3B /* Chrysan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Chrysan.modulemap; sourceTree = "<group>"; };
 		A53EB565B55B9BEA2A35FB2F73EDD417 /* Chrysan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Chrysan.xcconfig; sourceTree = "<group>"; };
 		B63F0360AB70734F7259B989157F1DC8 /* Pods-Chrysan_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chrysan_Example-umbrella.h"; sourceTree = "<group>"; };
+		B6DCED8620A58CD500CC6B26 /* ChrysanConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrysanConfig.swift; sourceTree = "<group>"; };
 		BFA427201607AD6D3FAF6ED9A09D3166 /* Chrysan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Chrysan-dummy.m"; sourceTree = "<group>"; };
 		C700FBFD7A5D70DDAC1B422B9396E80F /* ChrysanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChrysanView.swift; sourceTree = "<group>"; };
 		DF2594284BD2E9D0D3779A97E3709213 /* Pods-Chrysan_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chrysan_Example-dummy.m"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				C700FBFD7A5D70DDAC1B422B9396E80F /* ChrysanView.swift */,
 				8D9AC52AD175B865558494590AA41561 /* Extensions.swift */,
 				6CBFCBD9BCAF64377980D090E65E7577 /* RingProgressView.swift */,
+				B6DCED8620A58CD500CC6B26 /* ChrysanConfig.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				40BBFDEC1F1B31B65835C1B686865C3C /* ChrysanView.swift in Sources */,
 				A1B14C67EB5B4E0FACFF8B94A50016EF /* Extensions.swift in Sources */,
 				407081D33A70D9B6CC2FA74F4B1C6910 /* RingProgressView.swift in Sources */,
+				B6DCED8720A58CD500CC6B26 /* ChrysanConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
