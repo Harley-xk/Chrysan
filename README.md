@@ -3,6 +3,11 @@
 <img src="Images/icon.png" height=35>  Chrysan</img>
 </h1>
 
+[![CI Status](http://img.shields.io/travis/Harley-xk/Chrysan.svg?style=flat)](https://travis-ci.org/Harley-xk/Chrysan)
+[![Version](https://img.shields.io/cocoapods/v/Chrysan.svg?style=flat)](http://cocoapods.org/pods/Chrysan)
+[![License](https://img.shields.io/cocoapods/l/Chrysan.svg?style=flat)](http://cocoapods.org/pods/Chrysan)
+[![Platform](https://img.shields.io/cocoapods/p/Chrysan.svg?style=flat)](http://cocoapods.org/pods/Chrysan)
+
 > Chrysan 是一个简单易用的 HUD 库，基于我较早之前写的 HKProgressHUD，使用 Swift 进行了重构和优化。使用 iOS 自带的 UIBlurEffect 毛玻璃特效。
 
 <img src="Images/sample_2.png" height=350></img>
