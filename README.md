@@ -1,12 +1,15 @@
-# Chrysan
-顾名思义，执行任务时界面上旋转的菊花。
 
-基于 HKProgressHUD 重构，完全遵循了 Swift 3 的 API 风格，适用于 Swift 3.0+，iOS 8.0+
+<h1>
+<img src="Images/icon.png" height=35>  Chrysan</img>
+</h1>
 
-Chrysan 使用 iOS 自带的 UIBlurEffect 效果。
+> Chrysan 是一个简单易用的 HUD 库，基于我较早之前写的 HKProgressHUD，使用 Swift 进行了重构和优化。使用 iOS 自带的 UIBlurEffect 毛玻璃特效。
 
-![](Images/img_0.png)
-
+<img src="Images/sample_1.png" width=100></img>
+<img src="Images/sample_2.png" width=100></img>
+<img src="Images/sample_3.png" width=100></img>
+<img src="Images/sample_4.png" width=100></img>
+<img src="Images/sample_0.gif" width=108></img>
 
 ### 安装
 通过 CocoaPods 安装：
