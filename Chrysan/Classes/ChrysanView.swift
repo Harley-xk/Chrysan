@@ -181,6 +181,11 @@ public class ChrysanView: UIView {
     
     private func updateAndShow() {
         
+        if iconView.isAnimating {
+            iconView.stopAnimating()
+            iconView.animationImages = nil
+        }
+
         messageLabel.text = message;
         updateMessageTextAlignment()
         
@@ -208,13 +213,12 @@ public class ChrysanView: UIView {
         activityView.isHidden = true
         progressView.isHidden = true
         iconView.isHidden = true
-
+        
         switch status {
         case .plain:
             messageToTop.constant = 16
         case .running:
-            activityView.isHidden = false
-            activityView.activityIndicatorViewStyle = config.chrysanStyle
+            setupActivityViewForRunning()
         case .progress:
             progressView.isHidden = false
             progressView.setProgress(progress, text: progressText)
@@ -231,6 +235,21 @@ public class ChrysanView: UIView {
         
         layoutIfNeeded()
         showHUD()
+    }
+    
+    private func setupActivityViewForRunning() {
+        if let activityStyle = config.chrysanStyle.activityStyle {
+            activityView.isHidden = false
+            activityView.activityIndicatorViewStyle = activityStyle
+        } else if case let .animationImages(images) = config.chrysanStyle {
+            activityView.isHidden = true
+            iconView.isHidden = false
+            iconView.animationImages = images
+            iconView.animationDuration = Double(images.count) * config.frameDuration
+            iconView.startAnimating()
+        } else {
+            // do nothing
+        }
     }
     
     private func updateMessageTextAlignment() {
@@ -288,6 +307,8 @@ public class ChrysanView: UIView {
         message = nil
         progress = 0
         progressView.setProgress(0)
+        iconView.animationImages = nil
+        iconView.stopAnimating()
     }
     
     /*

@@ -28,6 +28,13 @@ pod 'Chrysan'
 
 通过访问 ViewController 的 chrysan 属性，可以访问 ViewController 的根 View 的菊花并自动创建。~~通过 ViewController 创建的菊花会自动设置向上 64 个 pt 的距离位移，以优化视觉效果。~~
 
+#### <span style="color:#1296db">显示自定义动画</span>
+
+**<span style="color:#1296db">1.3.0 加入新特性，现在可以通过全局配置项来显示自定义的加载动画了</span>**
+
+`chrysanStyle` 属性修改为 `ChrysanStyle` 类型，新增了 `animationImages` 关联枚举类型，可以指定一个 UIImage 的数组，作为自定义动画的循环帧图片播放，具体用法参考示例项目及注释。
+`ChrysanConfig` 类型新增 `frameDuration` 属性，用来控制自定义动画的播放速度。
+
 #### 显示
 
 ```swift
