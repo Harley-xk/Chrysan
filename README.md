@@ -16,11 +16,17 @@
 <img src="Images/sample_1.png" height=350></img>
 <img src="Images/sample_0.gif" height=350></img>
 
+### 适配
+Chrysan 最新版支持 iOS 9.0+，已针对 Swift 4.2 以及 iOS 12 适配。
+
 ### 安装
 通过 CocoaPods 安装：
 
 ```ruby
+# for swift 4.2
 pod 'Chrysan'
+# for swift 4.0/4.1/ iOS 8.0+
+pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git, :tag=>1.3.0'
 ```
 
 ### 使用

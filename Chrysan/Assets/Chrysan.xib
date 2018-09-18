@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,7 +42,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BMk-NJ-Fgd">
-                            <rect key="frame" x="114" y="21" width="37" height="37"/>
+                            <rect key="frame" x="113.5" y="21.5" width="37" height="37"/>
                         </activityIndicatorView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chrysan_check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-Nh-1Ih">
                             <rect key="frame" x="112" y="20" width="40" height="40"/>
@@ -98,14 +98,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="exs-X2-Jec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Rx-Kx-8kw"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7JV-b5-ETG" secondAttribute="trailing" constant="20" id="5qL-UK-KYe"/>
+                <constraint firstItem="04w-Fe-GBZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7JV-b5-ETG" secondAttribute="trailing" constant="20" id="5qL-UK-KYe"/>
                 <constraint firstItem="7JV-b5-ETG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AAA-kb-h94"/>
                 <constraint firstAttribute="trailing" secondItem="exs-X2-Jec" secondAttribute="trailing" id="UrI-Ai-1Q7"/>
                 <constraint firstItem="7JV-b5-ETG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YV2-KY-0z4"/>
-                <constraint firstItem="7JV-b5-ETG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="avT-QM-ahj"/>
+                <constraint firstItem="7JV-b5-ETG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="04w-Fe-GBZ" secondAttribute="leading" constant="20" id="avT-QM-ahj"/>
                 <constraint firstAttribute="bottom" secondItem="exs-X2-Jec" secondAttribute="bottom" id="pGO-kL-K0o"/>
                 <constraint firstItem="exs-X2-Jec" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uOy-dE-MtI"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="04w-Fe-GBZ"/>
             <connections>
                 <outlet property="activityView" destination="BMk-NJ-Fgd" id="M9s-bO-w9A"/>
                 <outlet property="backgroundView" destination="exs-X2-Jec" id="TLP-F7-WNg"/>

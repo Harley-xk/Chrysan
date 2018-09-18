@@ -13,7 +13,7 @@ public enum ChrysanStyle {
     case grayIndicator
     case animationImages([UIImage])
     
-    var activityStyle: UIActivityIndicatorViewStyle? {
+    var activityStyle: UIActivityIndicatorView.Style? {
         switch self {
         case .whiteLargeIndicator: return .whiteLarge
         case .whiteIndicator: return .white
@@ -35,7 +35,7 @@ public class ChrysanConfig {
     public var maskColor = UIColor.clear
     
     /// 菊花背景样式，使用系统自带的毛玻璃特效，默认为黑色样式
-    public var hudStyle = UIBlurEffectStyle.dark
+    public var hudStyle = UIBlurEffect.Style.dark
     
     /// 菊花的样式，默认为 white large
     public var chrysanStyle: ChrysanStyle = ChrysanStyle.whiteLargeIndicator

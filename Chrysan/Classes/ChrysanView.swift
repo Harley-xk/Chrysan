@@ -175,7 +175,7 @@ public class ChrysanView: UIView {
         }
     }
     
-    private func pinToParent(withEdge edge: NSLayoutAttribute) -> NSLayoutConstraint {
+    private func pinToParent(withEdge edge: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: parent, attribute: edge, relatedBy: .equal, toItem: self, attribute: edge, multiplier: 1, constant: 0)
     }
     
@@ -240,7 +240,7 @@ public class ChrysanView: UIView {
     private func setupActivityViewForRunning() {
         if let activityStyle = config.chrysanStyle.activityStyle {
             activityView.isHidden = false
-            activityView.activityIndicatorViewStyle = activityStyle
+            activityView.style = activityStyle
         } else if case let .animationImages(images) = config.chrysanStyle {
             activityView.isHidden = true
             iconView.isHidden = false
@@ -273,7 +273,7 @@ public class ChrysanView: UIView {
         isShown = true
         isHidden = false
         alpha = 0
-        parent.bringSubview(toFront: self)
+        parent.bringSubviewToFront(self)
         parent.layoutIfNeeded()
         layer.removeAllAnimations()
 
