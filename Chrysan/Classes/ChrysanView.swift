@@ -122,7 +122,7 @@ public class ChrysanView: UIView {
     
     private var isShown = false
     
-    weak private var parent: UIView!
+    weak private var parent: UIView?
     private var status: Status = .plain
     private var message: String?
     private var progress: CGFloat = 0
@@ -162,6 +162,10 @@ public class ChrysanView: UIView {
     private func pinEdgesToParent() {
         
         self.translatesAutoresizingMaskIntoConstraints = false;
+        
+        guard let parent = parent else {
+            return
+        }
 
         let top = pinToParent(withEdge: .top)
         let bottom = pinToParent(withEdge: .bottom)
@@ -171,7 +175,7 @@ public class ChrysanView: UIView {
         parent.addConstraints([top, bottom, left, right])
         
         DispatchQueue.main.async {
-            self.parent.layoutIfNeeded()
+            self.parent?.layoutIfNeeded()
         }
     }
     
@@ -273,8 +277,8 @@ public class ChrysanView: UIView {
         isShown = true
         isHidden = false
         alpha = 0
-        parent.bringSubviewToFront(self)
-        parent.layoutIfNeeded()
+        parent?.bringSubviewToFront(self)
+        parent?.layoutIfNeeded()
         layer.removeAllAnimations()
 
         UIView.animate(withDuration: 0.15) {
