@@ -24,7 +24,9 @@ Chrysan 最新版支持 iOS 9.0+，已针对 Swift 5 以及 iOS 12 适配。
 
 ### 安装
 
-通过 CocoaPods 安装：
+> Swift 5 请使用 1.5.0 及以上版本
+
+#### 通过 CocoaPods 安装
 
 ```ruby
 # for swift 4.2
@@ -33,7 +35,15 @@ pod 'Chrysan'
 pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git, :tag=>1.3.0'
 ```
 
-**_Swift 5 请使用 1.5.0 及以上版本_**
+#### 通过 Carthage 安装
+
+```ruby
+github "Harley-xk/MaLiang"
+```
+
+在命令行执行 `carthage update` 来完成编译，然后将 `Chrysan.framework` 添加到你的项目中。
+
+**确保将 `Chrysan.framework` 添加到 target 的 `Embedded Binaries` 配置项中**
 
 ### 使用
 
