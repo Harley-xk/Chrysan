@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B6B66B2C1DD59583005F82BE /* Chrysan.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = B6B66B2B1DD59583005F82BE /* Chrysan.podspec.json */; };
+		C3036B5A2417B9DA0033329D /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3036B592417B9DA0033329D /* CustomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		82322546EC0203983E22F957 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8661FB0C3CF3B29932E2A71D /* Pods-Chrysan_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chrysan_Tests/Pods-Chrysan_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B6B66B2B1DD59583005F82BE /* Chrysan.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Chrysan.podspec.json; path = ../Chrysan.podspec.json; sourceTree = "<group>"; };
+		C3036B592417B9DA0033329D /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		E771600D9A33022E599EB4BD /* Pods-Chrysan_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chrysan_Tests/Pods-Chrysan_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				C3036B592417B9DA0033329D /* CustomTableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				C3036B5A2417B9DA0033329D /* CustomTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
