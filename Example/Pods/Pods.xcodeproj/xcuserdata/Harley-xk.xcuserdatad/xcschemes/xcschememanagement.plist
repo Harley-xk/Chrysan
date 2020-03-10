@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Chrysan-Chrysan.xcscheme</key>
+		<key>Chrysan-Chrysan.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
-		<key>Chrysan.xcscheme</key>
+		<key>Chrysan.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Pods-Chrysan_Example.xcscheme</key>
 		<dict>
