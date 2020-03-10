@@ -38,7 +38,7 @@ pod 'Chrysan', :git => 'https://github.com/Harley-xk/Chrysan.git, :tag=>1.3.0'
 #### 通过 Carthage 安装
 
 ```ruby
-github "Harley-xk/MaLiang"
+github "Harley-xk/Chrysan"
 ```
 
 在命令行执行 `carthage update` 来完成编译，然后将 `Chrysan.framework` 添加到你的项目中。
