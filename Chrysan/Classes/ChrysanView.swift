@@ -161,26 +161,27 @@ public class ChrysanView: UIView {
     
     private func pinEdgesToParent() {
         
-        self.translatesAutoresizingMaskIntoConstraints = false;
         
         guard let parent = parent else {
             return
         }
-
-        let top = pinToParent(withEdge: .top)
-        let bottom = pinToParent(withEdge: .bottom)
-        let left = pinToParent(withEdge: .leading)
-        let right = pinToParent(withEdge: .trailing)
         
-        parent.addConstraints([top, bottom, left, right])
+        self.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let frameGuide = UILayoutGuide()
+        parent.addLayoutGuide(frameGuide)
+        
+        let top = topAnchor.constraint(equalTo: frameGuide.topAnchor)
+        let bottom = bottomAnchor.constraint(equalTo: frameGuide.bottomAnchor)
+        let left = leftAnchor.constraint(equalTo: frameGuide.leftAnchor)
+        let right = rightAnchor.constraint(equalTo: frameGuide.rightAnchor)
+        let width = NSLayoutConstraint(item: parent, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0)
+        let height = NSLayoutConstraint(item: parent, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0)
+        parent.addConstraints([top, bottom, left, right, width, height])
         
         DispatchQueue.main.async {
             self.parent?.layoutIfNeeded()
         }
-    }
-    
-    private func pinToParent(withEdge edge: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
-        return NSLayoutConstraint(item: parent!, attribute: edge, relatedBy: .equal, toItem: self, attribute: edge, multiplier: 1, constant: 0)
     }
     
     private func updateAndShow() {
@@ -268,6 +269,9 @@ public class ChrysanView: UIView {
         return UIImage(named: "chrysan_\(name).png", in: ChrysanView.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
     }
     
+    // 临时存储父视图交互的交互状态
+    private var isParentUserInteractionEnabled = true
+    
     private func showHUD() {
         
         if isShown {
@@ -277,6 +281,9 @@ public class ChrysanView: UIView {
         isShown = true
         isHidden = false
         alpha = 0
+        // 显示 hud 时禁用父视图交互
+        isParentUserInteractionEnabled = parent?.isUserInteractionEnabled ?? false
+        parent?.isUserInteractionEnabled = false
         parent?.bringSubviewToFront(self)
         parent?.layoutIfNeeded()
         layer.removeAllAnimations()
@@ -301,6 +308,8 @@ public class ChrysanView: UIView {
             if finished {
                 self.isHidden = true
                 self.reset()
+                // 显示 hud 时重置父视图交互状态
+                self.parent?.isUserInteractionEnabled = self.isParentUserInteractionEnabled
             }
         }
     }
