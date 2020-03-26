@@ -462,7 +462,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				MODULEMAP_FILE = "Target Support Files/Chrysan/Chrysan.modulemap";
 				PRODUCT_MODULE_NAME = Chrysan;
 				PRODUCT_NAME = Chrysan;
@@ -551,7 +551,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Chrysan";
 				INFOPLIST_FILE = "Target Support Files/Chrysan/ResourceBundle-Chrysan-Chrysan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_NAME = Chrysan;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -603,7 +603,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Chrysan";
 				INFOPLIST_FILE = "Target Support Files/Chrysan/ResourceBundle-Chrysan-Chrysan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_NAME = Chrysan;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -691,7 +691,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				MODULEMAP_FILE = "Target Support Files/Chrysan/Chrysan.modulemap";
 				PRODUCT_MODULE_NAME = Chrysan;
 				PRODUCT_NAME = Chrysan;
