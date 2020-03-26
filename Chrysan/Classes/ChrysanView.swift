@@ -305,12 +305,11 @@ public class ChrysanView: UIView {
         UIView.animate(withDuration: 0.15, animations: {
             self.alpha = 0
         }) { (finished) in
-            if finished {
-                self.isHidden = true
-                self.reset()
-                // 显示 hud 时重置父视图交互状态
-                self.parent?.isUserInteractionEnabled = self.isParentUserInteractionEnabled
-            }
+            // 当前视图被隐藏时，finished 可能为 false，忽略
+            self.isHidden = true
+            self.reset()
+            // 显示 hud 时重置父视图交互状态
+            self.parent?.isUserInteractionEnabled = self.isParentUserInteractionEnabled
         }
     }
     
