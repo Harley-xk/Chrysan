@@ -289,6 +289,7 @@ public class ChrysanView: UIView {
         layer.removeAllAnimations()
 
         UIView.animate(withDuration: 0.15) {
+            guard self.isShown else { return }
             self.alpha = 1
         }
     }
@@ -307,6 +308,7 @@ public class ChrysanView: UIView {
         UIView.animate(withDuration: 0.15, animations: {
             self.alpha = 0
         }) { (finished) in
+            guard !self.isShown else { return }
             // 当前视图被隐藏时，finished 可能为 false，忽略
             self.isHidden = true
             self.reset()
