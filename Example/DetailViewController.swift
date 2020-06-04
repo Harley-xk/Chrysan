@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Chrysan
+import Comet
 
 class DetailViewController: UIViewController {
 
@@ -35,6 +37,9 @@ class DetailViewController: UIViewController {
         }
     }
 
-
+    @IBAction func showAction(_ sender: Any) {
+        
+    }
+    
 }
 
