@@ -8,9 +8,17 @@
 
 import UIKit
 
-public typealias ProgressCompatiableView = UIView & ProgressConmpatiable
+public typealias ProgressCompatiableView = UIView & StatusResponsable
 
 class RingProgressView: ProgressCompatiableView {
+    func chrysan(_ chrysan: Chrysan, changeTo status: Status, message: String?) {
+        
+    }
+    
+    func chrysan(_ chrysan: Chrysan, willEnd status: Status, finished: @escaping () -> ()) {
+        
+    }
+    
     
     func update(percent: Double) {
         

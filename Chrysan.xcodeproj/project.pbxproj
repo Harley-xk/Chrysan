@@ -18,11 +18,10 @@
 		C317E369248550320072D00E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E367248550320072D00E /* LaunchScreen.storyboard */; };
 		C317E36F248550490072D00E /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C317E37624855A290072D00E /* Chrysan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E37524855A290072D00E /* Chrysan.swift */; };
-		C33C74D4248912A0004DDF94 /* ChrysanMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D32489129F004DDF94 /* ChrysanMaskView.swift */; };
 		C33C74D6248916F7004DDF94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D5248916F7004DDF94 /* Status.swift */; };
 		C33C74D9248928A6004DDF94 /* ActivityIndicatorLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
-		C33C74DD2489A6A6004DDF94 /* IconStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DC2489A6A6004DDF94 /* IconStateView.swift */; };
+		C35B12CC24925A08000DFC27 /* StatusViewVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35B12CB24925A08000DFC27 /* StatusViewVender.swift */; };
 		DF9D6D3B54E2D79217018868 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597B349AEE30DD3CB22EFBA /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +46,10 @@
 		C317E370248552AC0072D00E /* Chrysan.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chrysan.podspec.json; sourceTree = "<group>"; };
 		C317E372248554F90072D00E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C317E37524855A290072D00E /* Chrysan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chrysan.swift; sourceTree = "<group>"; };
-		C33C74D32489129F004DDF94 /* ChrysanMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrysanMaskView.swift; sourceTree = "<group>"; };
 		C33C74D5248916F7004DDF94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLoadingView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
-		C33C74DC2489A6A6004DDF94 /* IconStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconStateView.swift; sourceTree = "<group>"; };
+		C35B12CB24925A08000DFC27 /* StatusViewVender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewVender.swift; sourceTree = "<group>"; };
 		F0494794CCBBE6ABE67D6AF9 /* Pods-Chrysan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan.release.xcconfig"; path = "Target Support Files/Pods-Chrysan/Pods-Chrysan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +135,7 @@
 				C317E37524855A290072D00E /* Chrysan.swift */,
 				C33C74D5248916F7004DDF94 /* Status.swift */,
 				C310C4FA2487E1DD00F9DD8C /* Options.swift */,
-				C33C74D32489129F004DDF94 /* ChrysanMaskView.swift */,
+				C35B12CB24925A08000DFC27 /* StatusViewVender.swift */,
 				C33C74D72489287F004DDF94 /* StatusViews */,
 			);
 			path = Sources;
@@ -148,7 +146,6 @@
 			children = (
 				C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */,
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
-				C33C74DC2489A6A6004DDF94 /* IconStateView.swift */,
 			);
 			path = StatusViews;
 			sourceTree = "<group>";
@@ -347,8 +344,7 @@
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
 				C33C74D9248928A6004DDF94 /* ActivityIndicatorLoadingView.swift in Sources */,
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
-				C33C74DD2489A6A6004DDF94 /* IconStateView.swift in Sources */,
-				C33C74D4248912A0004DDF94 /* ChrysanMaskView.swift in Sources */,
+				C35B12CC24925A08000DFC27 /* StatusViewVender.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

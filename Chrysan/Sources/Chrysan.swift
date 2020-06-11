@@ -10,73 +10,115 @@ import Foundation
 import UIKit
 import SnapKit
 
-public class Chrysan {
+public class Chrysan: UIView {
     
     // MARK: - Initialize
     
     /// 为指定的视图创建菊花
     public static func make(for targetView: UIView) -> Chrysan {
-        let mask = ChrysanMaskView()
-        mask.fill(in: targetView)
-        return Chrysan(mask: mask)
-    }
-    
-    private init(mask: ChrysanMaskView) {
-        maskView = mask
-        maskView?.manager = self
+        let view = Chrysan()
+        view.fill(in: targetView)
+        return view
     }
     
     /// 移动到新的 target 视图
     public func move(to newTarget: UIView) {
-        let mask = maskView
-        mask?.removeFromSuperview()
-        mask?.fill(in: newTarget)
+        let view = self
+        view.removeFromSuperview()
+        view.fill(in: newTarget)
     }
     
-    // MARK: - Mask View
-    internal weak var maskView: ChrysanMaskView?
-
     // MARK: - Status
     
-    public internal(set) var status: Status = .idle
+    public var status: Status = .idle
     
-    // MARK: - Loading View
+    /// a vender provides status views for specified status
+    public var statusViewVender: StatusViewVender = HUDViewVender()
+    
+    /// current status view
+    private weak var currentStatusView: StatusView?
+    
+    public func changeStatus(to newStatus: Status, message: String? = nil) {
         
-    /// 注册 LoadingView 的工厂方法，用来返回显示 Loading 状态的 View，默认返回 ActivityIndicatorLoadingView
-    public var loadingViewFactory: LoadingViewFactory = LoadingViewFactory()
-    
-    // MARK: - Progress View
-    
-    private var progressView: ProgressCompatiableView?
-    private var progressViewFactory: () -> ProgressCompatiableView = { RingProgressView() }
-    
-    /// 注册 ProgressView 的工厂方法，用来返回显示 Progress 状态的 View，默认为 RingProgressView
-    public func registerProgressViewFactory(factory: @escaping ()-> ProgressCompatiableView) {
-        progressViewFactory = factory
+        if newStatus == .idle, status != .idle {
+            currentStatusView?.chrysan(self, willEnd: status, finished: {
+                self.currentStatusView?.removeFromSuperview()
+                self.currentStatusView = nil
+                
+                // MARK: TODO: hide chrysan
+                self.isHidden = true
+                self.superview?.sendSubviewToBack(self)
+            })
+            status = .idle
+            return
+        }
+        
+        let shouldChangeView = statusViewVender.shoudChangeView(from: status, to: newStatus)
+        if shouldChangeView || currentStatusView == nil {
+            if let current = currentStatusView {
+                current.chrysan(self, willEnd: status) {
+                    current.removeFromSuperview()
+                }
+            }
+            currentStatusView = statusViewVender.layoutView(in: self, for: newStatus, message: message)
+        }
+        self.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        currentStatusView?.chrysan(self, changeTo: newStatus, message: message)
     }
-    
-    // MARK: - StateView
-    
-    private var stateView: StateCompatiableView?
-    private var stateViewFactory: () -> StateCompatiableView = { IconStateView() }
-    
-    /// 注册 ProgressView 的工厂方法，用来返回显示 Progress 状态的 View，默认为 RingProgressView
-    public func registerStateViewFactory(factory: @escaping ()-> StateCompatiableView) {
-        stateViewFactory = factory
-    }
-    
 }
+
+// MARK: - Layout
+extension Chrysan {
+    
+    func fill(in target: UIView) {
+        target.addSubview(self)
+        let layoutGuide = target.safeAreaLayoutGuide
+        self.snp.makeConstraints {
+            $0.left.equalTo(layoutGuide.snp.left)
+            $0.right.equalTo(layoutGuide.snp.right)
+            $0.top.equalTo(layoutGuide.snp.top)
+            $0.bottom.equalTo(layoutGuide.snp.bottom)
+        }
+    }
+}
+
+// MARK: - StatusView
+extension Chrysan {
+    
+    func layoutStatusView(view: StatusView, width layout: Layout) {
+        addSubview(view)
+        view.snp.removeConstraints()
+        view.snp.makeConstraints {
+            $0.edges.greaterThanOrEqualToSuperview().inset(layout.padding)
+            $0.size.greaterThanOrEqualTo(layout.minSize)
+            switch layout.position {
+            case .center:
+                $0.centerX.equalToSuperview().offset(layout.offset.x)
+                $0.centerY.equalToSuperview().offset(layout.offset.y)
+            case .top:
+                $0.top.equalToSuperview().offset(layout.offset.y)
+                $0.centerX.equalToSuperview().offset(layout.offset.x)
+            case .bottom:
+                $0.bottom.equalToSuperview().offset(layout.offset.y)
+                $0.centerX.equalToSuperview().offset(layout.offset.x)
+            case .fill:
+                $0.edges.equalToSuperview().priority(.high)
+            }
+        }
+    }
+}
+
 
 public extension UIView {
     
     var chrysan: Chrysan {
         // DO NOT try to get Chrysan from it's self!
-        if self is ChrysanMaskView {
+        if self is Chrysan {
             fatalError("DO NOT try to get Chrysan from it's self!")
         }
         
-        if let mask = subviews.first(where: { $0 is ChrysanMaskView }) as? ChrysanMaskView {
-            return mask.manager!
+        if let chrysan = subviews.first(where: { $0 is Chrysan }) as? Chrysan {
+            return chrysan
         } else {
             return Chrysan.make(for: self)
         }

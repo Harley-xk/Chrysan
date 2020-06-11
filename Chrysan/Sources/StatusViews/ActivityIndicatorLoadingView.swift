@@ -8,40 +8,61 @@
 
 import UIKit
 
-public typealias LoadingtCompatiableView = UIView & LoadingCompatiable
-
-open class LoadingViewFactory {
-    
-    open var layout = Layout()
-    
-    public var view: LoadingtCompatiableView?
-    
-    open func makeLoadingView() -> LoadingtCompatiableView {
-        if view == nil {
-            view = ActivityIndicatorLoadingView()
-        }
-        return view!
-    }
-}
+public typealias LoadingtCompatiableView = UIView & StatusResponsable
 
 public final class ActivityIndicatorLoadingView: LoadingtCompatiableView {
     
-    private weak var indicatorView: UIActivityIndicatorView?
+    private weak var background: UIView?
     
-    public func beginLoading() {
+    convenience init(backgroundStyle style: UIBlurEffect.Style = .dark) {
+        self.init()
+        
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: style))
+        addSubview(blur)
+        blur.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 8
+        addSubview(stack)
+        stack.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = .red
+        indicator.isHidden = false
+        stack.addArrangedSubview(indicator)
+        self.indicatorView = indicator
+        
+        let messageLabel = UILabel()
+        messageLabel.textColor = .white
+        stack.addArrangedSubview(messageLabel)
+        self.messageLabel = messageLabel
+    }
+    
+    public func chrysan(_ chrysan: Chrysan, changeTo status: Status, message: String?) {
         indicatorView?.startAnimating()
+        messageLabel?.text = message
     }
     
-    public func endLoading() {
+    public func chrysan(_ chrysan: Chrysan, willEnd status: Status, finished: @escaping () -> ()) {
         indicatorView?.stopAnimating()
+        messageLabel?.text = ""
+        finished()
     }
-
+    
+    
+    private weak var indicatorView: UIActivityIndicatorView?
+    private weak var messageLabel: UILabel?
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
 }

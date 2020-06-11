@@ -21,9 +21,9 @@ public struct Layout {
     /// - Note: 当 position 设置为 fill 时将忽略该参数的值
     public var offset = CGPoint.zero
     
-    /// 尺寸, 宽度或者高度任意一个维度设置成0，则不限制该维度下的尺寸
+    /// 最小尺寸, 宽度或者高度任意一个维度设置成0，则不限制该维度下的尺寸
     /// - Note: 当 position 设置为 fill 时将忽略该参数的值
-    public var size = CGSize(width: 60, height: 60)
+    public var minSize = CGSize(width: 60, height: 60)
     
     /// 状态视图距离遮罩层边缘的最小距离
     public var padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -36,7 +36,7 @@ public struct Layout {
         case top
         /// 底部固定，此时锚点为底部中心
         case bottom
-        /// 填满整个遮罩层，此时没有锚点，Loading 视图始终与遮罩层一样大
+        /// 填满整个遮罩层，此时没有锚点
         case fill
     }
     
