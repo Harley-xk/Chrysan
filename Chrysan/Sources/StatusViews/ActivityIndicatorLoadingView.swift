@@ -19,6 +19,8 @@ public final class ActivityIndicatorLoadingView: LoadingtCompatiableView {
         
         let blur = UIVisualEffectView(effect: UIBlurEffect(style: style))
         addSubview(blur)
+        blur.layer.cornerRadius = 6
+        blur.clipsToBounds = true
         blur.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -28,17 +30,28 @@ public final class ActivityIndicatorLoadingView: LoadingtCompatiableView {
         stack.spacing = 8
         addSubview(stack)
         stack.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalToSuperview().inset(15)
         }
         
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.color = .red
         indicator.isHidden = false
+        indicator.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        indicator.setContentHuggingPriority(.defaultHigh, for: .vertical)
         stack.addArrangedSubview(indicator)
+        indicator.snp.makeConstraints {
+            $0.height.equalTo(40)
+        }
+        
         self.indicatorView = indicator
         
         let messageLabel = UILabel()
         messageLabel.textColor = .white
+        messageLabel.numberOfLines = 0
+        messageLabel.setContentHuggingPriority(.required, for: .horizontal)
+        messageLabel.setContentHuggingPriority(.required, for: .vertical)
+        messageLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
+        messageLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         stack.addArrangedSubview(messageLabel)
         self.messageLabel = messageLabel
     }

@@ -27,7 +27,8 @@ open class HUDViewVender: StatusViewVender {
         chrysan.addSubview(view)
         view.snp.removeConstraints()
         view.snp.makeConstraints {
-            $0.size.equalTo(80)
+            $0.left.top.greaterThanOrEqualToSuperview().inset(20)
+            $0.size.greaterThanOrEqualTo(80)
             $0.center.equalToSuperview()
         }
         return view

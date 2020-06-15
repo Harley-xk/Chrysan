@@ -71,39 +71,13 @@ public class Chrysan: UIView {
 extension Chrysan {
     
     func fill(in target: UIView) {
+        let layoutGuide = UILayoutGuide()
+        target.addLayoutGuide(layoutGuide)
         target.addSubview(self)
-        let layoutGuide = target.safeAreaLayoutGuide
         self.snp.makeConstraints {
             $0.left.equalTo(layoutGuide.snp.left)
-            $0.right.equalTo(layoutGuide.snp.right)
             $0.top.equalTo(layoutGuide.snp.top)
-            $0.bottom.equalTo(layoutGuide.snp.bottom)
-        }
-    }
-}
-
-// MARK: - StatusView
-extension Chrysan {
-    
-    func layoutStatusView(view: StatusView, width layout: Layout) {
-        addSubview(view)
-        view.snp.removeConstraints()
-        view.snp.makeConstraints {
-            $0.edges.greaterThanOrEqualToSuperview().inset(layout.padding)
-            $0.size.greaterThanOrEqualTo(layout.minSize)
-            switch layout.position {
-            case .center:
-                $0.centerX.equalToSuperview().offset(layout.offset.x)
-                $0.centerY.equalToSuperview().offset(layout.offset.y)
-            case .top:
-                $0.top.equalToSuperview().offset(layout.offset.y)
-                $0.centerX.equalToSuperview().offset(layout.offset.x)
-            case .bottom:
-                $0.bottom.equalToSuperview().offset(layout.offset.y)
-                $0.centerX.equalToSuperview().offset(layout.offset.x)
-            case .fill:
-                $0.edges.equalToSuperview().priority(.high)
-            }
+            $0.size.equalToSuperview()
         }
     }
 }
