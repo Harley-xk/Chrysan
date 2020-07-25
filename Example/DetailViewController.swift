@@ -39,6 +39,10 @@ class DetailViewController: UIViewController {
 
     @IBAction func showAction(_ sender: Any) {
         view.chrysan.changeStatus(to: .loading, message: "正在获取...")
+        
+        DispatchQueue.main.asyncAfter(delay: 5) {
+            self.view.chrysan.changeStatus(to: .idle)
+        }
     }
     
 }

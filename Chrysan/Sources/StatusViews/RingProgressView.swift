@@ -11,14 +11,15 @@ import UIKit
 public typealias ProgressCompatiableView = UIView & StatusResponsable
 
 class RingProgressView: ProgressCompatiableView {
-    func chrysan(_ chrysan: Chrysan, changeTo status: Status, message: String?) {
-        
+    
+    func shouldResponse(to status: Status, for chrysan: Chrysan) -> Bool {
+        if case .progress(_) = status { return true }
+        return false
     }
     
-    func chrysan(_ chrysan: Chrysan, willEnd status: Status, finished: @escaping () -> ()) {
+    func chrysan(_ chrysan: Chrysan, willChangeTo status: Status, message: String?, animator: UIViewPropertyAnimator?) {
         
-    }
-    
+    }    
     
     func update(percent: Double) {
         

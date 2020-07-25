@@ -30,14 +30,30 @@ public enum Status: Hashable {
     /// 预设状态，警告
     public static let warning: Status = .named("com.chrysan.status.warning")
     
-    /// 预设状态，警告
+    /// 预设状态，信息
     public static let info: Status = .named("com.chrysan.status.info")
 
 }
 
 public protocol StatusResponsable {
-    /// chrysan 进入某个状态的事件， progress 状态会重复调用该方法
-    func chrysan(_ chrysan: Chrysan, changeTo status: Status, message: String?)
-    /// chrysan 结束某个状态的事件, 完成UI更新后必须调用 finished
-    func chrysan(_ chrysan: Chrysan, willEnd status: Status, finished: @escaping () -> ())
+        
+    /// 是否可以响应指定的状态
+    /// - Parameters:
+    ///   - status: 目标状态
+    ///   - chrysan: 宿主 chrysan
+    func shouldResponse(to status: Status, for chrysan: Chrysan) -> Bool
+    
+    /// chrysan 即将改变状态
+    /// - Parameters:
+    ///   - chrysan: 当前 chrysan
+    ///   - status: 目标状态
+    ///   - message: 目标信息
+    ///   - animator: 转换状态时 chrysan 将通过 animator 执行预设动画，
+    ///               可以向 animator 添加 hud 自己的动画以同步执行
+    func chrysan(
+        _ chrysan: Chrysan,
+        willChangeTo status: Status,
+        message: String?,
+        animator: UIViewPropertyAnimator?
+    )    
 }

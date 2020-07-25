@@ -18,14 +18,17 @@ public class Chrysan: UIView {
     public static func make(for targetView: UIView) -> Chrysan {
         let view = Chrysan()
         view.fill(in: targetView)
+        view.setupAnimations()
         return view
     }
     
-    /// 移动到新的 target 视图
-    public func move(to newTarget: UIView) {
-        let view = self
-        view.removeFromSuperview()
-        view.fill(in: newTarget)
+    private func setupAnimations() {
+        showingAnimations = { [unowned self] in
+            self.backgroundColor = .black
+        }
+        hidingAnimations = { [unowned self] in
+            self.backgroundColor = .clear
+        }
     }
     
     // MARK: - Status
@@ -40,31 +43,50 @@ public class Chrysan: UIView {
     
     public func changeStatus(to newStatus: Status, message: String? = nil) {
         
-        if newStatus == .idle, status != .idle {
-            currentStatusView?.chrysan(self, willEnd: status, finished: {
-                self.currentStatusView?.removeFromSuperview()
-                self.currentStatusView = nil
-                
-                // MARK: TODO: hide chrysan
-                self.isHidden = true
-                self.superview?.sendSubviewToBack(self)
-            })
-            status = .idle
+        guard newStatus != status, let superview = superview else {
             return
         }
         
-        let shouldChangeView = statusViewVender.shoudChangeView(from: status, to: newStatus)
-        if shouldChangeView || currentStatusView == nil {
-            if let current = currentStatusView {
-                current.chrysan(self, willEnd: status) {
-                    current.removeFromSuperview()
-                }
+        let animator = UIViewPropertyAnimator(duration: 2, curve: .easeInOut)
+        if status == .idle {
+            // show
+            superview.bringSubviewToFront(self)
+            isHidden = false
+            if let showingAnimations = self.showingAnimations {
+                animator.addAnimations(showingAnimations)
             }
-            currentStatusView = statusViewVender.layoutView(in: self, for: newStatus, message: message)
+        } else if newStatus == .idle {
+            // hide
+            if let hidingAnimations = self.hidingAnimations {
+                animator.addAnimations(hidingAnimations)
+            }
+            animator.addCompletion { (position) in
+                guard position == .end else { return }
+                self.isHidden = true
+                superview.sendSubviewToBack(self)
+            }
         }
-        self.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        currentStatusView?.chrysan(self, changeTo: newStatus, message: message)
+        
+        if let statusView = currentStatusView, statusView.shouldResponse(to: status, for: self) {
+            statusView.chrysan(self, willChangeTo: status, message: message, animator: animator)
+        } else {
+            currentStatusView?.removeFromSuperview()
+            currentStatusView = statusViewVender.layoutView(in: self, for: status, message: message, animator: animator)
+        }
+        
+        animator.startAnimation()
+        status = newStatus
     }
+    
+    // MARK: - Animations
+    
+    public typealias AnimationTask = () -> Void
+    public typealias AnimationComplection = (UIViewAnimatingPosition) -> Void
+    
+    open var showingAnimations: AnimationTask?
+    open var showingComplection: AnimationComplection?
+    open var hidingAnimations: AnimationTask?
+    open var hddingComplection: AnimationComplection?
 }
 
 // MARK: - Layout

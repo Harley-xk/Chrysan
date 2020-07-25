@@ -8,9 +8,7 @@
 
 import UIKit
 
-public typealias LoadingtCompatiableView = UIView & StatusResponsable
-
-public final class ActivityIndicatorLoadingView: LoadingtCompatiableView {
+public final class HUDStatusView: UIView {
     
     private weak var background: UIView?
     
@@ -78,4 +76,20 @@ public final class ActivityIndicatorLoadingView: LoadingtCompatiableView {
      }
      */
     
+}
+
+extension HUDStatusView: StatusResponsable {
+    public func shouldResponse(to status: Status, for chrysan: Chrysan) -> Bool {
+        return status == .loading
+    }
+    
+    public func chrysan(
+        _ chrysan: Chrysan,
+        willChangeTo status: Status,
+        message: String?,
+        animator: UIViewPropertyAnimator?
+    ) {
+        
+    }
+
 }

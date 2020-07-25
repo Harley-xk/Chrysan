@@ -8,22 +8,18 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 public typealias StatusView = (UIView & StatusResponsable)
 
 public protocol StatusViewVender {
-    func shoudChangeView(from previousStatus: Status, to newStatus: Status) -> Bool
-    
-    func layoutView(in chrysan: Chrysan, for status: Status, message: String?) -> StatusView
+    func layoutView(in chrysan: Chrysan, for status: Status, message: String?, animator: UIViewPropertyAnimator?) -> StatusView
 }
 
 open class HUDViewVender: StatusViewVender {
-    public func shoudChangeView(from previousStatus: Status, to newStatus: Status) -> Bool {
-        return false
-    }
-
-    public func layoutView(in chrysan: Chrysan, for status: Status, message: String?) -> StatusView {
-        let view = ActivityIndicatorLoadingView(backgroundStyle: .dark)
+    
+    open func layoutView(in chrysan: Chrysan, for status: Status, message: String?, animator: UIViewPropertyAnimator?) -> StatusView {
+        let view = HUDStatusView(backgroundStyle: .dark)
         chrysan.addSubview(view)
         view.snp.removeConstraints()
         view.snp.makeConstraints {
@@ -32,6 +28,5 @@ open class HUDViewVender: StatusViewVender {
             $0.center.equalToSuperview()
         }
         return view
-    }
-
+    }    
 }
