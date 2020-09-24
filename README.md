@@ -45,6 +45,10 @@ github "Harley-xk/Chrysan"
 
 **确保将 `Chrysan.framework` 添加到 target 的 `Embedded Binaries` 配置项中**
 
+#### 通过 SPM 安装
+
+
+
 ### 使用
 
 每个 View 都有一个 chrysan 属性，可以获取当前 View 的独立的菊花。只有当第一次访问 chrysan 属性时才会真实地创建 ChrysanView 实例，避免不必要的开销和内存占用。
