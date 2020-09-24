@@ -21,7 +21,7 @@
     "source_files": "Chrysan/Classes/**/*",
     "resource_bundles": {
         "Chrysan": [
-                    "Chrysan/Assets/*"
+                    "Chrysan/Resources/*"
                     ]
     }
 }

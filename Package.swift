@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "Chrysan",
             dependencies: [],
-            path: "Chrysan",
-            resources: [.copy("Chrysan/Assets")])
+            path: "Chrysan/Classes",
+            resources: [.copy("Chrysan/Resources")])
     ]
 )

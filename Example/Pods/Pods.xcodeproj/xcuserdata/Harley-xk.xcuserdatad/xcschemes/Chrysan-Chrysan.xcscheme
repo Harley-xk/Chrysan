@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F4C2A8ECE04D41524F0E113D8FCA28E"
-               BuildableName = "Pods_Chrysan_Example.framework"
-               BlueprintName = "Pods-Chrysan_Example"
+               BlueprintIdentifier = "640746AB0E11185AB65477004B26D49D"
+               BuildableName = "Chrysan.bundle"
+               BlueprintName = "Chrysan-Chrysan"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -34,6 +34,7 @@
 		8661FB0C3CF3B29932E2A71D /* Pods-Chrysan_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chrysan_Tests/Pods-Chrysan_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B6B66B2B1DD59583005F82BE /* Chrysan.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Chrysan.podspec.json; path = ../Chrysan.podspec.json; sourceTree = "<group>"; };
 		C3036B592417B9DA0033329D /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		C34645A7251C419300874AF8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		E771600D9A33022E599EB4BD /* Pods-Chrysan_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chrysan_Tests/Pods-Chrysan_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +106,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				C34645A7251C419300874AF8 /* Package.swift */,
 				B6B66B2B1DD59583005F82BE /* Chrysan.podspec.json */,
 				45D945E41175B0504641CC6A /* README.md */,
 				82322546EC0203983E22F957 /* LICENSE */,
