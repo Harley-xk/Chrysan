@@ -15,20 +15,15 @@ public class Chrysan: UIView {
     // MARK: - Initialize
     
     /// 为指定的视图创建菊花
-    public static func make(for targetView: UIView) -> Chrysan {
+    public static func make(
+        for targetView: UIView,
+        responder: StatusResponder = HUDResponder()
+    ) -> Chrysan {
         let view = Chrysan()
+        view.responder = responder
         view.fill(in: targetView)
-        view.setupAnimations()
+        view.isHidden = true
         return view
-    }
-    
-    private func setupAnimations() {
-        showingAnimations = { [unowned self] in
-            self.backgroundColor = .black
-        }
-        hidingAnimations = { [unowned self] in
-            self.backgroundColor = .clear
-        }
     }
     
     // MARK: - Status
@@ -36,57 +31,32 @@ public class Chrysan: UIView {
     public var status: Status = .idle
     
     /// a vender provides status views for specified status
-    public var statusViewVender: StatusViewVender = HUDViewVender()
+    public private(set) var responder: StatusResponder = HUDResponder()
     
-    /// current status view
-    private weak var currentStatusView: StatusView?
-    
-    public func changeStatus(to newStatus: Status, message: String? = nil) {
-        
-        guard newStatus != status, let superview = superview else {
+    /// 更新 Status
+    /// - Parameter newStatus: 新的状态
+    public func changeStatus(to newStatus: Status) {
+
+        guard let _ = superview else {
             return
         }
         
-        let animator = UIViewPropertyAnimator(duration: 2, curve: .easeInOut)
-        if status == .idle {
-            // show
-            superview.bringSubviewToFront(self)
+        if newStatus != .idle, isHidden {
             isHidden = false
-            if let showingAnimations = self.showingAnimations {
-                animator.addAnimations(showingAnimations)
-            }
-        } else if newStatus == .idle {
-            // hide
-            if let hidingAnimations = self.hidingAnimations {
-                animator.addAnimations(hidingAnimations)
-            }
-            animator.addCompletion { (position) in
-                guard position == .end else { return }
-                self.isHidden = true
-                superview.sendSubviewToBack(self)
-            }
         }
         
-        if let statusView = currentStatusView, statusView.shouldResponse(to: status, for: self) {
-            statusView.chrysan(self, willChangeTo: status, message: message, animator: animator)
-        } else {
-            currentStatusView?.removeFromSuperview()
-            currentStatusView = statusViewVender.layoutView(in: self, for: status, message: message, animator: animator)
+        responder.changeStatus(from: status, to: newStatus, for: self) {
+            self.didChangeStatus(to: newStatus)
         }
-        
-        animator.startAnimation()
-        status = newStatus
     }
     
-    // MARK: - Animations
-    
-    public typealias AnimationTask = () -> Void
-    public typealias AnimationComplection = (UIViewAnimatingPosition) -> Void
-    
-    open var showingAnimations: AnimationTask?
-    open var showingComplection: AnimationComplection?
-    open var hidingAnimations: AnimationTask?
-    open var hddingComplection: AnimationComplection?
+    private func didChangeStatus(to newStatus: Status) {
+        self.status = newStatus
+        
+        if newStatus == .idle {
+            self.isHidden = true
+        }
+    }
 }
 
 // MARK: - Layout

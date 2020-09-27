@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
+        
+        let hudResponder = view.chrysan.responder as? HUDResponder
+        hudResponder?.layout.position = .bottom
+        hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
     }
 
     var detailItem: NSDate? {
@@ -37,10 +41,26 @@ class DetailViewController: UIViewController {
         }
     }
 
-    @IBAction func showAction(_ sender: Any) {
-        view.chrysan.changeStatus(to: .loading, message: "正在获取...")
+    @IBAction func showAction(_ sender: UIButton) {
+        let hudResponder = view.chrysan.responder as? HUDResponder
+
+        switch sender.tag {
+        case 0:
+            hudResponder?.layout.position = .top
+            hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
+        case 2:
+            hudResponder?.layout.position = .bottom
+            hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
+        default:
+            hudResponder?.layout.position = .center
+            hudResponder?.layout.offset = .zero
+//            hudResponder?.layout.offset = CGPoint(x: 30, y: 0)
+        }
         
-        DispatchQueue.main.asyncAfter(delay: 5) {
+        view.chrysan.changeStatus(to: .loading(message: "正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取"))
+//        view.chrysan.changeStatus(to: .loading(message: "正在获取..."))
+//
+        DispatchQueue.main.asyncAfter(delay: 3) {
             self.view.chrysan.changeStatus(to: .idle)
         }
     }

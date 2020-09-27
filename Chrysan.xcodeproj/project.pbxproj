@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		220F1835D604423A2F9565F4 /* Pods_Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E9E2F8CB41E29EB6A28D28 /* Pods_Chrysan.framework */; };
-		C310C4FB2487E1DD00F9DD8C /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310C4FA2487E1DD00F9DD8C /* Options.swift */; };
+		C305ECFC25201FBC00A800C7 /* HUDAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305ECFB25201FBC00A800C7 /* HUDAnimator.swift */; };
+		C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */; };
 		C317E34E24854FDE0072D00E /* Chrysan.h in Headers */ = {isa = PBXBuildFile; fileRef = C317E34C24854FDE0072D00E /* Chrysan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C317E35B2485502E0072D00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E35A2485502E0072D00E /* AppDelegate.swift */; };
 		C317E35F2485502E0072D00E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E35E2485502E0072D00E /* MasterViewController.swift */; };
@@ -19,9 +20,10 @@
 		C317E36F248550490072D00E /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C317E37624855A290072D00E /* Chrysan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E37524855A290072D00E /* Chrysan.swift */; };
 		C33C74D6248916F7004DDF94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D5248916F7004DDF94 /* Status.swift */; };
-		C33C74D9248928A6004DDF94 /* ActivityIndicatorLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */; };
+		C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* HUDStatusView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
-		C35B12CC24925A08000DFC27 /* StatusViewVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35B12CB24925A08000DFC27 /* StatusViewVender.swift */; };
+		C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6384C251DE5D40013B4AA /* StatusResponder.swift */; };
+		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
 		DF9D6D3B54E2D79217018868 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597B349AEE30DD3CB22EFBA /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +33,8 @@
 		22D146D94159A89EAF0EADA5 /* Pods-Chrysan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan.debug.xcconfig"; path = "Target Support Files/Pods-Chrysan/Pods-Chrysan.debug.xcconfig"; sourceTree = "<group>"; };
 		8597B349AEE30DD3CB22EFBA /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E9E2F8CB41E29EB6A28D28 /* Pods_Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C310C4FA2487E1DD00F9DD8C /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		C305ECFB25201FBC00A800C7 /* HUDAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDAnimator.swift; sourceTree = "<group>"; };
+		C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLayout.swift; sourceTree = "<group>"; };
 		C317E34924854FDE0072D00E /* Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317E34C24854FDE0072D00E /* Chrysan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chrysan.h; sourceTree = "<group>"; };
 		C317E34D24854FDE0072D00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,9 +50,10 @@
 		C317E372248554F90072D00E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C317E37524855A290072D00E /* Chrysan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chrysan.swift; sourceTree = "<group>"; };
 		C33C74D5248916F7004DDF94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLoadingView.swift; sourceTree = "<group>"; };
+		C33C74D8248928A6004DDF94 /* HUDStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStatusView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
-		C35B12CB24925A08000DFC27 /* StatusViewVender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewVender.swift; sourceTree = "<group>"; };
+		C3C6384C251DE5D40013B4AA /* StatusResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponder.swift; sourceTree = "<group>"; };
+		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
 		F0494794CCBBE6ABE67D6AF9 /* Pods-Chrysan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chrysan.release.xcconfig"; path = "Target Support Files/Pods-Chrysan/Pods-Chrysan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,8 +138,8 @@
 			children = (
 				C317E37524855A290072D00E /* Chrysan.swift */,
 				C33C74D5248916F7004DDF94 /* Status.swift */,
-				C310C4FA2487E1DD00F9DD8C /* Options.swift */,
-				C35B12CB24925A08000DFC27 /* StatusViewVender.swift */,
+				C3C6384C251DE5D40013B4AA /* StatusResponder.swift */,
+				C3C638562520121F0013B4AA /* Responders */,
 				C33C74D72489287F004DDF94 /* StatusViews */,
 			);
 			path = Sources;
@@ -144,10 +148,20 @@
 		C33C74D72489287F004DDF94 /* StatusViews */ = {
 			isa = PBXGroup;
 			children = (
-				C33C74D8248928A6004DDF94 /* ActivityIndicatorLoadingView.swift */,
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
 			);
 			path = StatusViews;
+			sourceTree = "<group>";
+		};
+		C3C638562520121F0013B4AA /* Responders */ = {
+			isa = PBXGroup;
+			children = (
+				C3C63850251DE68F0013B4AA /* HUDResponder.swift */,
+				C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */,
+				C305ECFB25201FBC00A800C7 /* HUDAnimator.swift */,
+				C33C74D8248928A6004DDF94 /* HUDStatusView.swift */,
+			);
+			path = Responders;
 			sourceTree = "<group>";
 		};
 		DA27B5752212D8D3255D14AA /* Pods */ = {
@@ -340,11 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C310C4FB2487E1DD00F9DD8C /* Options.swift in Sources */,
+				C305ECFC25201FBC00A800C7 /* HUDAnimator.swift in Sources */,
+				C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */,
+				C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */,
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
-				C33C74D9248928A6004DDF94 /* ActivityIndicatorLoadingView.swift in Sources */,
+				C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */,
+				C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */,
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
-				C35B12CC24925A08000DFC27 /* StatusViewVender.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

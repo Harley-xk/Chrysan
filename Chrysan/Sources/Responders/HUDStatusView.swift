@@ -9,9 +9,7 @@
 import UIKit
 
 public final class HUDStatusView: UIView {
-    
-    private weak var background: UIView?
-    
+        
     convenience init(backgroundStyle style: UIBlurEffect.Style = .dark) {
         self.init()
         
@@ -53,21 +51,9 @@ public final class HUDStatusView: UIView {
         stack.addArrangedSubview(messageLabel)
         self.messageLabel = messageLabel
     }
-    
-    public func chrysan(_ chrysan: Chrysan, changeTo status: Status, message: String?) {
-        indicatorView?.startAnimating()
-        messageLabel?.text = message
-    }
-    
-    public func chrysan(_ chrysan: Chrysan, willEnd status: Status, finished: @escaping () -> ()) {
-        indicatorView?.stopAnimating()
-        messageLabel?.text = ""
-        finished()
-    }
-    
-    
-    private weak var indicatorView: UIActivityIndicatorView?
-    private weak var messageLabel: UILabel?
+
+    weak var indicatorView: UIActivityIndicatorView?
+    weak var messageLabel: UILabel?
     /*
      // Only override draw() if you perform custom drawing.
      // An empty implementation adversely affects performance during animation.
@@ -76,20 +62,4 @@ public final class HUDStatusView: UIView {
      }
      */
     
-}
-
-extension HUDStatusView: StatusResponsable {
-    public func shouldResponse(to status: Status, for chrysan: Chrysan) -> Bool {
-        return status == .loading
-    }
-    
-    public func chrysan(
-        _ chrysan: Chrysan,
-        willChangeTo status: Status,
-        message: String?,
-        animator: UIViewPropertyAnimator?
-    ) {
-        
-    }
-
 }
