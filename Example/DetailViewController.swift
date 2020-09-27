@@ -57,12 +57,13 @@ class DetailViewController: UIViewController {
 //            hudResponder?.layout.offset = CGPoint(x: 30, y: 0)
         }
         
-        view.chrysan.changeStatus(to: .loading(message: "正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取正在获取"))
-//        view.chrysan.changeStatus(to: .loading(message: "正在获取..."))
-//
-        DispatchQueue.main.asyncAfter(delay: 3) {
-            self.view.chrysan.changeStatus(to: .idle)
+        view.chrysan.changeStatus(to: .loading(message: "正在获取"))
+
+        DispatchQueue.main.asyncAfter(delay: 2) {
+            self.view.chrysan.changeStatus(to: .loading(message: "正在上传"))
         }
+//        
+        view.chrysan.hide(afterDelay: 5)
     }
     
 }

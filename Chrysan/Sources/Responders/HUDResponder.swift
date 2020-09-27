@@ -17,12 +17,15 @@ open class HUDResponder: StatusResponder {
     /// 宿主 chrysan 视图
     public private(set) weak var host: Chrysan?
         
-    /// 宿主 chrysan 视图
-    public private(set) var animator: UIViewPropertyAnimator?
+    /// 动画属性配置器
+    public private(set) var animatorProvider: AnimatorProvider = CubicAnimatorProvider()
 
     /// 显示状态的视图
     public private(set) var statusView: HUDStatusView?
         
+    // last running animator
+    private weak var lastAnimator: UIViewPropertyAnimator?
+    
     open func changeStatus(
         from current: Status,
         to new: Status,
@@ -33,28 +36,41 @@ open class HUDResponder: StatusResponder {
             layoutStatusView(in: host)
         }
         
+        // if the last status transforming is not finished, force to stop
+        if let last = lastAnimator, last.isRunning {
+            last.stopAnimation(true)
+        }
+        
         // 准备执行动画，设置相关视图的起始状态
         prepareAnimation(for: host, from: current, to: new)
-
-        let timming = UISpringTimingParameters(dampingRatio: 0.5)
-        let animator = UIViewPropertyAnimator(duration: 0.25, timingParameters: timming)
+        
+        let animator = animatorProvider.makeAnimator()
         animator.addAnimations {
             self.runAnimation(for: host, from: current, to: new)
         }
-        animator.addCompletion { (position) in
+        animator.addCompletion { [weak self] (position) in
             if position == .end {
                 finished()
+                self?.animationFinished(for: host, from: current, to: new)
             }
         }
         animator.startAnimation()
+        lastAnimator = animator
     }
     
     // MARK: - Layout
+    
+    // 结束后将视图移除，如果在显示状态下修改了layout，该属性会被标记为 true，HUD 隐藏后会被移除
+    private var removeViewOnFinish = false
+    
     /// 布局属性，修改后从下一次显示 HUD 开始生效
     open var layout = HUDLayout() {
         didSet {
             // 修改布局属性，移除 HUD
-            if let view = statusView {
+            guard let view = statusView else { return }
+            if host?.isActive == true {
+                removeViewOnFinish = true
+            } else {
                 view.removeFromSuperview()
                 statusView = nil
             }
@@ -62,6 +78,9 @@ open class HUDResponder: StatusResponder {
     }
     
     open func layoutStatusView(in chrysan: Chrysan) {
+        
+        host = chrysan
+        
         let view = HUDStatusView(backgroundStyle: .dark)
         chrysan.addSubview(view)
         view.snp.removeConstraints()
@@ -99,29 +118,46 @@ open class HUDResponder: StatusResponder {
 
     // MARK: - Animations
     
-    /// 动画控制器，控制动画的准备、执行和销毁
-    open var hudAnimator = HUDAnimator()
-
     open func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
         if from == .idle {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
             statusView?.alpha = 0
-            statusView?.transform = CGAffineTransform(scaleX: 0, y: 0)
+            statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }
     }
     
     open func runAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
-        if from == .idle {
+        
+        let isShowing = from == .idle && new != .idle
+        let isHidding = from != .idle && new == .idle
+        
+        if isShowing {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0.3)
             statusView?.alpha = 1
-            statusView?.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.statusView?.messageLabel?.text = new.message
-            self.statusView?.indicatorView?.startAnimating()
-        } else if new == .idle {
+            statusView?.transform = .identity
+            statusView?.indicatorView?.startAnimating()
+        } else if isHidding {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
             statusView?.alpha = 0
-            statusView?.transform = CGAffineTransform(scaleX: 0, y: 0)
-        } else {
+            statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }
+        
+        // 隐藏 HUD 时不更新 message
+        if !isHidding {
+            self.statusView?.messageLabel?.text = new.message
+        }
+    }
+    
+    open func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
+//        let isShowing = from == .idle && new != .idle
+        let isHidden = from != .idle && new == .idle
+
+        if isHidden && removeViewOnFinish {
+            statusView?.removeFromSuperview()
+            statusView = nil
+            removeViewOnFinish = false
+        }
+        
+        lastAnimator = nil
     }
 }

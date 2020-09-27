@@ -28,10 +28,28 @@ public class Chrysan: UIView {
     
     // MARK: - Status
     
+    /// 当前状态
     public var status: Status = .idle
+    
+    /// 活跃状态，HUD 可见
+    public var isActive: Bool {
+        return !isHidden
+    }
     
     /// a vender provides status views for specified status
     public private(set) var responder: StatusResponder = HUDResponder()
+    
+    /// 隐藏 Chrysan
+    /// - Parameter delay: 延迟时间，单位：秒。在指定延迟之后隐藏，默认为 0，不延迟
+    public func hide(afterDelay delay: TimeInterval = 0) {
+        if delay > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(Int(delay * 1000))) { [weak self] in
+                self?.changeStatus(to: .idle)
+            }
+        } else {
+            changeStatus(to: .idle)
+        }
+    }
     
     /// 更新 Status
     /// - Parameter newStatus: 新的状态

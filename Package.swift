@@ -12,10 +12,10 @@ let package = Package(
     ],
     dependencies: [
         // A Swift Autolayout DSL for iOS & OS X
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.0.0"),
+        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.0")),
     ],
     targets: [
-        .target(name: "Chrysan", path: "Chrysan/Sources"),
+        .target(name: "Chrysan", dependencies: ["SnapKit"], path: "Chrysan/Sources"),
     ],
     swiftLanguageVersions: [
         .v5
