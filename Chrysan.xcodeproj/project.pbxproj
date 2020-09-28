@@ -17,8 +17,10 @@
 		C317E3642485502E0072D00E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E3622485502E0072D00E /* Main.storyboard */; };
 		C317E366248550320072D00E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C317E365248550320072D00E /* Assets.xcassets */; };
 		C317E369248550320072D00E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E367248550320072D00E /* LaunchScreen.storyboard */; };
-		C317E36F248550490072D00E /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C317E37624855A290072D00E /* Chrysan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E37524855A290072D00E /* Chrysan.swift */; };
+		C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */; };
+		C31DA58925217BDF00AEE121 /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
+		C31DA58A25217BDF00AEE121 /* Chrysan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C33C74D6248916F7004DDF94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D5248916F7004DDF94 /* Status.swift */; };
 		C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* HUDStatusView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
@@ -26,6 +28,20 @@
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
 		DF9D6D3B54E2D79217018868 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597B349AEE30DD3CB22EFBA /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C31DA58B25217BDF00AEE121 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C31DA58A25217BDF00AEE121 /* Chrysan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04B07264A2F0EB18738A3F54 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		C317E370248552AC0072D00E /* Chrysan.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chrysan.podspec.json; sourceTree = "<group>"; };
 		C317E372248554F90072D00E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C317E37524855A290072D00E /* Chrysan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chrysan.swift; sourceTree = "<group>"; };
+		C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorView.swift; sourceTree = "<group>"; };
 		C33C74D5248916F7004DDF94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C33C74D8248928A6004DDF94 /* HUDStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStatusView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
@@ -70,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C317E36F248550490072D00E /* Chrysan.framework in Frameworks */,
 				DF9D6D3B54E2D79217018868 /* Pods_Example.framework in Frameworks */,
+				C31DA58925217BDF00AEE121 /* Chrysan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,18 +157,19 @@
 				C33C74D5248916F7004DDF94 /* Status.swift */,
 				C3C6384C251DE5D40013B4AA /* StatusResponder.swift */,
 				C305ECFB25201FBC00A800C7 /* AnimationOptionable.swift */,
+				C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */,
 				C3C638562520121F0013B4AA /* Responders */,
-				C33C74D72489287F004DDF94 /* StatusViews */,
+				C33C74D72489287F004DDF94 /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		C33C74D72489287F004DDF94 /* StatusViews */ = {
+		C33C74D72489287F004DDF94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
 			);
-			path = StatusViews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C3C638562520121F0013B4AA /* Responders */ = {
@@ -217,6 +235,7 @@
 				C317E3552485502E0072D00E /* Frameworks */,
 				C317E3562485502E0072D00E /* Resources */,
 				71777EA39950F70A377E4FDB /* [CP] Embed Pods Frameworks */,
+				C31DA58B25217BDF00AEE121 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,6 +381,7 @@
 				C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */,
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
+				C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

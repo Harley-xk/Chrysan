@@ -35,8 +35,15 @@ public struct Status {
         return loading
     }
 
-    /// 预设状态：带进度的状态
     static let progress = Status(message: nil, progress: 0)
+    
+    /// 预设状态：带进度的状态
+    public static func progress(message: String? = nil, progress: Double) -> Status {
+        var status = Status.progress
+        status.progress = progress
+        status.message = message
+        return status
+    }
 }
 
 extension Status: Equatable {

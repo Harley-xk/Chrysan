@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
 
     @IBAction func showAction(_ sender: UIButton) {
         let hudResponder = view.chrysan.responder as? HUDResponder
-
+//        hudResponder?.layout.indicatorSize = CGSize(width: 100, height: 100)
         switch sender.tag {
         case 0:
             hudResponder?.layout.position = .top
@@ -57,13 +57,33 @@ class DetailViewController: UIViewController {
 //            hudResponder?.layout.offset = CGPoint(x: 30, y: 0)
         }
         
-        view.chrysan.changeStatus(to: .loading(message: "正在获取"))
+//        view.chrysan.changeStatus(to: .loading(message: "正在获取"))
 
-        DispatchQueue.main.asyncAfter(delay: 2) {
-            self.view.chrysan.changeStatus(to: .loading(message: "正在上传"))
+//        DispatchQueue.main.asyncAfter(delay: 2) {
+            self.view.chrysan.changeStatus(to: .loading(message: "准备上传"))
+//        }
+        
+        DispatchQueue.main.asyncAfter(delay: 0.5) {
+            self.progress = 0
+            self.progressTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
+                self.updateProgress()
+            })
         }
 //        
-        view.chrysan.hide(afterDelay: 5)
+    }
+    
+    private var progressTimer: Timer?
+    private var progress: Double = 0
+    
+    func updateProgress() {
+        progress += 0.05
+        view.chrysan.updateProgress(progress, message: "正在上传")
+        
+        if progress >= 1 {
+            view.chrysan.hide(afterDelay: 1)
+            progressTimer?.invalidate()
+            progressTimer = nil
+        }
     }
     
 }

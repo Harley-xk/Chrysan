@@ -81,7 +81,7 @@ open class HUDResponder: StatusResponder {
         
         host = chrysan
         
-        let view = HUDStatusView(backgroundStyle: .dark)
+        let view = HUDStatusView(backgroundStyle: .dark, indicatorSize: layout.indicatorSize)
         chrysan.addSubview(view)
         view.snp.removeConstraints()
         view.snp.makeConstraints {
@@ -110,8 +110,7 @@ open class HUDResponder: StatusResponder {
                 .lessThanOrEqualTo(chrysan.safeAreaLayoutGuide.snp.bottom)
                 .inset(layout.padding.bottom)
             
-            $0.width.greaterThanOrEqualTo(layout.minSize.width)
-            $0.height.greaterThanOrEqualTo(layout.minSize.height)
+            $0.size.greaterThanOrEqualTo(layout.indicatorSize)
         }
         statusView = view
     }
@@ -135,17 +134,14 @@ open class HUDResponder: StatusResponder {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0.3)
             statusView?.alpha = 1
             statusView?.transform = .identity
-            statusView?.indicatorView?.startAnimating()
         } else if isHidding {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
             statusView?.alpha = 0
             statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }
         
-        // 隐藏 HUD 时不更新 message
-        if !isHidding {
-            self.statusView?.messageLabel?.text = new.message
-        }
+        statusView?.updateStatus(for: chrysan, from: from, to: new)
+
     }
     
     open func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
