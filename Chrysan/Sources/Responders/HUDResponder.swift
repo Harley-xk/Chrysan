@@ -18,7 +18,10 @@ open class HUDResponder: StatusResponder {
     public private(set) weak var host: Chrysan?
         
     /// 动画属性配置器
-    public private(set) var animatorProvider: AnimatorProvider = CubicAnimatorProvider()
+    public var animatorProvider: AnimatorProvider = CubicAnimatorProvider()
+    
+    /// 状态指示器视图配置器
+    public var indicatorProvider: IndicatorProvider = HUDIndicatorProvider()
 
     /// 显示状态的视图
     public private(set) var statusView: HUDStatusView?
@@ -82,6 +85,7 @@ open class HUDResponder: StatusResponder {
         host = chrysan
         
         let view = HUDStatusView(backgroundStyle: .dark, indicatorSize: layout.indicatorSize)
+        view.indicatorProvider = indicatorProvider
         chrysan.addSubview(view)
         view.snp.removeConstraints()
         view.snp.makeConstraints {
@@ -118,6 +122,7 @@ open class HUDResponder: StatusResponder {
     // MARK: - Animations
     
     open func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
+        statusView?.prepreStatus(for: chrysan, from: from, to: new)
         if from == .idle {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
             statusView?.alpha = 0

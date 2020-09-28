@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class RingProgressView: UIView, StatusIndicatorView {
+open class RingProgressView: UIView, ProgressIndicatorView {
     
     /// 进度值，0～1
     open var progress: CGFloat = 0 {
@@ -31,8 +31,8 @@ open class RingProgressView: UIView, StatusIndicatorView {
         }
     }
     
-    private var progressLayer = CAShapeLayer()
-    private var backgroundMask = CAShapeLayer()
+    private let progressLayer = CAShapeLayer()
+    private let backgroundMask = CAShapeLayer()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,10 +60,6 @@ open class RingProgressView: UIView, StatusIndicatorView {
         progressLayer.fillColor = nil
         layer.addSublayer(progressLayer)
         layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 2), 0, 0, -1)
-    }
-    
-    public func updateStatus(from: Status, to new: Status) {
-        progress = CGFloat(new.progress ?? 0)
     }
 
     open override func draw(_ rect: CGRect) {

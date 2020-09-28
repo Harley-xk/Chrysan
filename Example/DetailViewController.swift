@@ -43,6 +43,7 @@ class DetailViewController: UIViewController {
 
     @IBAction func showAction(_ sender: UIButton) {
         let hudResponder = view.chrysan.responder as? HUDResponder
+        hudResponder?.indicatorProvider = CurtomIndicatorProvider()
 //        hudResponder?.layout.indicatorSize = CGSize(width: 100, height: 100)
         switch sender.tag {
         case 0:
@@ -88,3 +89,11 @@ class DetailViewController: UIViewController {
     
 }
 
+class CurtomIndicatorProvider: HUDIndicatorProvider {
+    
+    override func makeProgressIndicatorView() -> StatusIndicatorView {
+        var options = HUDBarProgressView.Options()
+        options.barColor = .systemRed
+        return HUDBarProgressView.makeBar(with: options)
+    }
+}

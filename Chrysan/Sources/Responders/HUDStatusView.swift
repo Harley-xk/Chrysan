@@ -10,7 +10,7 @@ import UIKit
 
 public final class HUDStatusView: UIView {
     
-    public var indicatorSize = CGSize(width: 40, height: 40)
+    public private(set) var indicatorSize = CGSize(width: 40, height: 40)
     public private(set) var indicatorContainer: UIView!
     
     convenience init(
@@ -37,31 +37,11 @@ public final class HUDStatusView: UIView {
             $0.edges.equalToSuperview().inset(15)
         }
         
-        let indicatorContainer = UIView()
+        indicatorContainer = UIView()
         stack.addArrangedSubview(indicatorContainer)
         indicatorContainer.snp.makeConstraints {
-            $0.height.equalTo(indicatorSize).priority(.high)
+            $0.height.equalTo(indicatorSize)
         }
-
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.color = .red
-        indicator.isHidden = false
-        indicatorContainer.addSubview(indicator)
-        indicator.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        self.indicatorView = indicator
-        
-        let progressView = RingProgressView()
-        indicatorContainer.addSubview(progressView)
-        progressView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.size.equalTo(indicatorSize)
-            $0.top.bottom.equalToSuperview()
-            $0.left.greaterThanOrEqualTo(indicatorContainer.snp.left)
-            $0.right.lessThanOrEqualTo(indicatorContainer.snp.right)
-        }
-        self.progressView = progressView
 
         let messageLabel = UILabel()
         messageLabel.textColor = .white
@@ -75,14 +55,14 @@ public final class HUDStatusView: UIView {
         self.messageLabel = messageLabel
     }
 
-    weak var indicatorView: StatusIndicatorView?
-    weak var progressView: StatusIndicatorView?
+    var indicatorProvider: IndicatorProvider = HUDIndicatorProvider()
+    
+    private weak var currentIndicatorView: StatusIndicatorView?
     
     weak var messageLabel: UILabel?
 
-    public func updateStatus(for chrysan: Chrysan, from: Status, to new: Status) {
+    public func prepreStatus(for chrysan: Chrysan, from: Status, to new: Status) {
         
-//        let isShowing = from == .idle && new != .idle
         let isHidding = from != .idle && new == .idle
 
         // 隐藏 HUD 时不更新任何内容
@@ -90,15 +70,30 @@ public final class HUDStatusView: UIView {
             return
         }
         
-        let hasProgress = new.progress != nil
-        progressView?.isHidden = !hasProgress
-        indicatorView?.isHidden = hasProgress
-        
-        if hasProgress {
-            progressView?.updateStatus(from: from, to: new)
-        } else {
-            indicatorView?.updateStatus(from: from, to: new)
+        let indicator = indicatorProvider.retriveIndicator(for: new)
+        if currentIndicatorView !== indicator {
+            currentIndicatorView?.removeFromSuperview()
+            indicatorContainer.addSubview(indicator)
+            indicator.snp.remakeConstraints {
+                $0.edges.equalToSuperview()
+//                $0.center.top.bottom.equalToSuperview()
+//                $0.left.greaterThanOrEqualToSuperview()
+//                $0.right.greaterThanOrEqualToSuperview()
+            }
+            currentIndicatorView = indicator
         }
+    }
+    
+    public func updateStatus(for chrysan: Chrysan, from: Status, to new: Status) {
+        
+        let isHidding = from != .idle && new == .idle
+
+        // 隐藏 HUD 时不更新任何内容
+        guard !isHidding else {
+            return
+        }
+
+        currentIndicatorView?.updateStatus(from: from, to: new)
         
         messageLabel?.text = new.message
     }

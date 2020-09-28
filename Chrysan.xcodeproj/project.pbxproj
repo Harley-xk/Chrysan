@@ -21,6 +21,10 @@
 		C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */; };
 		C31DA58925217BDF00AEE121 /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C31DA58A25217BDF00AEE121 /* Chrysan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C31DA5942521858A00AEE121 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */; };
+		C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */; };
+		C31DA5AC2521C06300AEE121 /* HUDBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */; };
+		C31DA5AF2521C9CB00AEE121 /* HUDIndicatorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5AE2521C9CB00AEE121 /* HUDIndicatorProvider.swift */; };
 		C33C74D6248916F7004DDF94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D5248916F7004DDF94 /* Status.swift */; };
 		C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* HUDStatusView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
@@ -66,6 +70,10 @@
 		C317E372248554F90072D00E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C317E37524855A290072D00E /* Chrysan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chrysan.swift; sourceTree = "<group>"; };
 		C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorView.swift; sourceTree = "<group>"; };
+		C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressBar.swift; sourceTree = "<group>"; };
+		C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDRingProgressView.swift; sourceTree = "<group>"; };
+		C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDBarProgressView.swift; sourceTree = "<group>"; };
+		C31DA5AE2521C9CB00AEE121 /* HUDIndicatorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDIndicatorProvider.swift; sourceTree = "<group>"; };
 		C33C74D5248916F7004DDF94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C33C74D8248928A6004DDF94 /* HUDStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStatusView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
+				C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +187,9 @@
 				C3C63850251DE68F0013B4AA /* HUDResponder.swift */,
 				C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */,
 				C33C74D8248928A6004DDF94 /* HUDStatusView.swift */,
+				C31DA5AE2521C9CB00AEE121 /* HUDIndicatorProvider.swift */,
+				C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */,
+				C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */,
 			);
 			path = Responders;
 			sourceTree = "<group>";
@@ -374,13 +386,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C305ECFC25201FBC00A800C7 /* AnimationOptionable.swift in Sources */,
+				C31DA5AC2521C06300AEE121 /* HUDBarProgressView.swift in Sources */,
+				C31DA5AF2521C9CB00AEE121 /* HUDIndicatorProvider.swift in Sources */,
 				C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */,
 				C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */,
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
 				C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */,
 				C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */,
+				C31DA5942521858A00AEE121 /* HorizontalProgressBar.swift in Sources */,
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
+				C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */,
 				C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

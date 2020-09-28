@@ -21,6 +21,9 @@ public struct Status {
     /// 进度状态对应的进度值，没有进度的状态为空
     public var progress: Double? = nil
     
+    /// 进度值文本，如果进度条支持进度文本，指定后将会显示该值
+    public var progressText: String?
+    
     /// 预设状态：静默状态
     public static let idle = Status(message: nil)
     
