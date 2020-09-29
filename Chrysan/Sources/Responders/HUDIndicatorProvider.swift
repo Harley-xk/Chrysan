@@ -10,11 +10,20 @@ import Foundation
 import UIKit
 
 /// 默认的状态视图管理器
-/// 针对 progress 的状态返回一个 HUDRingProgressView
-/// 针对非 progress 的状态返回一个 UIActivityIndicatorView
 open class HUDIndicatorProvider: IndicatorProvider {
     
-    public init() {}
+    public typealias IndicatorFactory = (HUDStatusView.Options) -> StatusIndicatorView
+    
+    public private(set) var factories: [Status.ID: IndicatorFactory] = [:]
+    
+    public init() {
+        registerFactory(factory: makeLoadingIndicatorView, for: .loading)
+        registerFactory(factory: makeProgressIndicatorView, for: .progress)
+    }
+    
+    open func registerFactory(factory: @escaping IndicatorFactory, for statusId: Status.ID) {
+        factories[statusId] = factory
+    }
     
     open func makeProgressIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
         HUDRingProgressView(
@@ -24,33 +33,33 @@ open class HUDIndicatorProvider: IndicatorProvider {
         )
     }
     
-    open func makeNormalIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
-        let indicator = SystenIndicatorView(size: options.indicatorSize, color: options.mainColor)
+    open func makeLoadingIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
+        let indicator = SystemActivityIndicatorView(size: options.indicatorSize, color: options.mainColor)
         indicator.snp.makeConstraints {
             $0.size.equalTo(options.indicatorSize)
         }
         return indicator
     }
     
-    public weak var indicatorView: StatusIndicatorView?
-    public weak var progressView: StatusIndicatorView?
+    open func makeIndicatorView(for status: Status, with options: HUDStatusView.Options) -> StatusIndicatorView {
+        let indicator: StatusIndicatorView
+        if let factory = factories[status.id] {
+            indicator = factory(options)
+        } else {
+            indicator = makeLoadingIndicatorView(options: options)
+        }
+        indicatorPool[status.id] = indicator
+        return indicator
+    }
+
+    public private(set) var indicatorPool: [Status.ID: StatusIndicatorView] = [:]
     
     public func retriveIndicator(for status: Status, in responder: StatusResponder) -> StatusIndicatorView {
         let options = (responder as? HUDResponder)?.viewOptions ?? HUDStatusView.Options()
-        if status.progress == nil {
-            if let indicator = indicatorView {
-                return indicator
-            }
-            let indicator = makeNormalIndicatorView(options: options)
-            indicatorView = indicator
+        if let indicator = indicatorPool[status.id] {
             return indicator
         } else {
-            if let progress = progressView {
-                return progress
-            }
-            let progress = makeProgressIndicatorView(options: options)
-            progressView = progress
-            return progress
+            return makeIndicatorView(for: status, with: options)
         }
     }
     

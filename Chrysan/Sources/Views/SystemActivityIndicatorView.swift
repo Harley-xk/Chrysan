@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-public class SystenIndicatorView: UIView, StatusIndicatorView {
+public class SystemActivityIndicatorView: UIView, StatusIndicatorView {
     
     public private(set) weak var indicator: UIActivityIndicatorView!
     
