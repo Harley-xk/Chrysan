@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
   spec.name          = 'Chrysan'
-  spec.version       = '2.0.0-alpha-3'
+  spec.version       = '2.0.0-alpha-4'
   spec.license       = { :type => 'MIT' }
   spec.homepage      = 'https://github.com/Harley-xk/Chrysan'
   spec.authors       = { 'Harley-xk' => 'harley.gb@foxmail.com' }
   spec.summary       = 'A status indicator library (HUD) for UIKit'
-  spec.source        = { :git => 'https://github.com/Harley-xk/Chrysan.git', :tag => '2.0.0-alpha-3' }
+  spec.source        = { :git => 'https://github.com/Harley-xk/Chrysan.git', :tag => spec.version }
   spec.module_name   = 'Chrysan'
   spec.swift_version = '5.3'
 
