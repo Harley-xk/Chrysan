@@ -19,6 +19,14 @@ open class HUDIndicatorProvider: IndicatorProvider {
     public init() {
         registerFactory(factory: makeLoadingIndicatorView, for: .loading)
         registerFactory(factory: makeProgressIndicatorView, for: .progress)
+        registerFactory(
+            factory: { AnimatedPathIndicatorView.successView(size: $0.indicatorSize, color: $0.mainColor) },
+            for: .success
+        )
+        registerFactory(
+            factory: { AnimatedPathIndicatorView.failureView(size: $0.indicatorSize, color: $0.mainColor) },
+            for: .failure
+        )
     }
     
     open func registerFactory(factory: @escaping IndicatorFactory, for statusId: Status.ID) {
@@ -41,26 +49,15 @@ open class HUDIndicatorProvider: IndicatorProvider {
         return indicator
     }
     
-    open func makeIndicatorView(for status: Status, with options: HUDStatusView.Options) -> StatusIndicatorView {
+    public func retriveIndicator(for status: Status, in responder: StatusResponder) -> StatusIndicatorView {
+        let options = (responder as? HUDResponder)?.viewOptions ?? HUDStatusView.Options()
         let indicator: StatusIndicatorView
         if let factory = factories[status.id] {
             indicator = factory(options)
         } else {
             indicator = makeLoadingIndicatorView(options: options)
         }
-        indicatorPool[status.id] = indicator
         return indicator
-    }
-
-    public private(set) var indicatorPool: [Status.ID: StatusIndicatorView] = [:]
-    
-    public func retriveIndicator(for status: Status, in responder: StatusResponder) -> StatusIndicatorView {
-        let options = (responder as? HUDResponder)?.viewOptions ?? HUDStatusView.Options()
-        if let indicator = indicatorPool[status.id] {
-            return indicator
-        } else {
-            return makeIndicatorView(for: status, with: options)
-        }
     }
     
 }

@@ -100,14 +100,17 @@ public final class HUDStatusView: UIView {
         guard !isHidding else {
             return
         }
-        
-        let indicator = indicatorProvider.retriveIndicator(for: new, in: responder)
-        if currentIndicatorView !== indicator {
+              
+        /// 切换不同的状态，需要重新创建 IndicatorView
+        if from != new {
+            let indicator = indicatorProvider.retriveIndicator(for: new, in: responder)
             currentIndicatorView?.removeFromSuperview()
             indicatorContainer.addSubview(indicator)
             indicator.snp.remakeConstraints {
                 $0.edges.equalToSuperview()
             }
+            indicator.setContentHuggingPriority(.required, for: .vertical)
+            indicator.setContentHuggingPriority(.required, for: .horizontal)
             currentIndicatorView = indicator
         }
     }

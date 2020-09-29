@@ -13,6 +13,10 @@ public protocol StatusIndicatorView: UIView {
     func updateStatus(from: Status, to new: Status)
 }
 
+public extension StatusIndicatorView {
+    func updateStatus(from: Status, to new: Status) {}
+}
+
 /// 进度条视图协议
 public protocol ProgressIndicatorView: UIView {
     

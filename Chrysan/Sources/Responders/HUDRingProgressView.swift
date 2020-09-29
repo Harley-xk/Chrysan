@@ -68,6 +68,6 @@ open class HUDRingProgressView: UIView, StatusIndicatorView {
     public func updateStatus(from: Status, to new: Status) {
         let progress = CGFloat(new.progress ?? 0)
         progressView.progress = progress
-        textLabel.text = new.progressText ?? String(format: "%.0f%%", progress)
+        textLabel.text = new.progressText ?? String(format: "%.0f%%", progress * 100)
     }
 }

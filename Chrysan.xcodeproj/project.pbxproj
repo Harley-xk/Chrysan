@@ -29,6 +29,8 @@
 		C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* HUDStatusView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
 		C34E094B2522C90B00319D5B /* SystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E094A2522C90B00319D5B /* SystemActivityIndicatorView.swift */; };
+		C34E09AA2523191E00319D5B /* AnimatedPathIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */; };
+		C34E09AE25231E1700319D5B /* AnimatedPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E09AD25231E1700319D5B /* AnimatedPathView.swift */; };
 		C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6384C251DE5D40013B4AA /* StatusResponder.swift */; };
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
 		DF9D6D3B54E2D79217018868 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597B349AEE30DD3CB22EFBA /* Pods_Example.framework */; };
@@ -79,6 +81,8 @@
 		C33C74D8248928A6004DDF94 /* HUDStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStatusView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		C34E094A2522C90B00319D5B /* SystemActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPathIndicatorView.swift; sourceTree = "<group>"; };
+		C34E09AD25231E1700319D5B /* AnimatedPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPathView.swift; sourceTree = "<group>"; };
 		C3C6384C251DE5D40013B4AA /* StatusResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponder.swift; sourceTree = "<group>"; };
 		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
 		C3F08CB32521DD9500502850 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
 				C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */,
 				C34E094A2522C90B00319D5B /* SystemActivityIndicatorView.swift */,
+				C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */,
+				C34E09AD25231E1700319D5B /* AnimatedPathView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +401,8 @@
 				C31DA5AF2521C9CB00AEE121 /* HUDIndicatorProvider.swift in Sources */,
 				C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */,
 				C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */,
+				C34E09AA2523191E00319D5B /* AnimatedPathIndicatorView.swift in Sources */,
+				C34E09AE25231E1700319D5B /* AnimatedPathView.swift in Sources */,
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
 				C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */,
 				C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */,

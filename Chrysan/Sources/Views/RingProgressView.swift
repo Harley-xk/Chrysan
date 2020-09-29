@@ -18,7 +18,7 @@ open class RingProgressView: UIView, ProgressIndicatorView {
     }
     
     /// 圆环宽度，默认 3
-    open var ringWidth: CGFloat = 3 {
+    open var lineWidth: CGFloat = 3 {
         didSet {
             setNeedsDisplay()
         }
@@ -51,19 +51,19 @@ open class RingProgressView: UIView, ProgressIndicatorView {
         }
         
         tintColor = .systemBlue
-        backgroundMask.lineWidth = ringWidth
+        backgroundMask.lineWidth = lineWidth
         backgroundMask.fillColor = nil
         backgroundMask.strokeColor = UIColor.black.cgColor
         layer.mask = backgroundMask
 
-        progressLayer.lineWidth = ringWidth
+        progressLayer.lineWidth = lineWidth
         progressLayer.fillColor = nil
         layer.addSublayer(progressLayer)
         layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 2), 0, 0, -1)
     }
 
     open override func draw(_ rect: CGRect) {
-        let circlePath = UIBezierPath(ovalIn: rect.insetBy(dx: ringWidth / 2, dy: ringWidth / 2))
+        let circlePath = UIBezierPath(ovalIn: rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2))
         backgroundMask.path = circlePath.cgPath
 
         progressLayer.path = circlePath.cgPath
