@@ -58,10 +58,8 @@ class DetailViewController: UIViewController {
     
     func updateProgress() {
         progress += 0.05
-        view.chrysan.updateProgress(progress, message: "正在上传") { (p) -> String in
-            String(format: "%.0f", p * 10000) + "/10000"
-        }
-        
+        let text = String(format: "%.0f", progress * 10000) + "/10000"
+        view.chrysan.updateProgress(progress, message: "正在上传", progressText: text)
         if progress >= 1 {
             view.chrysan.hide(afterDelay: 1)
             progressTimer?.invalidate()

@@ -89,9 +89,9 @@ public class Chrysan: UIView {
     public func updateProgress(
         _ progress: Double,
         message: String? = nil,
-        formatter: @escaping (Double) -> String = Status.defaultStatusProgressFormatter
+        progressText: String? = nil
     ) {
-        changeStatus(to: .progress(message: message, progress: progress, formatter: formatter))
+        changeStatus(to: .progress(message: message, progress: progress, progressText: progressText))
     }
 }
 

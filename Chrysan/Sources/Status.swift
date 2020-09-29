@@ -22,11 +22,8 @@ public struct Status {
     public var progress: Double? = nil
     
     /// 进度值文本，如果进度条支持进度文本，指定后将会显示该值
-    public var progressFormatter = defaultStatusProgressFormatter
-    
-    public static func defaultStatusProgressFormatter(progress: Double) -> String {
-        return String(format: "%.0f%%", progress * 100)
-    }
+    /// 默认显示格式: String(format: "%.0f%%", progress * 100)
+    public var progressText: String? = nil
 }
 
 
@@ -60,12 +57,12 @@ extension Status {
     public static func progress(
         message: String? = nil,
         progress: Double,
-        formatter: @escaping (Double) -> String = defaultStatusProgressFormatter
+        progressText: String? = nil
     ) -> Status {
         var status = Status.progress
         status.progress = progress
         status.message = message
-        status.progressFormatter = formatter
+        status.progressText = progressText
         return status
     }
 }
