@@ -8,7 +8,6 @@
 
 import UIKit
 import Chrysan
-import Comet
 
 class DetailViewController: UIViewController {
 
@@ -46,7 +45,7 @@ class DetailViewController: UIViewController {
 
         self.view.chrysan.changeStatus(to: .loading(message: "准备上传"))
         
-        DispatchQueue.main.asyncAfter(delay: 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
             self.progress = 0
             self.progressTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
                 self.updateProgress()

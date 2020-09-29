@@ -67,7 +67,7 @@
 		C317E365248550320072D00E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C317E368248550320072D00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C317E36A248550320072D00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C317E370248552AC0072D00E /* Chrysan.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chrysan.podspec.json; sourceTree = "<group>"; };
+		C317E370248552AC0072D00E /* Chrysan.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Chrysan.podspec; sourceTree = "<group>"; };
 		C317E372248554F90072D00E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C317E37524855A290072D00E /* Chrysan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chrysan.swift; sourceTree = "<group>"; };
 		C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorView.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C317E372248554F90072D00E /* Package.swift */,
-				C317E370248552AC0072D00E /* Chrysan.podspec.json */,
+				C317E370248552AC0072D00E /* Chrysan.podspec */,
 				C3F08CB32521DD9500502850 /* .travis.yml */,
 				C317E34B24854FDE0072D00E /* Chrysan */,
 				C317E3592485502E0072D00E /* Example */,
