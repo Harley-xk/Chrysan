@@ -16,9 +16,24 @@ open class HUDRingProgressView: UIView, StatusIndicatorView {
     
     public let textLabel = UILabel()
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+    private var textColor: UIColor = .white {
+        didSet {
+            textLabel.textColor = textColor
+        }
+    }
+    
+    private var ringSize: CGFloat = 40
+    
+    public init(
+        size: CGFloat,
+        progressColor: UIColor,
+        textColor: UIColor = .white
+    ) {
+        super.init(frame: .zero)
+        self.ringSize = size
+        self.tintColor = progressColor
+        self.textColor = textColor
+        self.setup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -28,7 +43,6 @@ open class HUDRingProgressView: UIView, StatusIndicatorView {
     
     open override var tintColor: UIColor! {
         didSet {
-            textLabel.textColor = tintColor
             progressView.tintColor = tintColor
         }
     }
@@ -36,14 +50,16 @@ open class HUDRingProgressView: UIView, StatusIndicatorView {
     func setup() {
         addSubview(progressView)
         progressView.snp.makeConstraints {
-            $0.edges.equalToSuperview().priority(.high)
-            $0.width.equalTo(self.snp.height)
+            $0.size.equalTo(ringSize)
             $0.center.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.left.greaterThanOrEqualToSuperview()
+            $0.right.lessThanOrEqualToSuperview()
         }
         
         addSubview(textLabel)
         textLabel.font = .systemFont(ofSize: 11)
-        textLabel.textColor = tintColor
+        textLabel.textColor = textColor
         textLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
         }

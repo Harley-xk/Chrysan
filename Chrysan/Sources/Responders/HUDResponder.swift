@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 /// HUD 风格的状态响应器
-open class HUDResponder: StatusResponder {
+public class HUDResponder: StatusResponder {
     
-    public init() {}
+    public var viewOptions: HUDStatusView.Options
+    
+    public init(viewOptions: HUDStatusView.Options = .init()) {
+        self.viewOptions = viewOptions
+    }
     
     /// 宿主 chrysan 视图
     public private(set) weak var host: Chrysan?
@@ -24,12 +28,12 @@ open class HUDResponder: StatusResponder {
     public var indicatorProvider: IndicatorProvider = HUDIndicatorProvider()
 
     /// 显示状态的视图
-    public private(set) var statusView: HUDStatusView?
+    private(set) var statusView: HUDStatusView?
         
     // last running animator
     private weak var lastAnimator: UIViewPropertyAnimator?
     
-    open func changeStatus(
+    public func changeStatus(
         from current: Status,
         to new: Status,
         for host: Chrysan,
@@ -63,11 +67,8 @@ open class HUDResponder: StatusResponder {
     
     // MARK: - Layout
     
-    // 结束后将视图移除，如果在显示状态下修改了layout，该属性会被标记为 true，HUD 隐藏后会被移除
-    private var removeViewOnFinish = false
-    
     /// 布局属性，修改后从下一次显示 HUD 开始生效
-    open var layout = HUDLayout() {
+    public var layout = HUDLayout() {
         didSet {
             // 修改布局属性，移除 HUD
             guard let view = statusView else { return }
@@ -80,11 +81,11 @@ open class HUDResponder: StatusResponder {
         }
     }
     
-    open func layoutStatusView(in chrysan: Chrysan) {
+    private func layoutStatusView(in chrysan: Chrysan) {
         
         host = chrysan
         
-        let view = HUDStatusView(backgroundStyle: .dark, indicatorSize: layout.indicatorSize)
+        let view = HUDStatusView(options: viewOptions)
         view.indicatorProvider = indicatorProvider
         chrysan.addSubview(view)
         view.snp.removeConstraints()
@@ -114,15 +115,18 @@ open class HUDResponder: StatusResponder {
                 .lessThanOrEqualTo(chrysan.safeAreaLayoutGuide.snp.bottom)
                 .inset(layout.padding.bottom)
             
-            $0.size.greaterThanOrEqualTo(layout.indicatorSize)
+//            $0.size.greaterThanOrEqualTo(layout.indicatorSize)
         }
         statusView = view
     }
 
     // MARK: - Animations
     
-    open func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
-        statusView?.prepreStatus(for: chrysan, from: from, to: new)
+    // 结束后将视图移除，如果在显示状态下修改了layout，该属性会被标记为 true，HUD 隐藏后会被移除
+    private var removeViewOnFinish = false
+    
+    private func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
+        statusView?.prepreStatus(for: self, from: from, to: new)
         if from == .idle {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
             statusView?.alpha = 0
@@ -130,7 +134,7 @@ open class HUDResponder: StatusResponder {
         }
     }
     
-    open func runAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
+    private func runAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
         
         let isShowing = from == .idle && new != .idle
         let isHidding = from != .idle && new == .idle
@@ -146,10 +150,9 @@ open class HUDResponder: StatusResponder {
         }
         
         statusView?.updateStatus(for: chrysan, from: from, to: new)
-
     }
     
-    open func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
+    private func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
 //        let isShowing = from == .idle && new != .idle
         let isHidden = from != .idle && new == .idle
 

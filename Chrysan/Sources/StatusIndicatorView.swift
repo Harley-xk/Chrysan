@@ -20,17 +20,8 @@ public protocol ProgressIndicatorView: UIView {
     var progress: CGFloat { get set }
 }
 
-extension UIActivityIndicatorView: StatusIndicatorView {
-    
-    public func updateStatus(from: Status, to new: Status) {
-        if from == .idle {
-            startAnimating()
-        }
-    }
-}
-
 /// Indicator 管理器
 public protocol IndicatorProvider {
-    func retriveIndicator(for status: Status) -> StatusIndicatorView
+    func retriveIndicator(for status: Status, in responder: StatusResponder) -> StatusIndicatorView
 }
 

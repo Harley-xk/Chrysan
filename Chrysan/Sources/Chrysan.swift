@@ -14,7 +14,10 @@ public class Chrysan: UIView {
     
     // MARK: - Initialize
     
-    /// 为指定的视图创建菊花
+    /// 为指定的视图创建一个状态指示器 Chrysan
+    /// - Parameters:
+    ///   - targetView: 宿主视图
+    ///   - responder: 可以自定义的状态响应器
     public static func make(
         for targetView: UIView,
         responder: StatusResponder = HUDResponder()
@@ -36,8 +39,14 @@ public class Chrysan: UIView {
         return !isHidden
     }
     
-    /// a vender provides status views for specified status
+    /// 状态响应器，负责响应不同的状态，控制内容显示和布局
+    /// - Note: Chrysan 本身只是一个空白的透明视图，只负责状态的切换和分发，你可以实现自己的 StatusResponder 来实现完全自定义的状态响应风格
     public private(set) var responder: StatusResponder = HUDResponder()
+    
+    /// 尝试获取默认的 HUDResponder，不存在返回空
+    public var hudResponder: HUDResponder? {
+        return responder as? HUDResponder
+    }
     
     /// 更新 Status
     /// - Parameter newStatus: 新的状态
@@ -103,7 +112,7 @@ public extension UIView {
     var chrysan: Chrysan {
         // DO NOT try to get Chrysan from it's self!
         if self is Chrysan {
-            fatalError("DO NOT try to get Chrysan from it's self!")
+            fatalError("DO NOT try to get Chrysan from its self!")
         }
         
         if let chrysan = subviews.first(where: { $0 is Chrysan }) as? Chrysan {

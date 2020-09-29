@@ -26,11 +26,9 @@ public struct HUDLayout {
     public var position: Position = .center
     
     /// 距离锚点的偏移
+    /// - Note: 当 position == .bottom 时，offset 在 y 轴的偏移方向为**自下向上**
     public var offset = CGPoint.zero
-    
-    /// 状态指示器尺寸
-    public var indicatorSize = CGSize(width: 40, height: 40)
-    
+        
     /// 状态视图距离遮罩层边缘的最小距离
     public var padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
 

@@ -14,7 +14,7 @@ public class HUDBarProgressView: UIView, StatusIndicatorView {
     
     public struct Options {
         public init() {}
-        public var barSize = CGSize(width: 200, height: 20)
+        public var barSize = CGSize(width: 200, height: 15)
         public var barColor = UIColor.systemBlue
         public var barBackgroundColor = UIColor.darkGray
         public var textColor = UIColor.white
@@ -46,8 +46,9 @@ public class HUDBarProgressView: UIView, StatusIndicatorView {
     private func setup() {
         addSubview(progressView)
         progressView.snp.makeConstraints {
-            $0.center.equalToSuperview()
+//            $0.center.equalToSuperview()
             $0.left.right.equalToSuperview()
+            $0.top.bottom.equalToSuperview().inset(10)
             $0.size.equalTo(options.barSize)
         }
         
