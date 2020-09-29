@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         hudResponder?.layout.position = .bottom
         hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
         
-        hudResponder?.indicatorProvider = CustomIndicatorProvider()
+//        hudResponder?.indicatorProvider = CustomIndicatorProvider()
     }
 
     @IBAction func showAction(_ sender: UIButton) {
@@ -45,10 +45,11 @@ class DetailViewController: UIViewController {
 
         self.view.chrysan.changeStatus(to: .loading(message: "准备上传"))
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+        excute(after: 0.5) {
             self.progress = 0
             self.progressTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
                 self.updateProgress()
+                self.progress += Double.random(in: 0 ... 0.1)
             })
         }
     }
@@ -57,13 +58,29 @@ class DetailViewController: UIViewController {
     private var progress: Double = 0
     
     func updateProgress() {
-        progress += 0.05
-        let text = String(format: "%.0f", progress * 10000) + "/10000"
-        view.chrysan.updateProgress(progress, message: "正在上传", progressText: text)
+//        let text = String(format: "%.0f", progress * 10000) + "/10000"
+//        view.chrysan.updateProgress(progress, message: "正在上传", progressText: text)
+        view.chrysan.updateProgress(progress, message: "正在上传")
         if progress >= 1 {
-            view.chrysan.hide(afterDelay: 1)
             progressTimer?.invalidate()
             progressTimer = nil
+            finishAndHideChrysan()
+        }
+    }
+    
+    func finishAndHideChrysan() {
+        view.chrysan.changeStatus(to: .success(message: "上传成功"))
+        
+        excute(after: 1) {
+            self.view.chrysan.changeStatus(to: .failure(message: "上传失败"))
+        }
+        
+        view.chrysan.hide(afterDelay: 2)
+    }
+    
+    func excute(after seconds: TimeInterval, task: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(Int(seconds * 1000))) {
+            task()
         }
     }
     
