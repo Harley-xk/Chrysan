@@ -22,15 +22,33 @@ public struct Status {
     public var progress: Double? = nil
     
     /// 进度值文本，如果进度条支持进度文本，指定后将会显示该值
-    public var progressText: String?
+    public var progressFormatter = defaultStatusProgressFormatter
+    
+    public static func defaultStatusProgressFormatter(progress: Double) -> String {
+        return String(format: "%.0f%%", progress * 100)
+    }
+}
+
+
+extension Status: Equatable {
+    
+    public static func == (lhs: Status, rhs: Status) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+}
+
+// MARK: - Preset Status
+
+extension Status {
     
     /// 预设状态：静默状态
     public static let idle = Status(message: nil)
     
-    /// 预设状态，加载中
-    public static let loading: Status = Status(message: nil)
-    
-    /// 指定消息内容的加载中状态
+    static let loading: Status = Status(message: nil)
+    static let progress = Status(message: nil, progress: 0)
+    static let success = Status()
+
+    /// 加载中状态, 所有的 loading 状态都具有相同的 id
     /// - Parameter message: 自定义消息内容
     public static func loading(message: String) -> Status {
         var loading = Status.loading
@@ -38,20 +56,16 @@ public struct Status {
         return loading
     }
 
-    static let progress = Status(message: nil, progress: 0)
-    
-    /// 预设状态：带进度的状态
-    public static func progress(message: String? = nil, progress: Double) -> Status {
+    /// 预设状态：带进度的状态，所有的 progress 状态都具有相同的 id
+    public static func progress(
+        message: String? = nil,
+        progress: Double,
+        formatter: @escaping (Double) -> String = defaultStatusProgressFormatter
+    ) -> Status {
         var status = Status.progress
         status.progress = progress
         status.message = message
+        status.progressFormatter = formatter
         return status
-    }
-}
-
-extension Status: Equatable {
-    
-    public static func == (lhs: Status, rhs: Status) -> Bool {
-        return lhs.identifier == rhs.identifier
     }
 }

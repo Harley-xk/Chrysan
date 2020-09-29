@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         hudResponder?.layout.position = .bottom
         hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
         
-        hudResponder?.indicatorProvider = CurtomIndicatorProvider()
+        hudResponder?.indicatorProvider = CustomIndicatorProvider()
     }
 
     @IBAction func showAction(_ sender: UIButton) {
@@ -58,7 +58,9 @@ class DetailViewController: UIViewController {
     
     func updateProgress() {
         progress += 0.05
-        view.chrysan.updateProgress(progress, message: "正在上传")
+        view.chrysan.updateProgress(progress, message: "正在上传") { (p) -> String in
+            String(format: "%.0f", p * 10000) + "/10000"
+        }
         
         if progress >= 1 {
             view.chrysan.hide(afterDelay: 1)
@@ -69,7 +71,7 @@ class DetailViewController: UIViewController {
     
 }
 
-class CurtomIndicatorProvider: HUDIndicatorProvider {
+class CustomIndicatorProvider: HUDIndicatorProvider {
     
     override func makeProgressIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
         var barOptions = HUDBarProgressView.Options()

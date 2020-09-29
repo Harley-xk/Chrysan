@@ -86,8 +86,12 @@ public class Chrysan: UIView {
         }
     }
     
-    public func updateProgress(_ progress: Double, message: String? = nil) {
-        changeStatus(to: .progress(message: message, progress: progress))
+    public func updateProgress(
+        _ progress: Double,
+        message: String? = nil,
+        formatter: @escaping (Double) -> String = Status.defaultStatusProgressFormatter
+    ) {
+        changeStatus(to: .progress(message: message, progress: progress, formatter: formatter))
     }
 }
 

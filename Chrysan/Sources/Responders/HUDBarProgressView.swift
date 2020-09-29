@@ -70,6 +70,6 @@ public class HUDBarProgressView: UIView, StatusIndicatorView {
     
     public func updateStatus(from: Status, to new: Status) {
         progressView.progress = CGFloat(new.progress ?? 0)
-        textLabel.text = String(format: "%.0f%%", (new.progress ?? 0) * 100)
+        textLabel.text = new.progressFormatter(new.progress ?? 0)
     }
 }
