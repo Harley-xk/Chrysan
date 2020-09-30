@@ -18,7 +18,6 @@
 		C317E369248550320072D00E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E367248550320072D00E /* LaunchScreen.storyboard */; };
 		C317E37624855A290072D00E /* Chrysan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E37524855A290072D00E /* Chrysan.swift */; };
 		C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */; };
-		C31DA58925217BDF00AEE121 /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C31DA5942521858A00AEE121 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */; };
 		C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */; };
 		C31DA5AC2521C06300AEE121 /* HUDBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */; };
@@ -30,9 +29,27 @@
 		C34E09AA2523191E00319D5B /* AnimatedPathIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */; };
 		C34E09AE25231E1700319D5B /* AnimatedPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E09AD25231E1700319D5B /* AnimatedPathView.swift */; };
 		C34E09C22523427C00319D5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C34E09C12523427C00319D5B /* SnapKit */; };
+		C34E09D3252344A200319D5B /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
+		C34E09D4252344A200319D5B /* Chrysan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6384C251DE5D40013B4AA /* StatusResponder.swift */; };
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
+		C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */; };
+		C3D794192524575D00F4D86D /* CircleDotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C34E09D5252344A200319D5B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C34E09D4252344A200319D5B /* Chrysan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C305ECFB25201FBC00A800C7 /* AnimationOptionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOptionable.swift; sourceTree = "<group>"; };
@@ -64,6 +81,8 @@
 		C34E09AD25231E1700319D5B /* AnimatedPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPathView.swift; sourceTree = "<group>"; };
 		C3C6384C251DE5D40013B4AA /* StatusResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponder.swift; sourceTree = "<group>"; };
 		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
+		C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingIndicatorView.swift; sourceTree = "<group>"; };
+		C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDotsLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31DA58925217BDF00AEE121 /* Chrysan.framework in Frameworks */,
+				C34E09D3252344A200319D5B /* Chrysan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */,
+				C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */,
+				C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */,
 				C31DA5932521858A00AEE121 /* HorizontalProgressBar.swift */,
 				C34E094A2522C90B00319D5B /* SystemActivityIndicatorView.swift */,
 				C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */,
@@ -211,6 +232,7 @@
 				C317E3542485502E0072D00E /* Sources */,
 				C317E3552485502E0072D00E /* Frameworks */,
 				C317E3562485502E0072D00E /* Resources */,
+				C34E09D5252344A200319D5B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +315,7 @@
 				C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */,
 				C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */,
 				C34E09AA2523191E00319D5B /* AnimatedPathIndicatorView.swift in Sources */,
+				C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */,
 				C34E09AE25231E1700319D5B /* AnimatedPathView.swift in Sources */,
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
 				C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */,
@@ -301,6 +324,7 @@
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
 				C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */,
+				C3D794192524575D00F4D86D /* CircleDotsLoadingView.swift in Sources */,
 				C34E094B2522C90B00319D5B /* SystemActivityIndicatorView.swift in Sources */,
 				C31DA5802520823E00AEE121 /* StatusIndicatorView.swift in Sources */,
 			);

@@ -126,3 +126,9 @@ public extension UIView {
         }
     }
 }
+
+public extension UIViewController {
+    var chrysan: Chrysan {
+        return view.chrysan
+    }
+}
