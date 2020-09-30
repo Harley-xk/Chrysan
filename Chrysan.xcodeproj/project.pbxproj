@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C305ECFC25201FBC00A800C7 /* AnimationOptionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305ECFB25201FBC00A800C7 /* AnimationOptionable.swift */; };
+		C305ECFC25201FBC00A800C7 /* AnimatorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305ECFB25201FBC00A800C7 /* AnimatorProvider.swift */; };
 		C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */; };
 		C317E34E24854FDE0072D00E /* Chrysan.h in Headers */ = {isa = PBXBuildFile; fileRef = C317E34C24854FDE0072D00E /* Chrysan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C317E35B2485502E0072D00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E35A2485502E0072D00E /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C305ECFB25201FBC00A800C7 /* AnimationOptionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOptionable.swift; sourceTree = "<group>"; };
+		C305ECFB25201FBC00A800C7 /* AnimatorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorProvider.swift; sourceTree = "<group>"; };
 		C310C4FA2487E1DD00F9DD8C /* HUDLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLayout.swift; sourceTree = "<group>"; };
 		C317E34924854FDE0072D00E /* Chrysan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chrysan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317E34C24854FDE0072D00E /* Chrysan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chrysan.h; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				C317E37524855A290072D00E /* Chrysan.swift */,
 				C33C74D5248916F7004DDF94 /* Status.swift */,
 				C3C6384C251DE5D40013B4AA /* StatusResponder.swift */,
-				C305ECFB25201FBC00A800C7 /* AnimationOptionable.swift */,
+				C305ECFB25201FBC00A800C7 /* AnimatorProvider.swift */,
 				C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */,
 				C3C638562520121F0013B4AA /* Responders */,
 				C33C74D72489287F004DDF94 /* Views */,
@@ -326,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C305ECFC25201FBC00A800C7 /* AnimationOptionable.swift in Sources */,
+				C305ECFC25201FBC00A800C7 /* AnimatorProvider.swift in Sources */,
 				C31DA5AC2521C06300AEE121 /* HUDBarProgressView.swift in Sources */,
 				C31DA5AF2521C9CB00AEE121 /* HUDIndicatorFactory.swift in Sources */,
 				C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */,

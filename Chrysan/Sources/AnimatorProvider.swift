@@ -16,8 +16,13 @@ public protocol AnimatorProvider {
 
 public struct SpringAnimatorProvider: AnimatorProvider {
     
-    public var duraction: TimeInterval = 0.25
-    public var dampingRatio: CGFloat = 0.5
+    public var duraction: TimeInterval
+    public var dampingRatio: CGFloat
+    
+    public init(duraction: TimeInterval = 0.25, dampingRatio: CGFloat = 0.5) {
+        self.duraction = duraction
+        self.dampingRatio = dampingRatio
+    }
     
     public func makeAnimator() -> UIViewPropertyAnimator {
         let timingParameters = UISpringTimingParameters(dampingRatio: dampingRatio)
@@ -35,6 +40,11 @@ public struct CubicAnimatorProvider: AnimatorProvider {
     public var curveStyle = Curve.animationCurve(.easeInOut)
     public var duraction: TimeInterval = 0.25
 
+    public init(duraction: TimeInterval = 0.25, curve: Curve = .animationCurve(.easeInOut)) {
+        self.duraction = duraction
+        self.curveStyle = curve
+    }
+    
     public func makeAnimator() -> UIViewPropertyAnimator {
         let timingParameters: UICubicTimingParameters
         switch curveStyle {
