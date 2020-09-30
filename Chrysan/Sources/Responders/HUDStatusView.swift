@@ -50,12 +50,13 @@ public final class HUDStatusView: UIView {
     }
     
     public private(set) var indicatorContainer: UIView!
+    private weak var messageLabel: UILabel?
     
     var options: Options = Options()
     
     convenience init(options: Options = Options()) {
         self.init()
-                
+        
         self.options = options
         
         let blur = UIVisualEffectView(effect: options.hudVisualEffect)
@@ -82,56 +83,59 @@ public final class HUDStatusView: UIView {
         messageLabel.numberOfLines = options.messageLines
         messageLabel.textAlignment = options.messageAlignment
         messageLabel.font = options.messageFont
-        messageLabel.setContentHuggingPriority(.required, for: .horizontal)
-        messageLabel.setContentHuggingPriority(.required, for: .vertical)
+        messageLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        messageLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
         messageLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         messageLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         stack.addArrangedSubview(messageLabel)
-        self.messageLabel = messageLabel
+        self.messageLabel = messageLabel        
     }
+}
 
-    var indicatorProvider: IndicatorProvider = HUDIndicatorProvider()
-    
-    private weak var currentIndicatorView: StatusIndicatorView?
-    
-    weak var messageLabel: UILabel?
 
+// MARK: - Status
+extension HUDStatusView {
+    
+    public var currentIndicatorView: StatusIndicatorView? {
+        return indicatorContainer.subviews.first as? StatusIndicatorView
+    }
+    
     public func prepreStatus(for responder: HUDResponder, from: Status, to new: Status) {
         
         let isHidding = from != .idle && new == .idle
-
+        
         // 隐藏 HUD 时不更新任何内容
         guard !isHidding else {
             return
         }
-              
+        
         /// 切换不同的状态，需要重新创建 IndicatorView
         if from != new {
-            let indicator = indicatorProvider.retriveIndicator(for: new, in: responder)
+            let factory = responder.factories[new.id] ?? .ringIndicator
+            let indicator = factory.make(options)
             currentIndicatorView?.removeFromSuperview()
             indicatorContainer.addSubview(indicator)
             indicator.snp.remakeConstraints {
                 $0.center.equalToSuperview()
                 $0.top.bottom.equalToSuperview()
-                $0.left.greaterThanOrEqualToSuperview()
-                $0.right.lessThanOrEqualToSuperview()
-                $0.size.equalTo(options.indicatorSize)
+                $0.left.greaterThanOrEqualToSuperview().priority(.high)
+                $0.right.lessThanOrEqualToSuperview().priority(.high)
+                $0.size.equalTo(options.indicatorSize).priority(.high)
             }
             indicator.setContentHuggingPriority(.required, for: .vertical)
             indicator.setContentHuggingPriority(.required, for: .horizontal)
-            currentIndicatorView = indicator
         }
     }
     
     public func updateStatus(for chrysan: Chrysan, from: Status, to new: Status) {
         
         let isHidding = from != .idle && new == .idle
-
+        
         // 隐藏 HUD 时不更新任何内容
         guard !isHidding else {
             return
         }
-
+        
         currentIndicatorView?.updateStatus(from: from, to: new)
         
         messageLabel?.text = new.message

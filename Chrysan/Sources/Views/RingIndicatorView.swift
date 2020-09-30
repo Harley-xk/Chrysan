@@ -21,7 +21,7 @@ public class RingIndicatorView: UIView, StatusIndicatorView {
         /// 线宽
         public var lineWidth: CGFloat = 3
         /// 最短比例
-        public var percent: CGFloat = 0.8
+        public var percent: CGFloat = 0.6
         /// 是否执行伸缩动画
         public var stretchAnimation = true
         /// 转一圈需要的时间

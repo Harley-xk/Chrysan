@@ -16,6 +16,12 @@ public class HUDResponder: StatusResponder {
     
     public init(viewOptions: HUDStatusView.Options = .init()) {
         self.viewOptions = viewOptions
+        
+        // register default factories
+        register(.ringIndicator, for: .loading)
+        register(.ringProgress, for: .progress)
+        register(.successPath, for: .success)
+        register(.failurePath, for: .failure)
     }
     
     /// 宿主 chrysan 视图
@@ -24,12 +30,26 @@ public class HUDResponder: StatusResponder {
     /// 动画属性配置器
     public var animatorProvider: AnimatorProvider = CubicAnimatorProvider()
     
-    /// 状态指示器视图配置器
-    public var indicatorProvider: IndicatorProvider = HUDIndicatorProvider()
-
     /// 显示状态的视图
     private(set) var statusView: HUDStatusView?
-        
+    
+    // MARK: - Indicator Factories
+    
+    /// 已注册的状态视图工厂缓存，每次显示新的状态时都会通过已注册的工厂方法创建新的视图
+    public private(set) var factories: [Status.ID: HUDIndicatorFactory] = [:]
+    
+    /// 为指定的状态 ID 注册一个工厂
+    /// - Note: 统一额 ID 只能注册一个工厂方法，后注册的会覆盖之前注册的方法
+    public func register(_ factory: HUDIndicatorFactory, for statusId: Status.ID) {
+        factories[statusId] = factory
+    }
+    
+    /// 为指定的状态 ID 注册一个工厂方法
+    /// - Note: 统一额 ID 只能注册一个工厂方法，后注册的会覆盖之前注册的方法
+    public func registerIndicator(for statusId: Status.ID, factory: @escaping HUDIndicatorFactory.Make) {
+        factories[statusId] = HUDIndicatorFactory(factory)
+    }
+    
     // last running animator
     private weak var lastAnimator: UIViewPropertyAnimator?
     
@@ -86,7 +106,6 @@ public class HUDResponder: StatusResponder {
         host = chrysan
         
         let view = HUDStatusView(options: viewOptions)
-        view.indicatorProvider = indicatorProvider
         chrysan.addSubview(view)
         view.snp.removeConstraints()
         view.snp.makeConstraints {
@@ -114,8 +133,6 @@ public class HUDResponder: StatusResponder {
             $0.bottom
                 .lessThanOrEqualTo(chrysan.safeAreaLayoutGuide.snp.bottom)
                 .inset(layout.padding.bottom)
-            
-//            $0.size.greaterThanOrEqualTo(layout.indicatorSize)
         }
         statusView = view
     }
@@ -153,7 +170,6 @@ public class HUDResponder: StatusResponder {
     }
     
     private func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
-//        let isShowing = from == .idle && new != .idle
         let isHidden = from != .idle && new == .idle
 
         if isHidden && removeViewOnFinish {
