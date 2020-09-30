@@ -16,21 +16,22 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         if #available(iOS 13.0, *) {
             let color: UIColor = .systemTeal
-            view.chrysan.hudResponder?.viewOptions.mainColor = color
-            view.chrysan.hudResponder?.viewOptions.progressColor = color
+            chrysan.hudResponder?.viewOptions.mainColor = color
+            chrysan.hudResponder?.viewOptions.progressColor = color
         } else {
             // Fallback on earlier versions
         }
 
-        let hudResponder = view.chrysan.hudResponder
+        let hudResponder = chrysan.hudResponder
         hudResponder?.layout.position = .bottom
         hudResponder?.layout.offset = CGPoint(x: 0, y: 20)
         
-//        hudResponder?.indicatorProvider = CustomIndicatorProvider()
+//        hudResponder?.register(.systemIndicator, for: .loading)
+//        hudResponder?.registerIndicator(.barProgress(textColor: .red), for: .progress)
     }
 
     @IBAction func showAction(_ sender: UIButton) {
-        let hudResponder = view.chrysan.hudResponder
+        let hudResponder = chrysan.hudResponder
         switch sender.tag {
         case 0:
             hudResponder?.layout.position = .top
@@ -45,7 +46,7 @@ class DetailViewController: UIViewController {
 
         self.view.chrysan.changeStatus(to: .loading(message: "准备上传"))
         
-        excute(after: 0.5) {
+        excute(after: 2) {
             self.progress = 0
             self.progressTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
                 self.updateProgress()
@@ -60,7 +61,7 @@ class DetailViewController: UIViewController {
     func updateProgress() {
 //        let text = String(format: "%.0f", progress * 10000) + "/10000"
 //        view.chrysan.updateProgress(progress, message: "正在上传", progressText: text)
-        view.chrysan.updateProgress(progress, message: "正在上传")
+        chrysan.updateProgress(progress, message: "正在上传")
         if progress >= 1 {
             progressTimer?.invalidate()
             progressTimer = nil
@@ -69,13 +70,13 @@ class DetailViewController: UIViewController {
     }
     
     func finishAndHideChrysan() {
-        view.chrysan.changeStatus(to: .success(message: "上传成功"))
+        chrysan.changeStatus(to: .success(message: "上传成功"))
         
         excute(after: 1) {
             self.view.chrysan.changeStatus(to: .failure(message: "上传失败"))
         }
         
-        view.chrysan.hide(afterDelay: 2)
+        chrysan.hide(afterDelay: 2)
     }
     
     func excute(after seconds: TimeInterval, task: @escaping () -> ()) {
@@ -84,15 +85,4 @@ class DetailViewController: UIViewController {
         }
     }
     
-}
-
-class CustomIndicatorProvider: HUDIndicatorProvider {
-    
-    override func makeProgressIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
-        var barOptions = HUDBarProgressView.Options()
-        barOptions.textColor = .white
-        barOptions.barColor = options.progressColor
-        barOptions.barSize = CGSize(width: 150, height: 16)
-        return HUDBarProgressView.makeBar(with: barOptions)
-    }
 }

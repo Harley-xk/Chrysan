@@ -35,6 +35,9 @@
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
 		C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */; };
 		C3D794192524575D00F4D86D /* CircleDotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */; };
+		C3D79420252478BB00F4D86D /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */; };
+		C3D7942425247A0200F4D86D /* SystemIndicatorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7942325247A0200F4D86D /* SystemIndicatorExample.swift */; };
+		C3D7942A25247D1900F4D86D /* AnimationExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7942925247D1900F4D86D /* AnimationExamples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +86,9 @@
 		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
 		C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingIndicatorView.swift; sourceTree = "<group>"; };
 		C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDotsLoadingView.swift; sourceTree = "<group>"; };
+		C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
+		C3D7942325247A0200F4D86D /* SystemIndicatorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIndicatorExample.swift; sourceTree = "<group>"; };
+		C3D7942925247D1900F4D86D /* AnimationExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExamples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				C317E35A2485502E0072D00E /* AppDelegate.swift */,
+				C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */,
+				C3D7942625247A6C00F4D86D /* Examples */,
 				C317E35E2485502E0072D00E /* MasterViewController.swift */,
 				C317E3602485502E0072D00E /* DetailViewController.swift */,
 				C317E3622485502E0072D00E /* Main.storyboard */,
@@ -188,6 +196,15 @@
 				C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */,
 			);
 			path = Responders;
+			sourceTree = "<group>";
+		};
+		C3D7942625247A6C00F4D86D /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7942925247D1900F4D86D /* AnimationExamples.swift */,
+				C3D7942325247A0200F4D86D /* SystemIndicatorExample.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,9 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D7942A25247D1900F4D86D /* AnimationExamples.swift in Sources */,
 				C317E35B2485502E0072D00E /* AppDelegate.swift in Sources */,
+				C3D79420252478BB00F4D86D /* ExamplesViewController.swift in Sources */,
 				C317E35F2485502E0072D00E /* MasterViewController.swift in Sources */,
 				C317E3612485502E0072D00E /* DetailViewController.swift in Sources */,
+				C3D7942425247A0200F4D86D /* SystemIndicatorExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
