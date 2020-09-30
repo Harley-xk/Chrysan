@@ -13,11 +13,9 @@ import SnapKit
 public class AnimatedPathIndicatorView: UIView, StatusIndicatorView {
     
     public class func successView(size: CGSize, color: UIColor) -> AnimatedPathIndicatorView {
-        let successPaths = [[
-            CGPoint(x: 0.04, y: 0.52),
-            CGPoint(x: 0.32, y: 0.81),
-            CGPoint(x: 0.95, y: 0.18)
-        ]]
+        let successPaths = [
+            [CGPoint(x: 0.04, y: 0.52), CGPoint(x: 0.32, y: 0.81), CGPoint(x: 0.95, y: 0.18)]
+        ]
         return AnimatedPathIndicatorView(size: size, color: color, paths: successPaths)
     }
     

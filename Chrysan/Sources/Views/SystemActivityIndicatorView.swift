@@ -14,7 +14,7 @@ public class SystemActivityIndicatorView: UIView, StatusIndicatorView {
     
     public private(set) weak var indicator: UIActivityIndicatorView!
     
-    convenience init(size: CGSize, color: UIColor) {
+    public convenience init(size: CGSize, color: UIColor) {
         self.init()
         let indicator: UIActivityIndicatorView
         if #available(iOS 13.0, *) {

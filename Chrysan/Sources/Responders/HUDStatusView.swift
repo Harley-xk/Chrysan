@@ -51,9 +51,13 @@ public final class HUDStatusView: UIView {
     
     public private(set) var indicatorContainer: UIView!
     
+    var options: Options = Options()
+    
     convenience init(options: Options = Options()) {
         self.init()
                 
+        self.options = options
+        
         let blur = UIVisualEffectView(effect: options.hudVisualEffect)
         addSubview(blur)
         blur.layer.cornerRadius = options.hudCornerRadius
@@ -107,7 +111,11 @@ public final class HUDStatusView: UIView {
             currentIndicatorView?.removeFromSuperview()
             indicatorContainer.addSubview(indicator)
             indicator.snp.remakeConstraints {
-                $0.edges.equalToSuperview()
+                $0.center.equalToSuperview()
+                $0.top.bottom.equalToSuperview()
+                $0.left.greaterThanOrEqualToSuperview()
+                $0.right.lessThanOrEqualToSuperview()
+                $0.size.equalTo(options.indicatorSize)
             }
             indicator.setContentHuggingPriority(.required, for: .vertical)
             indicator.setContentHuggingPriority(.required, for: .horizontal)

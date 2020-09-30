@@ -42,10 +42,11 @@ open class HUDIndicatorProvider: IndicatorProvider {
     }
     
     open func makeLoadingIndicatorView(options: HUDStatusView.Options) -> StatusIndicatorView {
-        let indicator = SystemActivityIndicatorView(size: options.indicatorSize, color: options.mainColor)
-        indicator.snp.makeConstraints {
-            $0.size.equalTo(options.indicatorSize)
-        }
+//        let indicator = SystemActivityIndicatorView(size: options.indicatorSize, color: options.mainColor)
+        var ringOptions = RingIndicatorView.Options()
+        ringOptions.size = options.indicatorSize
+        ringOptions.color = options.mainColor
+        let indicator = RingIndicatorView(options: ringOptions)
         return indicator
     }
     
