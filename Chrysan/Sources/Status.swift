@@ -54,6 +54,12 @@ public extension Status {
     
     /// 预设状态：静默状态
     static let idle = Status(id: .idle)
+    
+    /// 纯文本的状态，此时一般只显示文本内容
+    /// - Parameter message: 文本内容，支持多行
+    static func plain(message: String) -> Status {
+        return Status(id: .plain, message: message)
+    }
 
     /// 加载中状态, 所有的 loading 状态都具有相同的 id
     /// - Parameter message: 自定义消息内容
@@ -88,6 +94,7 @@ public extension Status {
 
 public extension Status.ID {
     static let idle = "chrysan.status.idle"
+    static let plain = "chrysan.status.plain"
     static let loading = "chrysan.status.loading"
     static let progress = "chrysan.status.progress"
     static let success = "chrysan.status.success"

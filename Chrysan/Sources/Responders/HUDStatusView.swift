@@ -109,8 +109,9 @@ extension HUDStatusView {
             return
         }
         
-        /// 切换不同的状态，需要重新创建 IndicatorView
-        if from != new {
+        /// 切换不同的状态，且目标状态不是纯文本，需要重新创建 IndicatorView
+        if from != new, new.id != .plain {
+            indicatorContainer.isHidden = false
             let factory = responder.factories[new.id] ?? .ringIndicator
             let indicator = factory.make(options)
             currentIndicatorView?.removeFromSuperview()
@@ -124,6 +125,8 @@ extension HUDStatusView {
             }
             indicator.setContentHuggingPriority(.required, for: .vertical)
             indicator.setContentHuggingPriority(.required, for: .horizontal)
+        } else if new.id == .plain {
+            indicatorContainer.isHidden = true
         }
     }
     

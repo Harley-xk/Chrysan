@@ -38,9 +38,9 @@ public struct CubicAnimatorProvider: AnimatorProvider {
     }
     
     public var curveStyle = Curve.animationCurve(.easeInOut)
-    public var duraction: TimeInterval = 0.25
+    public var duraction: TimeInterval = 0.2
 
-    public init(duraction: TimeInterval = 0.25, curve: Curve = .animationCurve(.easeInOut)) {
+    public init(duraction: TimeInterval = 0.2, curve: Curve = .animationCurve(.easeInOut)) {
         self.duraction = duraction
         self.curveStyle = curve
     }
