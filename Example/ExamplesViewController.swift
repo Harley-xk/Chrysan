@@ -26,12 +26,19 @@ class ExamplesViewController: UITableViewController {
         super.viewDidLoad()
 
         exampleGroups = [
-            ExampleGroup(name: "Animations", examples: [
+            ExampleGroup(name: "Showing Animations", examples: [
                 SpringAnimationExample(),
                 CubicAnimationExample()
             ]),
             ExampleGroup(name: "Indicators", examples: [
-                SystemIndicatorExample()
+                SystemIndicatorExample(),
+                RingIndicatorExample(stretch: false),
+                RingIndicatorExample(stretch: true),
+                CircleDotsIndicatorExample()
+            ]),
+            ExampleGroup(name: "Static States", examples: [
+                SuccessStateExample(),
+                FailureStateExample()
             ])
         ]
     }
