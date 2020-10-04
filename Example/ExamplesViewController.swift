@@ -38,7 +38,9 @@ class ExamplesViewController: UITableViewController {
             ]),
             ExampleGroup(name: "Static States", examples: [
                 SuccessStateExample(),
-                FailureStateExample()
+                FailureStateExample(),
+                PlainTextExample.shortExample,
+                PlainTextExample.longExample
             ])
         ]
     }

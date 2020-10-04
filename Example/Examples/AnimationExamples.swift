@@ -21,7 +21,7 @@ struct SpringAnimationExample: AnyChyrsanExample {
             dampingRatio: 0.5
         )
         viewController.chrysan.changeStatus(to: .success(message: "Animation Changed!"))
-        viewController.chrysan.hide(afterDelay: 2)
+        viewController.chrysan.hide(afterDelay: 1)
     }
 }
 
@@ -33,7 +33,7 @@ struct CubicAnimationExample: AnyChyrsanExample {
         let responder = viewController.chrysan.hudResponder
         responder?.animatorProvider = CubicAnimatorProvider()
         viewController.chrysan.changeStatus(to: .success(message: "Animation Changed!"))
-        viewController.chrysan.hide(afterDelay: 2)
+        viewController.chrysan.hide(afterDelay: 1)
     }
 }
 
