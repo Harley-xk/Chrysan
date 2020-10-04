@@ -21,7 +21,7 @@ public class CircleDotsLoadingView: UIView, StatusIndicatorView {
         /// 圆点数量，默认 5
         public var dotCount: Int = 12
         /// 旋转一圈的周期，默认 1s
-        public var duraction: TimeInterval = 1.5
+        public var duraction: TimeInterval = 1
         
         public init() {}
     }
@@ -64,7 +64,7 @@ public class CircleDotsLoadingView: UIView, StatusIndicatorView {
     }
     
     public func startAnimating() {
-        dotLayer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        dotLayer.transform = CATransform3DMakeScale(0.2, 0.2, 1)
 
         let scale = CABasicAnimation(keyPath: "transform.scale")
         scale.fromValue = 1

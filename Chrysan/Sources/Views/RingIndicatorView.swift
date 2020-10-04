@@ -25,7 +25,7 @@ public class RingIndicatorView: UIView, StatusIndicatorView {
         /// 是否执行伸缩动画
         public var stretchAnimation = true
         /// 转一圈需要的时间
-        public var duraction: TimeInterval = 1.5
+        public var duraction: TimeInterval = 1
         
         public init() {}
     }
@@ -75,7 +75,7 @@ public class RingIndicatorView: UIView, StatusIndicatorView {
             endAnimate.toValue = options.percent * 2
             
             let strokeAnimateGroup = CAAnimationGroup()
-            strokeAnimateGroup.duration = options.duraction
+            strokeAnimateGroup.duration = options.duraction * 2
             strokeAnimateGroup.repeatCount = .infinity
             strokeAnimateGroup.animations = [startAnimate, endAnimate]
             shapeLayer.add(strokeAnimateGroup, forKey: nil)
