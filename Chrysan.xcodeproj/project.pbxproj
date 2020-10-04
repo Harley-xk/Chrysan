@@ -30,6 +30,7 @@
 		C34E09D3252344A200319D5B /* Chrysan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; };
 		C34E09D4252344A200319D5B /* Chrysan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C317E34924854FDE0072D00E /* Chrysan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3BE00932529AAC800D31AE6 /* StaticStateExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00922529AAC800D31AE6 /* StaticStateExamples.swift */; };
+		C3BE00962529B2DD00D31AE6 /* ProgressExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */; };
 		C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6384C251DE5D40013B4AA /* StatusResponder.swift */; };
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
 		C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */; };
@@ -80,6 +81,7 @@
 		C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPathIndicatorView.swift; sourceTree = "<group>"; };
 		C34E09AD25231E1700319D5B /* AnimatedPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPathView.swift; sourceTree = "<group>"; };
 		C3BE00922529AAC800D31AE6 /* StaticStateExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStateExamples.swift; sourceTree = "<group>"; };
+		C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressExamples.swift; sourceTree = "<group>"; };
 		C3C6384C251DE5D40013B4AA /* StatusResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponder.swift; sourceTree = "<group>"; };
 		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
 		C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingIndicatorView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				C3D7942925247D1900F4D86D /* AnimationExamples.swift */,
 				C3D7942325247A0200F4D86D /* IndicatorExamples.swift */,
 				C3BE00922529AAC800D31AE6 /* StaticStateExamples.swift */,
+				C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D7942A25247D1900F4D86D /* AnimationExamples.swift in Sources */,
+				C3BE00962529B2DD00D31AE6 /* ProgressExamples.swift in Sources */,
 				C317E35B2485502E0072D00E /* AppDelegate.swift in Sources */,
 				C3D79420252478BB00F4D86D /* ExamplesViewController.swift in Sources */,
 				C3D7942425247A0200F4D86D /* IndicatorExamples.swift in Sources */,

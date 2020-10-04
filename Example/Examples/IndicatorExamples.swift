@@ -17,7 +17,7 @@ struct SystemIndicatorExample: AnyChyrsanExample {
         let responder = viewController.chrysan.hudResponder
         responder?.register(.systemIndicator, for: .loading)
         viewController.chrysan.changeStatus(to: .loading(message: "正在加载"))
-        viewController.chrysan.hide(afterDelay: 4)
+        viewController.chrysan.hide(afterDelay: 2)
     }
     
 }

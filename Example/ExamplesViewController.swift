@@ -36,6 +36,10 @@ class ExamplesViewController: UITableViewController {
                 RingIndicatorExample(stretch: true),
                 CircleDotsIndicatorExample()
             ]),
+            ExampleGroup(name: "Progress", examples: [
+                RingProgressExample(),
+                BarProgressExample()
+            ]),
             ExampleGroup(name: "Static States", examples: [
                 SuccessStateExample(),
                 FailureStateExample(),
@@ -68,5 +72,13 @@ class ExamplesViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let example = exampleGroups[indexPath.section].examples[indexPath.row]
         example.show(in: self)
+    }
+}
+
+extension DispatchQueue {
+    func asyncAfter(seconds: TimeInterval, task: @escaping () -> ()) {
+        asyncAfter(deadline: .now() + .milliseconds(Int(seconds * 1000))) {
+            task()
+        }
     }
 }
