@@ -52,14 +52,20 @@ public class RingIndicatorView: UIView, StatusIndicatorView {
     }
     
     public func updateStatus(from: Status, to new: Status) {
-        if from == .idle {
+        if new != .idle, !isAnimating {
             startAnimating()
         }
     }
     
+    public private(set) var isAnimating = false
+
     public func startAnimating() {
+        
+        // stretchAnimation needs a longer duraction
+        let duraction = options.duraction * (options.stretchAnimation ? 1.5 : 1)
+        
         let rotate = CABasicAnimation(keyPath: "transform.rotation")
-        rotate.duration = options.duraction
+        rotate.duration = duraction
         rotate.fromValue = 0
         rotate.toValue = CGFloat.pi * 2
         rotate.repeatCount = .infinity
@@ -75,10 +81,12 @@ public class RingIndicatorView: UIView, StatusIndicatorView {
             endAnimate.toValue = options.percent * 2
             
             let strokeAnimateGroup = CAAnimationGroup()
-            strokeAnimateGroup.duration = options.duraction * 2
+            strokeAnimateGroup.duration = duraction
             strokeAnimateGroup.repeatCount = .infinity
             strokeAnimateGroup.animations = [startAnimate, endAnimate]
             shapeLayer.add(strokeAnimateGroup, forKey: nil)
         }
+        
+        isAnimating = true
     }
 }

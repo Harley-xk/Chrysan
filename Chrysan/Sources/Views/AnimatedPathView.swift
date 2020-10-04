@@ -69,7 +69,7 @@ public class AnimatedPathView: UIView {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0.0
         animation.toValue = 1.0
-        animation.duration = 0.4
+        animation.duration = 0.3
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = true
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)

@@ -35,7 +35,7 @@ public class SystemActivityIndicatorView: UIView, StatusIndicatorView {
     }
     
     public func updateStatus(from: Status, to new: Status) {
-        if from == .idle {
+        if new != .idle, !indicator.isAnimating {
             indicator.startAnimating()
         }
     }

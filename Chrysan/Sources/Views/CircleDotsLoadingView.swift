@@ -58,10 +58,12 @@ public class CircleDotsLoadingView: UIView, StatusIndicatorView {
     }
     
     public func updateStatus(from: Status, to new: Status) {
-        if from == .idle {
+        if new != .idle, !isAnimating {
             startAnimating()
         }
     }
+    
+    public private(set) var isAnimating = false
     
     public func startAnimating() {
         dotLayer.transform = CATransform3DMakeScale(0.2, 0.2, 1)
@@ -72,6 +74,8 @@ public class CircleDotsLoadingView: UIView, StatusIndicatorView {
         scale.duration = options.duraction
         scale.repeatCount = .infinity
         dotLayer.add(scale, forKey: nil)
+        
+        isAnimating = true
     }
     
 }
