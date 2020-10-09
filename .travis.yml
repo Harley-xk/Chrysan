@@ -2,5 +2,4 @@ language: swift
 os: osx
 osx_image: xcode12
 
-podfile: Podfile
-script: xcodebuild -workspace Chrysan.xcworkspace -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: xcodebuild Chrysan.xcodeproj -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
