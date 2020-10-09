@@ -15,10 +15,12 @@ struct GIFIndicatorExample: AnyChyrsanExample {
     let name = "GIF Animating Indicator"
     
     func show(in viewController: UIViewController) {
-        let asset = NSDataAsset(name: "loading")!
+        let asset = NSDataAsset(name: "infinity")!
+//        let asset = NSDataAsset(name: "ripple")!
+//        let asset = NSDataAsset(name: "double-ring")!
         let indicator = HUDIndicatorFactory.gifIndicator(data: asset.data)
         viewController.chrysan.hudResponder?.register(indicator, for: .loading)
-        viewController.chrysan.changeStatus(to: .loading(message: "Using GIF for Loading Status"))
+        viewController.chrysan.changeStatus(to: .loading(message: "Using GIF"))
         viewController.chrysan.hide(afterDelay: 6)
     }
 }
