@@ -20,22 +20,22 @@
 
 多种内置的指示器效果，同样支持自定义，并且支持 **GIF** 动图
 
-<img src="Images/indicator-system.png" height=350></img>
-<img src="Images/indicator-ring.png" height=350></img>
-<img src="Images/indicator-ring-dots.png" height=350></img>
+<img src="Images/indicator-system.gif" height=350></img>
+<img src="Images/indicator-ring.gif" height=350></img>
+<img src="Images/indicator-ring-dots.gif" height=350></img>
 <img src="Images/animation-gif.gif" height=350></img>
 
 进度指示器，内置环形和条形进度指示器，支持自定义进度文字和颜色
 
-<img src="Images/progress-ring.png" height=350></img>
-<img src="Images/progress-bar.png" height=350></img>
+<img src="Images/progress-ring.gif" height=350></img>
+<img src="Images/progress-bar.gif" height=350></img>
 
 静态状态指示器, 内置带动画的成功和失败指示器，支持自定义路径动画
 
 <img src="Images/state-success.png" height=350></img>
 <img src="Images/state-failure.png" height=350></img>
 
-支持自定义扩展更多状态，支持自定义图标指示器，支持系统内置 SF Symbols 作为图标
+支持自定义扩展更多状态，支持自定义图标指示器，支持使用系统内置 SF Symbols 作为图标
 
 <img src="Images/state-custom.png" height=350></img>
 <img src="Images/icon-sf-1.png" height=350></img>
@@ -56,7 +56,7 @@ Chrysan 2.x 支持 iOS 11+ 以及 Swift 5.3+。如需支持更早的版本，请
 
 ### 安装
 
-> 注意：Chrysan 依赖 Snapkit 进行 UI 布局，确保你没有引用与其冲突的其他第三方库
+> 注意：Chrysan 依赖 SnapKit 5.x 进行 UI 布局，确保你没有引用与其冲突的其他第三方库
 
 #### 通过 CocoaPods 安装
 
