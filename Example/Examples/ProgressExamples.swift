@@ -26,7 +26,8 @@ class ProgressExample: AnyChyrsanExample {
     private var progress: Double = 0
     
     func updateProgress() {
-        host?.chrysan.changeStatus(to: .progress(message: "正在下载", progress: progress))
+        host?.chrysan.showHUD(progress: progress, message: "正在下载")
+//        host?.chrysan.changeStatus(to: .progress(message: "正在下载", progress: progress))
         if progress > 1 {
             timer.invalidate()
             timer = nil

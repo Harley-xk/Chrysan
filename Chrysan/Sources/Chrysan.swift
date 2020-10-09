@@ -110,6 +110,40 @@ extension Chrysan {
     }
 }
 
+// MARK: - Short Cuts
+
+public extension Chrysan {
+    
+    private func forceHUD() {
+        guard hudResponder != nil else {
+            responder = HUDResponder()
+            return
+        }
+    }
+    
+    /// show HUD for speciffied status
+    /// - Parameters:
+    ///   - status: target status
+    ///   - delay: auto hide hud after delay seconds if set
+    func showHUD(_ status: Status, hideAfterDelay delay: TimeInterval? = nil) {
+        forceHUD()
+        
+        changeStatus(to: status)
+        
+        if let delay = delay {
+            hide(afterDelay: delay)
+        }
+    }
+    
+    /// show HUD for progress ststus
+    /// - Parameters:
+    ///   - progress: complete fraction for current task
+    ///   - message: message for current status
+    func showHUD(progress: Double, message: String? = nil, progressText: String? = nil) {
+        forceHUD()
+        changeStatus(to: .progress(message: message, progress: progress, progressText: progressText))
+    }
+}
 
 public extension UIView {
     

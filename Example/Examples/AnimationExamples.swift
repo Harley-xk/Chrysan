@@ -20,8 +20,7 @@ struct SpringAnimationExample: AnyChyrsanExample {
             duraction: 0.25,
             dampingRatio: 0.5
         )
-        viewController.chrysan.changeStatus(to: .success(message: "Animation Changed!"))
-        viewController.chrysan.hide(afterDelay: 1)
+        viewController.chrysan.showHUD(.success(message: "Animation Changed!"), hideAfterDelay: 1)
     }
 }
 
