@@ -177,17 +177,8 @@
 				C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */,
 				C3C638562520121F0013B4AA /* Responders */,
 				C33C74D72489287F004DDF94 /* Views */,
-				C322A5D6253029D400697848 /* Supporting */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		C322A5D6253029D400697848 /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				C322A5D32530292E00697848 /* AnimatedImageView.swift */,
-			);
-			path = Supporting;
 			sourceTree = "<group>";
 		};
 		C33C74D72489287F004DDF94 /* Views */ = {
@@ -201,6 +192,7 @@
 				C34E094A2522C90B00319D5B /* SystemActivityIndicatorView.swift */,
 				C34E09A92523191E00319D5B /* AnimatedPathIndicatorView.swift */,
 				C34E09AD25231E1700319D5B /* AnimatedPathView.swift */,
+				C322A5D32530292E00697848 /* AnimatedImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
