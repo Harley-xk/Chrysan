@@ -2,4 +2,4 @@ language: swift
 os: osx
 osx_image: xcode12
 
-script: xcodebuild Chrysan.xcodeproj -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: xcodebuild -project Chrysan.xcodeproj -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
