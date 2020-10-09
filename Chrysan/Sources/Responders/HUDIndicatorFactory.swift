@@ -43,6 +43,26 @@ public struct HUDIndicatorFactory {
         SystemActivityIndicatorView(size: $0.indicatorSize, color: $0.mainColor)
     }
     
+    /// 使用静态图片的状态指示器
+    public static func imageIndicator(image: UIImage) -> HUDIndicatorFactory {
+        return HUDIndicatorFactory {
+            let imageView = UIImageView(image: image)
+            imageView.tintColor = $0.mainColor
+            return imageView
+        }
+    }
+    
+    /// 使用系统图标的静态图片指示器，支持 iOS 13+
+    @available(iOS 13.0, *)
+    public static func imageIndicator(systemName: String, withConfiguration configuration: UIImage.Configuration? = nil) -> HUDIndicatorFactory {
+        return HUDIndicatorFactory {
+            let image = UIImage(systemName: systemName, withConfiguration: configuration)
+            let imageView = UIImageView(image: image)
+            imageView.tintColor = $0.mainColor
+            return imageView
+        }
+    }
+    
     /// 环形进度条，默认设置
     public static let ringProgress = HUDIndicatorFactory {
         HUDRingProgressView(

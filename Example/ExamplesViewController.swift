@@ -34,7 +34,7 @@ class ExamplesViewController: UITableViewController {
                 SystemIndicatorExample(),
                 RingIndicatorExample(stretch: false),
                 RingIndicatorExample(stretch: true),
-                CircleDotsIndicatorExample()
+                CircleDotsIndicatorExample(),
             ]),
             ExampleGroup(name: "Progress", examples: [
                 RingProgressExample(),
@@ -43,6 +43,7 @@ class ExamplesViewController: UITableViewController {
             ExampleGroup(name: "Static States", examples: [
                 SuccessStateExample(),
                 FailureStateExample(),
+                CustomIconExamples(),
                 PlainTextExample.shortExample,
                 PlainTextExample.longExample
             ])
