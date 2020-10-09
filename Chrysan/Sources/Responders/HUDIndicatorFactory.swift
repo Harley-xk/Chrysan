@@ -53,10 +53,9 @@ public struct HUDIndicatorFactory {
     }
     
     /// 使用 GIF 动图的状态指示器
-    public static func gifIndicator(data: Data, duraction: TimeInterval? = nil) -> HUDIndicatorFactory {
+    public static func gifIndicator(data: Data, repeatCount: AnimatedImageView.RepeatCount = .infinite) -> HUDIndicatorFactory {
         return HUDIndicatorFactory { _ in
-            let imageView = UIImageView()
-            imageView.displayGIF(from: data, duraction: duraction)
+            let imageView = AnimatedImageView(data: data, repeatCount: repeatCount)
             return imageView
         }
     }

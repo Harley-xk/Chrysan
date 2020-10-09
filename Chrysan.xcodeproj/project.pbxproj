@@ -20,6 +20,7 @@
 		C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */; };
 		C31DA5AC2521C06300AEE121 /* HUDBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */; };
 		C31DA5AF2521C9CB00AEE121 /* HUDIndicatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA5AE2521C9CB00AEE121 /* HUDIndicatorFactory.swift */; };
+		C322A5D42530292E00697848 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322A5D32530292E00697848 /* AnimatedImageView.swift */; };
 		C33C74D6248916F7004DDF94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D5248916F7004DDF94 /* Status.swift */; };
 		C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74D8248928A6004DDF94 /* HUDStatusView.swift */; };
 		C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */; };
@@ -78,6 +79,7 @@
 		C31DA59C2521862200AEE121 /* HUDRingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDRingProgressView.swift; sourceTree = "<group>"; };
 		C31DA5AB2521C06300AEE121 /* HUDBarProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDBarProgressView.swift; sourceTree = "<group>"; };
 		C31DA5AE2521C9CB00AEE121 /* HUDIndicatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDIndicatorFactory.swift; sourceTree = "<group>"; };
+		C322A5D32530292E00697848 /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		C33C74D5248916F7004DDF94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C33C74D8248928A6004DDF94 /* HUDStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStatusView.swift; sourceTree = "<group>"; };
 		C33C74DA2489A4EA004DDF94 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
@@ -175,8 +177,17 @@
 				C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */,
 				C3C638562520121F0013B4AA /* Responders */,
 				C33C74D72489287F004DDF94 /* Views */,
+				C322A5D6253029D400697848 /* Supporting */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C322A5D6253029D400697848 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C322A5D32530292E00697848 /* AnimatedImageView.swift */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		C33C74D72489287F004DDF94 /* Views */ = {
@@ -347,6 +358,7 @@
 				C310C4FB2487E1DD00F9DD8C /* HUDLayout.swift in Sources */,
 				C3BE00992529BEF100D31AE6 /* ImageIndicatorView.swift in Sources */,
 				C34E09AA2523191E00319D5B /* AnimatedPathIndicatorView.swift in Sources */,
+				C322A5D42530292E00697848 /* AnimatedImageView.swift in Sources */,
 				C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */,
 				C34E09AE25231E1700319D5B /* AnimatedPathView.swift in Sources */,
 				C33C74DB2489A4EA004DDF94 /* RingProgressView.swift in Sources */,
