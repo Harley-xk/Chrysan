@@ -35,6 +35,7 @@ class ExamplesViewController: UITableViewController {
                 RingIndicatorExample(stretch: false),
                 RingIndicatorExample(stretch: true),
                 CircleDotsIndicatorExample(),
+                GIFIndicatorExample()
             ]),
             ExampleGroup(name: "Progress", examples: [
                 RingProgressExample(),

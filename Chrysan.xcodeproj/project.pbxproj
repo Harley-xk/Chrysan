@@ -34,9 +34,9 @@
 		C3BE00932529AAC800D31AE6 /* StaticStateExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00922529AAC800D31AE6 /* StaticStateExamples.swift */; };
 		C3BE00962529B2DD00D31AE6 /* ProgressExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */; };
 		C3BE00992529BEF100D31AE6 /* ImageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00982529BEF100D31AE6 /* ImageIndicatorView.swift */; };
-		C3BE00A22529C1A700D31AE6 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE00A12529C1A700D31AE6 /* GIFAnimatedImage.swift */; };
 		C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6384C251DE5D40013B4AA /* StatusResponder.swift */; };
 		C3C63851251DE68F0013B4AA /* HUDResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C63850251DE68F0013B4AA /* HUDResponder.swift */; };
+		C3D0274B2530064400AD360F /* GIFIndicatorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0274A2530064400AD360F /* GIFIndicatorExample.swift */; };
 		C3D7941625241A3A00F4D86D /* RingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */; };
 		C3D794192524575D00F4D86D /* CircleDotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */; };
 		C3D79420252478BB00F4D86D /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */; };
@@ -89,9 +89,10 @@
 		C3BE00922529AAC800D31AE6 /* StaticStateExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStateExamples.swift; sourceTree = "<group>"; };
 		C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressExamples.swift; sourceTree = "<group>"; };
 		C3BE00982529BEF100D31AE6 /* ImageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIndicatorView.swift; sourceTree = "<group>"; };
-		C3BE00A12529C1A700D31AE6 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		C3C6384C251DE5D40013B4AA /* StatusResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponder.swift; sourceTree = "<group>"; };
 		C3C63850251DE68F0013B4AA /* HUDResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDResponder.swift; sourceTree = "<group>"; };
+		C3D02748252FF58600AD360F /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		C3D0274A2530064400AD360F /* GIFIndicatorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFIndicatorExample.swift; sourceTree = "<group>"; };
 		C3D7941525241A3A00F4D86D /* RingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingIndicatorView.swift; sourceTree = "<group>"; };
 		C3D794182524575D00F4D86D /* CircleDotsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDotsLoadingView.swift; sourceTree = "<group>"; };
 		C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		C317E3592485502E0072D00E /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				C3D02748252FF58600AD360F /* Example.entitlements */,
 				C317E35A2485502E0072D00E /* AppDelegate.swift */,
 				C3D7941F252478BB00F4D86D /* ExamplesViewController.swift */,
 				C317E3622485502E0072D00E /* Main.storyboard */,
@@ -171,7 +173,6 @@
 				C3C6384C251DE5D40013B4AA /* StatusResponder.swift */,
 				C305ECFB25201FBC00A800C7 /* AnimatorProvider.swift */,
 				C31DA57F2520823E00AEE121 /* StatusIndicatorView.swift */,
-				C3BE00A12529C1A700D31AE6 /* GIFAnimatedImage.swift */,
 				C3C638562520121F0013B4AA /* Responders */,
 				C33C74D72489287F004DDF94 /* Views */,
 			);
@@ -215,6 +216,7 @@
 				C3BE00952529B2DD00D31AE6 /* ProgressExamples.swift */,
 				C388A8E1252FE5FB00A8E51C /* CustomIconExamples.swift */,
 				C388A8E4252FEEC700A8E51C /* IconSections.swift */,
+				C3D0274A2530064400AD360F /* GIFIndicatorExample.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -351,7 +353,6 @@
 				C3C6384D251DE5D40013B4AA /* StatusResponder.swift in Sources */,
 				C33C74D9248928A6004DDF94 /* HUDStatusView.swift in Sources */,
 				C31DA5942521858A00AEE121 /* HorizontalProgressBar.swift in Sources */,
-				C3BE00A22529C1A700D31AE6 /* GIFAnimatedImage.swift in Sources */,
 				C317E37624855A290072D00E /* Chrysan.swift in Sources */,
 				C33C74D6248916F7004DDF94 /* Status.swift in Sources */,
 				C31DA59D2521862200AEE121 /* HUDRingProgressView.swift in Sources */,
@@ -371,6 +372,7 @@
 				C388A8E5252FEEC700A8E51C /* IconSections.swift in Sources */,
 				C317E35B2485502E0072D00E /* AppDelegate.swift in Sources */,
 				C3D79420252478BB00F4D86D /* ExamplesViewController.swift in Sources */,
+				C3D0274B2530064400AD360F /* GIFIndicatorExample.swift in Sources */,
 				C3D7942425247A0200F4D86D /* IndicatorExamples.swift in Sources */,
 				C3BE00932529AAC800D31AE6 /* StaticStateExamples.swift in Sources */,
 			);
@@ -579,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -589,6 +592,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harley.chrysan.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -598,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -608,6 +613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harley.chrysan.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

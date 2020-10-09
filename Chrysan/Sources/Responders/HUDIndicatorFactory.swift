@@ -52,6 +52,15 @@ public struct HUDIndicatorFactory {
         }
     }
     
+    /// 使用 GIF 动图的状态指示器
+    public static func gifIndicator(data: Data, duraction: TimeInterval? = nil) -> HUDIndicatorFactory {
+        return HUDIndicatorFactory { _ in
+            let imageView = UIImageView()
+            imageView.displayGIF(from: data, duraction: duraction)
+            return imageView
+        }
+    }
+    
     /// 使用系统图标的静态图片指示器，支持 iOS 13+
     @available(iOS 13.0, *)
     public static func imageIndicator(systemName: String, withConfiguration configuration: UIImage.Configuration? = nil) -> HUDIndicatorFactory {
