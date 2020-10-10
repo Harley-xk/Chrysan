@@ -27,12 +27,13 @@ open class RingProgressView: UIView, ProgressIndicatorView {
     /// 圆环的前景色
     open override var tintColor: UIColor! {
         didSet {
+            background.strokeColor = tintColor.withAlphaComponent(0.2).cgColor
             setNeedsDisplay()
         }
     }
     
     private let progressLayer = CAShapeLayer()
-    private let backgroundMask = CAShapeLayer()
+    private let background = CAShapeLayer()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,15 +47,12 @@ open class RingProgressView: UIView, ProgressIndicatorView {
     
     private func setupLayers() {
         
-        if backgroundColor == nil {
-            backgroundColor = UIColor.darkGray
-        }
-        
+        backgroundColor = .clear
+
         tintColor = .systemBlue
-        backgroundMask.lineWidth = lineWidth
-        backgroundMask.fillColor = nil
-        backgroundMask.strokeColor = UIColor.black.cgColor
-        layer.mask = backgroundMask
+        background.lineWidth = lineWidth
+        background.fillColor = nil
+        layer.addSublayer(background)
 
         progressLayer.lineWidth = lineWidth
         progressLayer.fillColor = nil
@@ -63,8 +61,10 @@ open class RingProgressView: UIView, ProgressIndicatorView {
     }
 
     open override func draw(_ rect: CGRect) {
-        let circlePath = UIBezierPath(ovalIn: rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2))
-        backgroundMask.path = circlePath.cgPath
+        let circlePath = UIBezierPath(
+            ovalIn: rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
+        )
+        background.path = circlePath.cgPath
 
         progressLayer.path = circlePath.cgPath
         progressLayer.lineCap = .round
