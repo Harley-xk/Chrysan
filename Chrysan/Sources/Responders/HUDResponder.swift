@@ -153,11 +153,11 @@ public class HUDResponder: StatusResponder {
         let isHidding = from != .idle && new == .idle
         
         if isShowing {
-            chrysan.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+            chrysan.backgroundColor = viewOptions.maskColor
             statusView?.alpha = 1
             statusView?.transform = .identity
         } else if isHidding {
-            chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
+            chrysan.backgroundColor = viewOptions.maskColor.withAlphaComponent(0)
             statusView?.alpha = 0
             statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }

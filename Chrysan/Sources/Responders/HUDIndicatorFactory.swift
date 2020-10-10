@@ -102,6 +102,7 @@ public struct HUDIndicatorFactory {
             var options = HUDBarProgressView.Options()
             options.textColor = textColor ?? $0.textColor
             options.barColor = $0.mainColor
+            options.barBackgroundColor = $0.mainColor.withAlphaComponent(0.2)
             options.barSize = size
             return HUDBarProgressView.makeBar(with: options)
         }

@@ -19,7 +19,8 @@ public final class HUDStatusView: UIView {
         public var hudCornerRadius: CGFloat
         /// 主色调，影响状态指示器、进度条颜色，默认白色
         public var mainColor: UIColor
-        
+        /// 背景遮罩层颜色
+        public var maskColor: UIColor
         /// 文本颜色，影响说明文字、进度条文本等文字的颜色
         /// 留空时使用 mainColor
         public var textColor: UIColor {
@@ -43,6 +44,7 @@ public final class HUDStatusView: UIView {
             hudVisualEffect: UIVisualEffect = UIBlurEffect(style: .dark),
             hudCornerRadius: CGFloat = 6,
             mainColor: UIColor = .white,
+            maskColor: UIColor = .clear,
             textColor: UIColor? = nil,
             messageLines: Int = 0,
             messageFont: UIFont = .systemFont(ofSize: 15),
@@ -52,6 +54,7 @@ public final class HUDStatusView: UIView {
             self.hudVisualEffect = hudVisualEffect
             self.hudCornerRadius = hudCornerRadius
             self.mainColor = mainColor
+            self.maskColor = maskColor
             self._textColor = textColor
             self.messageLines = messageLines
             self.messageFont = messageFont
