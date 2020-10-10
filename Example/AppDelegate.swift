@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Chrysan
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let options = HUDResponder.global.viewOptions
+        options.mainColor = .systemPurple
+        options.hudVisualEffect = UIBlurEffect(style: .extraLight)
+        options.hudCornerRadius = 20
+        
+        HUDResponder.global.register(.circleDots, for: .loading)
+
         return true
     }
 
