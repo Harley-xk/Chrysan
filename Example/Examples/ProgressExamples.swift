@@ -77,7 +77,7 @@ class BarProgressExample: ProgressExample {
     }
 
     override func show(in viewController: UIViewController) {
-        viewController.chrysan.hudResponder?.register(.barProgress(textColor: .systemOrange), for: .progress)
+        viewController.chrysan.hudResponder?.register(.barProgress(textColor: .white), for: .progress)
         super.show(in: viewController)
     }
 }

@@ -15,7 +15,7 @@ struct GIFIndicatorExample: AnyChyrsanExample {
     let name = "GIF Animating Indicator"
     
     func show(in viewController: UIViewController) {
-        let asset = NSDataAsset(name: "infinity")!
+        let asset = NSDataAsset(name: "infinity-red")!
 //        let asset = NSDataAsset(name: "ripple")!
 //        let asset = NSDataAsset(name: "double-ring")!
         let indicator = HUDIndicatorFactory.gifIndicator(data: asset.data)

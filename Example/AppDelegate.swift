@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let options = HUDResponder.global.viewOptions
-        options.mainColor = .systemPurple
-        options.hudVisualEffect = UIBlurEffect(style: .extraLight)
-        options.hudCornerRadius = 20
+        options.mainColor = .systemRed
+        options.maskColor = UIColor.label.withAlphaComponent(0.2)
+        options.hudVisualEffect = UIBlurEffect(style: .prominent)
+        options.hudCornerRadius = 10
         
         HUDResponder.global.register(.circleDots, for: .loading)
 
