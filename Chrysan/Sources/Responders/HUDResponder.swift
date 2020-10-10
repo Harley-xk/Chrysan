@@ -12,6 +12,10 @@ import UIKit
 /// HUD 风格的状态响应器
 public class HUDResponder: StatusResponder {
     
+    /// 全局响应器
+    public static let global: HUDResponder = HUDResponder()
+    
+    /// HUD 样式配置项，修改全局响应器的样式，可以全局生效
     public var viewOptions: HUDStatusView.Options
     
     public init(viewOptions: HUDStatusView.Options = .init()) {
@@ -85,21 +89,16 @@ public class HUDResponder: StatusResponder {
         lastAnimator = animator
     }
     
+    public func remove(from chrysan: Chrysan) {
+        statusView?.removeFromSuperview()
+        statusView = nil
+        factories.removeAll()
+    }
+    
     // MARK: - Layout
     
     /// 布局属性，修改后从下一次显示 HUD 开始生效
-    public var layout = HUDLayout() {
-        didSet {
-            // 修改布局属性，移除 HUD
-            guard let view = statusView else { return }
-            if host?.isActive == true {
-                removeViewOnFinish = true
-            } else {
-                view.removeFromSuperview()
-                statusView = nil
-            }
-        }
-    }
+    public var layout = HUDLayout()
     
     private func layoutStatusView(in chrysan: Chrysan) {
         
@@ -139,9 +138,6 @@ public class HUDResponder: StatusResponder {
 
     // MARK: - Animations
     
-    // 结束后将视图移除，如果在显示状态下修改了layout，该属性会被标记为 true，HUD 隐藏后会被移除
-    private var removeViewOnFinish = false
-    
     private func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
         statusView?.prepreStatus(for: self, from: from, to: new)
         if from == .idle {
@@ -172,10 +168,9 @@ public class HUDResponder: StatusResponder {
     private func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
         let isHidden = from != .idle && new == .idle
 
-        if isHidden && removeViewOnFinish {
+        if isHidden {
             statusView?.removeFromSuperview()
             statusView = nil
-            removeViewOnFinish = false
         }
         
         lastAnimator = nil

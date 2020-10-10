@@ -10,17 +10,25 @@ import UIKit
 
 public final class HUDStatusView: UIView {
     
-    public struct Options {
+    public class Options {
         /// 状态指示器的尺寸
         public var indicatorSize: CGSize
         /// 背景的视觉样式，默认为 UIBlurEffect(style: .dark)
         public var hudVisualEffect: UIVisualEffect
         /// HUD 圆角半径，默认 6
         public var hudCornerRadius: CGFloat
-        /// 主色调，影响状态指示器和说明文本，默认白色
+        /// 主色调，影响状态指示器、进度条颜色，默认白色
         public var mainColor: UIColor
-        /// 进度条颜色，默认 systemBlue
-        public var progressColor: UIColor
+        
+        /// 文本颜色，影响说明文字、进度条文本等文字的颜色
+        /// 留空时使用 mainColor
+        public var textColor: UIColor {
+            return _textColor ?? mainColor
+        }
+        /// 重新执行 TextColor，可以指定为 nil 以使用 mainColor
+        public func setTextColor(_ color: UIColor?) {
+            _textColor = color
+        }
         /// 文本标签行数，0 表示无限制，默认 0
         public var messageLines: Int
         /// 文本字体，默认 systemFont(ofSize: 15)
@@ -28,12 +36,14 @@ public final class HUDStatusView: UIView {
         /// 文本对齐方式，默认 center
         public var messageAlignment: NSTextAlignment
         
+        private var _textColor: UIColor?
+        
         public init(
             indicatorSize: CGSize = CGSize(width: 40, height: 40),
             hudVisualEffect: UIVisualEffect = UIBlurEffect(style: .dark),
             hudCornerRadius: CGFloat = 6,
             mainColor: UIColor = .white,
-            progressColor: UIColor = .white,
+            textColor: UIColor? = nil,
             messageLines: Int = 0,
             messageFont: UIFont = .systemFont(ofSize: 15),
             messageAlignment: NSTextAlignment = .center
@@ -42,7 +52,7 @@ public final class HUDStatusView: UIView {
             self.hudVisualEffect = hudVisualEffect
             self.hudCornerRadius = hudCornerRadius
             self.mainColor = mainColor
-            self.progressColor = progressColor
+            self._textColor = textColor
             self.messageLines = messageLines
             self.messageFont = messageFont
             self.messageAlignment = messageAlignment
@@ -54,7 +64,7 @@ public final class HUDStatusView: UIView {
     
     var options: Options = Options()
     
-    convenience init(options: Options = Options()) {
+    convenience init(options: Options) {
         self.init()
         
         self.options = options
@@ -79,7 +89,7 @@ public final class HUDStatusView: UIView {
         stack.addArrangedSubview(indicatorContainer)
         
         let messageLabel = UILabel()
-        messageLabel.textColor = options.mainColor
+        messageLabel.textColor = options.textColor
         messageLabel.numberOfLines = options.messageLines
         messageLabel.textAlignment = options.messageAlignment
         messageLabel.font = options.messageFont

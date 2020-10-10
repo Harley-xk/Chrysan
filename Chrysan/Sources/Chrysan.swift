@@ -12,6 +12,9 @@ import SnapKit
 
 public class Chrysan: UIView {
     
+    /// 全局响应器，如果创建 Chrysan 时没有特别指定响应器，则缺省使用全局响应器
+    static var responder: StatusResponder = HUDResponder.global
+    
     // MARK: - Initialize
     
     /// 为指定的视图创建一个状态指示器 Chrysan
@@ -20,10 +23,10 @@ public class Chrysan: UIView {
     ///   - responder: 可以自定义的状态响应器
     public static func make(
         for targetView: UIView,
-        responder: StatusResponder = HUDResponder()
+        responder: StatusResponder? = nil
     ) -> Chrysan {
         let view = Chrysan()
-        view.responder = responder
+        view.responder = responder ?? Chrysan.responder
         view.fill(in: targetView)
         view.isHidden = true
         return view
@@ -41,7 +44,11 @@ public class Chrysan: UIView {
     
     /// 状态响应器，负责响应不同的状态，控制内容显示和布局
     /// - Note: Chrysan 本身只是一个空白的透明视图，只负责状态的切换和分发，你可以实现自己的 StatusResponder 来实现完全自定义的状态响应风格
-    public private(set) var responder: StatusResponder = HUDResponder()
+    public private(set) var responder: StatusResponder! {
+        didSet {
+            oldValue?.remove(from: self)
+        }
+    }
     
     /// 尝试获取默认的 HUDResponder，不存在返回空
     public var hudResponder: HUDResponder? {

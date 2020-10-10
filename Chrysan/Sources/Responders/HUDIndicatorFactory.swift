@@ -75,8 +75,8 @@ public struct HUDIndicatorFactory {
     public static let ringProgress = HUDIndicatorFactory {
         HUDRingProgressView(
             size: $0.indicatorSize.height,
-            progressColor: $0.progressColor,
-            textColor: $0.mainColor
+            progressColor: $0.mainColor,
+            textColor: $0.textColor
         )
     }
     
@@ -89,16 +89,19 @@ public struct HUDIndicatorFactory {
     public static let failurePath = HUDIndicatorFactory {
         AnimatedPathIndicatorView.failureView(size: $0.indicatorSize, color: $0.mainColor)
     }
-
+    
     /// 横向条形进度条, 可以定制尺寸
+    /// - Parameters:
+    ///   - size: 进度条尺寸
+    ///   - textColor: 进度条文本颜色，默认使用 StatusView.Options.textColor
     public static func barProgress(
         size: CGSize = CGSize(width: 150, height: 16),
         textColor: UIColor? = nil
     ) -> HUDIndicatorFactory {
         return HUDIndicatorFactory {
             var options = HUDBarProgressView.Options()
-            options.textColor = textColor ?? $0.mainColor
-            options.barColor = $0.progressColor
+            options.textColor = textColor ?? $0.textColor
+            options.barColor = $0.mainColor
             options.barSize = size
             return HUDBarProgressView.makeBar(with: options)
         }

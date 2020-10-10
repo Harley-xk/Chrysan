@@ -23,4 +23,9 @@ public protocol StatusResponder {
         for host: Chrysan,
         finished: @escaping () -> ()
     )
+    
+    /// 从指定的 Chrysan 移除响应器
+    /// - Note: 给 Chrysan 指定新的响应器时，旧的响应器的该方法会被触发
+    ///         此时应该移除所有相关视图并清除占用的资源
+    func remove(from chrysan: Chrysan)
 }
