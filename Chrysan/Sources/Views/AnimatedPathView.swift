@@ -19,6 +19,7 @@ public class AnimatedPathView: UIView {
     /// - Parameter paths: vector point arrays form 0 ~ 1
     public convenience init(paths: [Path], color: UIColor) {
         self.init()
+        backgroundColor = .clear
         self.paths = paths
         self.color = color
     }

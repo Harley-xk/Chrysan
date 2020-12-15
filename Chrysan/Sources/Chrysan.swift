@@ -106,13 +106,24 @@ public class Chrysan: UIView {
 extension Chrysan {
     
     func fill(in target: UIView) {
-        let layoutGuide = UILayoutGuide()
-        target.addLayoutGuide(layoutGuide)
-        target.addSubview(self)
-        self.snp.makeConstraints {
-            $0.left.equalTo(layoutGuide.snp.left)
-            $0.top.equalTo(layoutGuide.snp.top)
-            $0.size.equalToSuperview()
+        if #available(iOS 13.0, *) {
+            let layoutGuide = UILayoutGuide()
+            target.superview?.addLayoutGuide(layoutGuide)
+            target.addSubview(self)
+            self.snp.makeConstraints {
+                $0.left.equalTo(layoutGuide.snp.left)
+                $0.top.equalTo(layoutGuide.snp.top)
+                $0.size.equalToSuperview()
+            }
+        } else {
+            if let scroll = target as? UIScrollView, let superview = scroll.superview {
+                superview.addSubview(self)
+            } else {
+                target.addSubview(self)
+            }
+            self.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
         }
     }
 }
@@ -158,6 +169,11 @@ public extension UIView {
         // DO NOT try to get Chrysan from it's self!
         if self is Chrysan {
             fatalError("DO NOT try to get Chrysan from its self!")
+        }
+        
+        if #available(iOS 13.0, *) {
+        } else if self is UIScrollView, let superview = self.superview {
+            return superview.chrysan
         }
         
         if let chrysan = subviews.first(where: { $0 is Chrysan }) as? Chrysan {
