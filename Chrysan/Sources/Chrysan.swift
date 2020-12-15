@@ -65,6 +65,7 @@ public class Chrysan: UIView {
         
         if newStatus != .idle, isHidden {
             isHidden = false
+            superview?.bringSubviewToFront(self)
         }
         
         responder.changeStatus(from: status, to: newStatus, for: self) {
