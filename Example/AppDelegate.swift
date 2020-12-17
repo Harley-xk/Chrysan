@@ -19,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let options = HUDResponder.global.viewOptions
         options.mainColor = .systemRed
-        options.maskColor = UIColor.label.withAlphaComponent(0.2)
+        var maskColor = UIColor.black.withAlphaComponent(0.2)
+        if #available(iOS 13.0, *) {
+            maskColor = UIColor.label.withAlphaComponent(0.2)
+        }
+        options.maskColor = maskColor
         options.hudVisualEffect = UIBlurEffect(style: .prominent)
         options.hudCornerRadius = 10
         
