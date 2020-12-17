@@ -109,7 +109,7 @@ extension Chrysan {
     func fill(in target: UIView) {
         if #available(iOS 13.0, *) {
             let layoutGuide = UILayoutGuide()
-            target.superview?.addLayoutGuide(layoutGuide)
+            target.addLayoutGuide(layoutGuide)
             target.addSubview(self)
             self.snp.makeConstraints {
                 $0.left.equalTo(layoutGuide.snp.left)
