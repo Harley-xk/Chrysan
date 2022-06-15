@@ -9,14 +9,14 @@
 [![License](https://img.shields.io/cocoapods/l/Chrysan.svg?style=flat)](http://cocoapods.org/pods/Chrysan)
 [![Platform](https://img.shields.io/cocoapods/p/Chrysan.svg?style=flat)](http://cocoapods.org/pods/Chrysan)
 [![twitter](https://img.shields.io/badge/twitter-Harley--xk-blue.svg)](https://twitter.com/Harley86589)
-[![weibo](https://img.shields.io/badge/weibo-%E7%BE%A4%E6%98%9F%E9%99%A8%E8%90%BD-orange.svg)](https://weibo.com/u/1161848005)
 
 > Chrysan 是一个简单易用的 HUD 库，使用 iOS 自带的 UIBlurEffect 毛玻璃特效。
 
 使用基于 UIViewPropertyAnimator 的**动画**，可以自定义想要的效果
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/animation-spring.gif" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/animation-cubic.gif" height=400></img>
+ ![spring](https://me.harley-xk.studio/post-images/README/github-chrysan/animation-spring.gif|width=400px)
+
+ ![cubic](https://me.harley-xk.studio/post-images/README/github-chrysan/animation-cubic.gif|width=400px)
 
 多种内置的指示器效果，同样支持自定义，并且支持 **GIF** 动图
 
