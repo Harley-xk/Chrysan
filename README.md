@@ -1,6 +1,6 @@
 
 <h1>
-<img src="./images/icon.png" height=35>  Chrysan</img>
+<img src="./Images/icon.png" height=35>  Chrysan</img>
 </h1>
 
 [![CI Status](http://img.shields.io/travis/Harley-xk/Chrysan.svg?style=flat)](https://travis-ci.org/Harley-xk/Chrysan)
@@ -14,37 +14,37 @@
 
 使用基于 UIViewPropertyAnimator 的**动画**，可以自定义想要的效果
 
-<img src="./images/animation-spring.gif" height=400></img>
-<img src="./images/animation-cubic.gif" height=400></img>
+<img src="./Images/animation-spring.gif" height=400></img>
+<img src="./Images/animation-cubic.gif" height=400></img>
 
 多种内置的指示器效果，同样支持自定义，并且支持 **GIF** 动图
 
-<img src="./images/indicator-system.gif" height=400></img>
-<img src="./images/indicator-ring.gif" height=400></img>
-<img src="./images/indicator-ring-dots.gif" height=400></img>
-<img src="./images/animation-gif.gif" height=400></img>
+<img src="./Images/indicator-system.gif" height=400></img>
+<img src="./Images/indicator-ring.gif" height=400></img>
+<img src="./Images/indicator-ring-dots.gif" height=400></img>
+<img src="./Images/animation-gif.gif" height=400></img>
 
 进度指示器，内置环形和条形进度指示器，支持自定义进度文字和颜色
 
-<img src="./images/progress-ring.gif" height=400></img>
-<img src="./images/progress-bar.gif" height=400></img>
+<img src="./Images/progress-ring.gif" height=400></img>
+<img src="./Images/progress-bar.gif" height=400></img>
 
 静态状态指示器, 内置带动画的成功和失败指示器，支持自定义路径动画
 
-<img src="./images/state-success.png" height=400></img>
-<img src="./images/state-failure.png" height=400></img>
+<img src="./Images/state-success.png" height=400></img>
+<img src="./Images/state-failure.png" height=400></img>
 
 支持自定义扩展更多状态，支持自定义图标指示器，支持使用系统内置 SF Symbols 作为图标
 
-<img src="./images/state-custom.png" height=400></img>
-<img src="./images/icon-sf-1.png" height=400></img>
-<img src="./images/icon-sf-2.png" height=400></img>
-<img src="./images/icon-sf-3.png" height=400></img>
+<img src="./Images/state-custom.png" height=400></img>
+<img src="./Images/icon-sf-1.png" height=400></img>
+<img src="./Images/icon-sf-2.png" height=400></img>
+<img src="./Images/icon-sf-3.png" height=400></img>
 
 纯文本展示，支持单行和多行文本
 
-<img src="./images/text-single-line.png" height=400></img>
-<img src="./images/text-multi-line.png" height=400></img>
+<img src="./Images/text-single-line.png" height=400></img>
+<img src="./Images/text-multi-line.png" height=400></img>
 
 
 ### 适配
