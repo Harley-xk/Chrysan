@@ -69,11 +69,12 @@ public class Chrysan: UIView {
         }
         
         responder.changeStatus(from: status, to: newStatus, for: self) {
-//            self.didChangeStatus(to: newStatus)
+            self.didChangeStatus(to: newStatus)
         }
-        // 动画调度完毕后立刻切换状态
-        // Note: 存在动画尚未执行完毕就进入下一个状态时，再次判定为从 idle 开始，导致 hud 会再播放一遍弹出动画
-        self.didChangeStatus(to: newStatus)
+        /// 动画调度完毕后立刻修改状态属性~~切换状态~~
+        /// Note: 存在动画尚未执行完毕就进入下一个状态时，再次判定为从 idle 开始，导致 hud 会再播放一遍弹出动画
+        /// Note: 不能直接调用`didChangeStatus`否则隐藏时会直接消失
+        self.status = newStatus
     }
     
     /// Chrysan 完成状态转换，会在动画完成后被调用
