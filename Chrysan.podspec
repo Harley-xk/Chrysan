@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'Chrysan'
-  spec.version       = '2.0.5'
+  spec.version       = '2.0.6'
   spec.license       = { :type => 'MIT' }
   spec.homepage      = 'https://github.com/Harley-xk/Chrysan'
   spec.authors       = { 'Harley-xk' => 'harley.gb@foxmail.com' }
