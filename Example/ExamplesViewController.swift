@@ -49,6 +49,13 @@ class ExamplesViewController: UITableViewController {
                 PlainTextExample.longExample
             ])
         ]
+
+        if #available(iOS 13.0.0, *) {
+            exampleGroups.insert(
+                ExampleGroup(name: "Concurrency", examples: [
+                    AutoTaskExample()
+                ]), at: 1)
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

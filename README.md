@@ -1,6 +1,6 @@
 
 <h1>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/icon.png" height=35>  Chrysan</img>
+<img src="./images/icon.png" height=35>  Chrysan</img>
 </h1>
 
 [![CI Status](http://img.shields.io/travis/Harley-xk/Chrysan.svg?style=flat)](https://travis-ci.org/Harley-xk/Chrysan)
@@ -14,38 +14,37 @@
 
 使用基于 UIViewPropertyAnimator 的**动画**，可以自定义想要的效果
 
- ![spring](https://me.harley-xk.studio/post-images/README/github-chrysan/animation-spring.gif|width=400px)
-
- ![cubic](https://me.harley-xk.studio/post-images/README/github-chrysan/animation-cubic.gif|width=400px)
+<img src="./images/animation-spring.gif" height=400></img>
+<img src="./images/animation-cubic.gif" height=400></img>
 
 多种内置的指示器效果，同样支持自定义，并且支持 **GIF** 动图
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/indicator-system.gif" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/indicator-ring.gif" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/indicator-ring-dots.gif" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/animation-gif.gif" height=400></img>
+<img src="./images/indicator-system.gif" height=400></img>
+<img src="./images/indicator-ring.gif" height=400></img>
+<img src="./images/indicator-ring-dots.gif" height=400></img>
+<img src="./images/animation-gif.gif" height=400></img>
 
 进度指示器，内置环形和条形进度指示器，支持自定义进度文字和颜色
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/progress-ring.gif" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/progress-bar.gif" height=400></img>
+<img src="./images/progress-ring.gif" height=400></img>
+<img src="./images/progress-bar.gif" height=400></img>
 
 静态状态指示器, 内置带动画的成功和失败指示器，支持自定义路径动画
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/state-success.png" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/state-failure.png" height=400></img>
+<img src="./images/state-success.png" height=400></img>
+<img src="./images/state-failure.png" height=400></img>
 
 支持自定义扩展更多状态，支持自定义图标指示器，支持使用系统内置 SF Symbols 作为图标
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/state-custom.png" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/icon-sf-1.png" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/icon-sf-2.png" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/icon-sf-3.png" height=400></img>
+<img src="./images/state-custom.png" height=400></img>
+<img src="./images/icon-sf-1.png" height=400></img>
+<img src="./images/icon-sf-2.png" height=400></img>
+<img src="./images/icon-sf-3.png" height=400></img>
 
 纯文本展示，支持单行和多行文本
 
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/text-single-line.png" height=400></img>
-<img src="https://me.harley-xk.studio/post-images/README/github-chrysan/text-multi-line.png" height=400></img>
+<img src="./images/text-single-line.png" height=400></img>
+<img src="./images/text-multi-line.png" height=400></img>
 
 
 ### 适配
@@ -115,6 +114,26 @@ chrysan.changeStatus(to: .progress(message: "正在下载", progress: progress, 
 chrysan.hide()
 // 1 秒后隐藏 chrysan
 chrysan.hide(afterDelay: 1)
+```
+
+#### 自动关联异步任务
+
+针对 Swift 新的异步 API，新增了自动关联并发任务的方法，可以在任务执行前后自动显示和隐藏 HUD
+
+```swift
+
+func doSomeTasks() {
+    chrysan.loading("doing some long term tasks") {
+        await veryLongTimeTasks()
+    }
+}
+
+func veryLongTimeTask() async {
+    await doSomeVeryLongTimeTask1()
+    await doSomeVeryLongTimeTask2()
+    await doSomeVeryLongTimeTask3()
+}
+
 ```
 
 #### 预设状态

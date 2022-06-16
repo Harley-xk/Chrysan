@@ -78,7 +78,7 @@ public class Chrysan: UIView {
     }
     
     /// Chrysan 完成状态转换，会在动画完成后被调用
-    public func didChangeStatus(to newStatus: Status) {
+    private func didChangeStatus(to newStatus: Status) {
         self.status = newStatus
         
         if newStatus == .idle {
@@ -104,6 +104,28 @@ public class Chrysan: UIView {
         progressText: String? = nil
     ) {
         changeStatus(to: .progress(message: message, progress: progress, progressText: progressText))
+    }
+
+
+    @available(iOS 13.0, *)
+    public typealias AsyncTask = () async -> Void
+
+    /** iOS 13 异步扩展：提供一个异步任务，在任务执行前自动切换到 loading 状态，并在任务完毕后自动隐藏 */
+    @available(iOS 13.0, *)
+    public func loading(_ message: String? = nil, for task: @escaping AsyncTask) {
+
+        // show hud before task
+        self.changeStatus(to: .loading(message: message))
+
+        // setup a task for async works
+        Task {
+            // run the task
+            await task()
+            // auto hides when works done
+            DispatchQueue.main.async {
+                self.hide()
+            }
+        }
     }
 }
 
