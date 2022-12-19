@@ -18,12 +18,13 @@ struct AutoTaskExample: AnyChyrsanExample {
 
     func show(in viewController: UIViewController) {
         viewController.chrysan.loading("doing some long time tasks") {
-            await veryLongTimeTask()
+            await veryLongTimeTask(seconds: 2)
+            await veryLongTimeTask(seconds: 5)
         }
     }
 
 
-    func veryLongTimeTask() async {
-        sleep(8)
+    func veryLongTimeTask(seconds: UInt64) async {
+        try? await Task.sleep(nanoseconds: 1000000000 * seconds)
     }
 }

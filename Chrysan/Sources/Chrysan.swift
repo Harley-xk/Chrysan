@@ -125,9 +125,7 @@ public class Chrysan: UIView {
             // run the task
             await task()
             // auto hides when works done
-            DispatchQueue.main.async {
-                self.hide()
-            }
+            self.hide()
         }
     }
 }
