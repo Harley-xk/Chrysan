@@ -34,8 +34,34 @@ public class HUDResponder: StatusResponder {
     /// 动画属性配置器
     public var animatorProvider: AnimatorProvider = CubicAnimatorProvider()
     
-    /// 显示状态的视图
-    private(set) var statusView: HUDStatusView?
+    // MARK: Status View Pool
+    
+    /// 状态视图缓存池
+    private(set) var statusViewPool: [UUID: HUDStatusView] = [:]
+        
+    /// 获取指定宿主的状态指示器视图，如果指示器不存在则自动创建
+    /// - Parameters:
+    ///   - chrysan: 目标宿主
+    func fetchStatusView(
+        for chrysan: Chrysan,
+        createIfNotExists: Bool = true
+    ) -> HUDStatusView {
+        var statusView = statusViewPool[chrysan.id]
+        if statusView == nil {
+            statusView = layoutStatusView(in: chrysan)
+            statusViewPool[chrysan.id] = statusView
+        }
+        return statusView!
+    }
+    
+    /// 释放状态指示器
+    func releaseStatusView(for chrysan: Chrysan) {
+        guard let statusView = statusViewPool[chrysan.id] else {
+            return
+        }
+        statusView.removeFromSuperview()
+        statusViewPool[chrysan.id] = nil
+    }
     
     // MARK: - Indicator Factories
     
@@ -63,10 +89,6 @@ public class HUDResponder: StatusResponder {
         for host: Chrysan,
         finished: @escaping () -> ()
     ) {
-        if new != .idle, statusView == nil {
-            layoutStatusView(in: host)
-        }
-        
         // if the last status transforming is not finished, force to stop
         if let last = lastAnimator, last.isRunning {
             last.stopAnimation(false)
@@ -91,8 +113,7 @@ public class HUDResponder: StatusResponder {
     }
     
     public func remove(from chrysan: Chrysan) {
-        statusView?.removeFromSuperview()
-        statusView = nil
+        releaseStatusView(for: chrysan)
         factories.removeAll()
     }
     
@@ -101,10 +122,7 @@ public class HUDResponder: StatusResponder {
     /// 布局属性，修改后从下一次显示 HUD 开始生效
     public var layout = HUDLayout()
     
-    private func layoutStatusView(in chrysan: Chrysan) {
-        
-        host = chrysan
-        
+    private func layoutStatusView(in chrysan: Chrysan) -> HUDStatusView {
         let view = HUDStatusView(options: viewOptions)
         chrysan.addSubview(view)
         view.snp.removeConstraints()
@@ -134,17 +152,18 @@ public class HUDResponder: StatusResponder {
                 .lessThanOrEqualTo(chrysan.safeAreaLayoutGuide.snp.bottom)
                 .inset(layout.padding.bottom)
         }
-        statusView = view
+        return view
     }
 
     // MARK: - Animations
     
     private func prepareAnimation(for chrysan: Chrysan, from: Status, to new: Status) {
-        statusView?.prepreStatus(for: self, from: from, to: new)
+        let statusView = fetchStatusView(for: chrysan)
+        statusView.prepreStatus(for: self, from: from, to: new)
         if from == .idle {
             chrysan.backgroundColor = UIColor.black.withAlphaComponent(0)
-            statusView?.alpha = 0
-            statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            statusView.alpha = 0
+            statusView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }
     }
     
@@ -153,25 +172,26 @@ public class HUDResponder: StatusResponder {
         let isShowing = from == .idle && new != .idle
         let isHidding = from != .idle && new == .idle
         
+        let statusView = fetchStatusView(for: chrysan)
+
         if isShowing {
             chrysan.backgroundColor = viewOptions.maskColor
-            statusView?.alpha = 1
-            statusView?.transform = .identity
+            statusView.alpha = 1
+            statusView.transform = .identity
         } else if isHidding {
             chrysan.backgroundColor = viewOptions.maskColor.withAlphaComponent(0)
-            statusView?.alpha = 0
-            statusView?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            statusView.alpha = 0
+            statusView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }
         
-        statusView?.updateStatus(for: chrysan, from: from, to: new)
+        statusView.updateStatus(for: chrysan, from: from, to: new)
     }
     
     private func animationFinished(for chrysan: Chrysan, from: Status, to new: Status) {
         let isHidden = from != .idle && new == .idle
 
         if isHidden {
-            statusView?.removeFromSuperview()
-            statusView = nil
+            releaseStatusView(for: chrysan)
         }
         
         lastAnimator = nil

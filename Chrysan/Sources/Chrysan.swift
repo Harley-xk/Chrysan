@@ -17,6 +17,9 @@ public class Chrysan: UIView {
     
     // MARK: - Initialize
     
+    /// Chrysan 的 ID，每个实例唯一
+    public let id = UUID()
+    
     /// 为指定的视图创建一个状态指示器 Chrysan
     /// - Parameters:
     ///   - targetView: 宿主视图
